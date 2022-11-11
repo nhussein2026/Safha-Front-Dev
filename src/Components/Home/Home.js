@@ -1,3 +1,4 @@
+import logo from "../../assets/images/logo.png"
 const Home = () => {
 
     return (
@@ -9,7 +10,7 @@ const Home = () => {
                             <i className="fas fa-bars"></i>
                         </button>
                         <a href="demo25.html" className="logo">
-                            <img src="assets/images/logo-black.png" alt="Porto Logo" width="111" height="44" />
+                            <img src={logo} alt="Porto Logo" width="111" height="44" />
                         </a>
                         <nav className="main-nav">
                             <ul className="menu">
