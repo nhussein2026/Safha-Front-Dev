@@ -151,14 +151,6 @@ const Navbar = () => {
                                 </li>
                             </ul>
                         </nav>
-                        <span className="separator d-none d-lg-inline"></span>
-                        {/* <nav className="main-nav ml-0 d-none d-xl-block">
-                            <ul className="menu">
-                                <li className="d-none d-xxl-block"><a href="#">Special Offer</a></li>
-                                <li><a href="#">Buy Porto</a></li>
-                            </ul>
-                        </nav> */}
-                        <span className="separator d-none d-xl-inline"></span>
                     </div>
 
                     <div className="header-right pl-0 pl-lg-4">
