@@ -130,6 +130,58 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </li>
+                                <li className="d-none d-xl-block">
+                                    <a href="/books">REviews</a>
+                                    <div className="megamenu megamenu-fixed-width">
+                                        <div className="row">
+                                            <div className="col-lg-4">
+                                                <a href="#" className="nolink">PRODUCT PAGES</a>
+                                                <ul className="submenu">
+                                                    <li><a href="demo25-product.html">SIMPLE PRODUCT</a></li>
+                                                    <li><a href="product-variable.html">VARIABLE PRODUCT</a></li>
+                                                    <li><a href="demo25-product.html">SALE PRODUCT</a></li>
+                                                    <li><a href="demo25-product.html">FEATURED & ON SALE</a></li>
+                                                    <li><a href="product-custom-tab.html">WITH CUSTOM TAB</a></li>
+                                                    <li><a href="product-sidebar-left.html">WITH LEFT SIDEBAR</a></li>
+                                                    <li><a href="product-sidebar-right.html">WITH RIGHT SIDEBAR</a></li>
+                                                    <li><a href="product-addcart-sticky.html">ADD CART STICKY</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div className="col-lg-4">
+                                                <a href="#" className="nolink">PRODUCT LAYOUTS</a>
+                                                <ul className="submenu">
+                                                    <li><a href="product-extended-layout.html">EXTENDED LAYOUT</a></li>
+                                                    <li><a href="product-grid-layout.html">GRID IMAGE</a></li>
+                                                    <li><a href="product-full-width.html">FULL WIDTH LAYOUT</a></li>
+                                                    <li><a href="product-sticky-info.html">STICKY INFO</a></li>
+                                                    <li><a href="product-sticky-both.html">LEFT & RIGHT STICKY</a></li>
+                                                    <li><a href="product-transparent-image.html">TRANSPARENT IMAGE</a>
+                                                    </li>
+                                                    <li><a href="product-center-vertical.html">CENTER VERTICAL</a></li>
+                                                    <li><a href="#">BUILD YOUR OWN</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div className="col-lg-4 p-0">
+                                                <div className="menu-banner menu-banner-2">
+                                                    <figure>
+                                                        <img src="assets/images/menu-banner-1.jpg" alt="Menu banner"
+                                                            className="product-promo" width="380" height="790" />
+                                                    </figure>
+                                                    <i>OFF</i>
+                                                    <div className="banner-content">
+                                                        <h4>
+                                                            <span className="">UP TO</span><br />
+                                                            <b className="">50%</b>
+                                                        </h4>
+                                                    </div>
+                                                    <a href="category.html" className="btn btn-sm btn-dark">SHOP NOW</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                                 <li>
                                     <a href="/about">About</a>
                                     <ul>
