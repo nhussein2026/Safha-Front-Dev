@@ -1,12 +1,32 @@
-.register {
-    border: 1px solid #dadce0;
-    border-radius: 15px;
-    background: #FDFDFD;
+#SignUp {
+    box-shadow: #c6c935b9 0px 50px 100px -20px,
+    rgba(131, 105, 105, 0.3) 0px 30px 60px -30px,
+    rgba(98, 132, 165, 0.35) 0px -2px 6px 0px inset;
+    /* padding: 50px; */
+    justify-content: center;
+    align-items: center;
 }
-.logo {
-    width: 100px;
-    margin: auto;
+#logo {
+        
 }
-.title {
-    font-weight: 600;
+.optionButtons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 6%;
+}
+#signup-btn {
+    border-radius: 25px;
+    background-color: rgb(182, 177, 177);
+}
+#password{
+    border-radius: 25px;
+}
+#name {
+    border-radius: 25px;
+}
+#email {
+    border-radius: 25px;
+}
+#rang{
+    background-color: #f4f4f4;
 }
