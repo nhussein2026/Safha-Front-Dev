@@ -7,6 +7,7 @@ import Reviews from './Components/Reviews/Reviews';
 import Categories from './Components/Categories/Categories';
 import About from './Components/About/About';
 import Suggested from './Components/SuggestedCategories/Suggested';
+import SingleBook from "./Components/SingleBook/SingleBook";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/books' element={<Books />} />
+        <Route path='/single-book' element={<SingleBook/>} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/categories' element={<Categories />} />
         <Route path='/about' element={<About />} />
