@@ -18,6 +18,7 @@ function App() {
         <Route path='/categories' element={<Categories />} />
         <Route path='/about' element={<About />} />
         <Route path='/footer' element={<Footer />} />
+        
       </Routes>
     </>
   );
