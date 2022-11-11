@@ -18,10 +18,10 @@ const Navbar = () => {
                         <nav className="main-nav">
                             <ul className="menu">
                                 <li className="active">
-                                    <a href="demo25.html">Home</a>
+                                    <a href="/">Home</a>
                                 </li>
                                 <li>
-                                    <a href="demo25-shop.html">Categories</a>
+                                    <a href="/categories">Categories</a>
                                     <div className="megamenu megamenu-fixed-width megamenu-3cols">
                                         <div className="row">
                                             <div className="col-lg-4">
@@ -79,7 +79,7 @@ const Navbar = () => {
                                     </div>
                                 </li>
                                 <li className="d-none d-xl-block">
-                                    <a href="demo25-product.html">Books</a>
+                                    <a href="/books">Books</a>
                                     <div className="megamenu megamenu-fixed-width">
                                         <div className="row">
                                             <div className="col-lg-4">
@@ -131,7 +131,7 @@ const Navbar = () => {
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#">About</a>
+                                    <a href="/about">About</a>
                                     <ul>
                                         <li><a href="wishlist.html">Wishlist</a></li>
                                         <li><a href="cart.html">Shopping Cart</a></li>
