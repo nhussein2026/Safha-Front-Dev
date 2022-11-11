@@ -6,7 +6,7 @@ const SecondNavbar = () => {
                 <div className="container">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item"><a href="demo25.html">Home</a></li>
-                        <li className="breadcrumb-item active" aria-current="page">Shop</li>
+                        <li className="breadcrumb-item active" aria-current="page">Books</li>
                     </ol>
                 </div>
             </nav>

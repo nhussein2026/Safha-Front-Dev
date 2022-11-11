@@ -1,9 +1,11 @@
 import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 const SingleBook = () => {
 
     return (
         <div>
+            <Navbar />
             <div className="bg-white">
                 <div className="container">
                     <div className="row main-content">

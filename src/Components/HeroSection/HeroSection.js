@@ -7,12 +7,9 @@ const HeroSection = () => {
                 <div className="category-banner p-0">
                     <div className="container">
                         <div className="row align-items-center">
-                            <div className="col-md-5">
-                                <h5 className="line-height-1 text-uppercase mb-0">Book Club</h5>
-                                <h2 className="m-b-2">Summer Reading</h2>
-                                <h3 className="ls-n-10 font-weight-normal line-height-1 text-body m-0">The best books for
-                                    your
-                                    beach bag</h3>
+                            <div className="col-md-5" style={{ backgroundImage: 'url(assets/images/cuted-logo.png)'}}>
+                                <h2 className="m-b-2">Safha</h2>
+                                <h3 className="ls-n-10 font-weight-normal line-height-1 text-body m-0">Readers Are Leaders</h3>
                             </div>
                             <div className="col-md-3 col-lg-4" style={{ backgroundImage: 'url(assets/images/demoes/demo25/banners/shop-banner.png)' }}>
                             </div>
