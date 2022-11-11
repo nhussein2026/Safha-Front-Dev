@@ -1,6 +1,7 @@
 import Footer from "../Footer/Footer";
 import HeroSection from "../HeroSection/HeroSection";
 import Navbar from "../Navbar/Navbar";
+// import SingleBook from "../SingleBook/SingleBook";
 const Home = () => {
 
     return (
@@ -8,6 +9,7 @@ const Home = () => {
        <Navbar />
        <HeroSection/>
        <Footer />
+       {/* <SingleBook/> */}
        </>
     )
 }
