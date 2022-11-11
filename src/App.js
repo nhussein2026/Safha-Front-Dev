@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
-import Signup from './Components/Signup/Signup';
+import Signup from './screens/Signup/Signup';
 import Books from './Components/Books/Books';
 import Reviews from './Components/Reviews/Reviews';
 import Categories from './Components/Categories/Categories';
