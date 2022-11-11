@@ -6,6 +6,7 @@ import Books from './Components/Books/Books';
 import Reviews from './Components/Reviews/Reviews';
 import Categories from './Components/Categories/Categories';
 import About from './Components/About/About';
+import Suggested from './Components/SuggestedCategories/Suggested';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path='/categories' element={<Categories />} />
         <Route path='/about' element={<About />} />
         <Route path='/footer' element={<Footer />} />
-        
+        <Route path='/suggested' element={<Suggested />} />
       </Routes>
     </>
   );
