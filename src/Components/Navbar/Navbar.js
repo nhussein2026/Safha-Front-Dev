@@ -149,8 +149,6 @@ const Navbar = () => {
                                         <li><a href="forgot-password.html">Forgot Password</a></li>
                                     </ul>
                                 </li>
-                                <li className="d-none d-xxl-block"><a href="blog.html">Features</a></li>
-                                <li><a href="blog.html">Blog</a></li>
                             </ul>
                         </nav>
                         <span className="separator d-none d-lg-inline"></span>
