@@ -5,12 +5,15 @@ import { BrowserRouter } from "react-router-dom"
 import './assets/css/bootstrap.min.css'
 import './assets/css/demo25.min.css'
 import './assets/vendor/fontawesome-free/css/all.min.css'
-import './assets/vendor/simple-line-icons/css/simple-line-icons.min.css'
+import './assets/vendor/simple-line-icons/css/simple-line-icons.min.css';
+import AuthProvider from './contexts/Authcontext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App />
+    <AuthProvider>
+        <App />
+    </AuthProvider>
   </BrowserRouter>
 );
 

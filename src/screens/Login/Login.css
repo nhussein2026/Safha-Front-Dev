@@ -1,22 +1,30 @@
-#SignUp {
-    box-shadow: #c6c935b9 0px 50px 100px -20px,
-    rgba(131, 105, 105, 0.3) 0px 30px 60px -30px,
-    rgba(98, 132, 165, 0.35) 0px -2px 6px 0px inset;
-    /* padding: 50px; */
-    justify-content: center;
-    align-items: center;
+#register {
+    padding-top: 30px;
+    border: 1px solid #dadce0;
+    border-radius: 32px;
+    background-color: rgb(255, 255, 255);
+    width: 484px;
+
 }
 #logo {
     width: 160px;
+    margin: auto;
 }
-.optionButtons {
+#title {
+    font-weight: 200;
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 6%;
+    justify-content: center;
 }
-#signup-btn {
-    border-radius: 25px;
-    background-color: rgb(182, 177, 177);
+#register-btnn {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+#signup-bttn {
+    border-radius: 30px;
+    background-color: #9e561f;
+}
+#signup-word {
+    color: black;
 }
 #password{
     border-radius: 25px;
@@ -26,27 +34,4 @@
 }
 #email {
     border-radius: 25px;
-}
-.login{
-    min-height: 400px;
-    padding: 20px 10px 24px;
-    justify-content: center;
-    align-items: center;
-}
-#signup-word {
-    color: black;
-}
-#login-child{
-    padding-top: 30px;
-    /* padding: 30px; */
-    padding-bottom: 0;
-    border-radius: 32px;
-    background-color: rgb(255, 255, 255);
-    width: 484px;
-}
-#form{
-    
-}
-.signin {
-    
 }

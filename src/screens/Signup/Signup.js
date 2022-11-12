@@ -1,17 +1,19 @@
 import './Signup.css';
-import logo from "../../assets/images/logo-with-safha.png"
-import { useRef } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useRef, useState } from 'react'
+import { Form, Link, useNavigate } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
-import logoo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo with safha.png";
+
 const Signup = () => {
     const navigate = useNavigate()
     const usernameRef = useRef()
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmationRef = useRef()
+    const [loading, setLoading] = useState(false)
     const Signup = async () => {
+        setLoading(true)
         const response = await fetch('http://localhost:3000/api/v1/users/signup', {
             method: 'POST',
             body: JSON.stringify({
@@ -37,70 +39,47 @@ const Signup = () => {
     // }
     return (
         <>
-            {/* <Navbar /> */}
-            <div className="login">
-                {/* <div id="login-container" className="container-"> */}
-                {/* <div className="row"> */}
-                <div id="login-child" className="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4 border border-ligh rounded-3 w-100%">
-
-                    <div style={{
-                        display: "flex",
-                        justifyContent: "center",
-                    }}><a href='/'><img id='logo' src={logoo} alt="Safha Logo" /></a> </div>
-                    <h2 className="mb-3" style={{
-                        display: "flex",
-                        justifyContent: "center",
-                    }}>Welcome to SAFHA</h2>
-                    <form >
-                        <div className="mb-2 col-md-11" style={{
-                            display: "flex",
-                            justifyContent: "center",
-                        }} >
-                            <label htmlFor="name" className="form-label">UserName</label>
-                            <input ref={usernameRef} placeholder="Enter Your username " type="name" className="form-control" id="name" />
+            <div className="container">
+            <div className="row">
+                <div className="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                    <div id='register' className= "my-2 p-5">
+                        <div id='logo' className='mb-3'>
+                            <img src={logo} alt='' />
                         </div>
-                        <div className="mb-2 col-md-11" style={{
-                            display: "flex",
-                            justifyContent: "center",
-                        }}>
-                            <label htmlFor="name" className="form-label">Email</label>
-                            <input ref={emailRef} placeholder="Enter Your Email" type="text" className="form-control" id="name" />
+                        <h2 id='title' className='mb-2'>Welcom to Safha</h2>
+                        <div className='form-field mb-2'>
+                            <label htmlFor='name' className='mb-1'>Name</label>
+                            <input type='text' ref={usernameRef} id="name" className='form-control' />
                         </div>
-                        <div className="mb-3 col-md-11" style={{
-                            display: "flex",
-                            justifyContent: "center",
-                        }}>
-                            <label htmlFor="password" className="form-label">Password</label>
-                            <input ref={passwordRef} placeholder="Enter Your password" type="password" className="form-control" id="password" />
+                        <div className='form-field mb-2'>
+                            <label htmlFor='email' className='mb-1'>Email Address</label>
+                            <input type='email' ref={emailRef} id="email" className='form-control' />
                         </div>
-                        <div className="mb-3 col-md-11" style={{
-                            display: "flex",
-                            justifyContent: "center",
-                        }}>
-                            <label htmlFor="password" className="form-label">Password Confirmation</label>
-                            <input ref={passwordConfirmationRef} placeholder="Enter Your password Confirmation" type="password" className="form-control" id="password" />
+                        <div className='form-field mb-2'>
+                            <label htmlFor='password' className='mb-1'>Password</label>
+                            <input type='password' ref={passwordRef} id="password" className='form-control' />
                         </div>
-                        <div style={{
-                            display: "flex",
-                            justifyContent: "center",
-                        }}>
-
-                            <button  onClick={Signup}
-                            aria-label className="red SignupButton active col-md-8" type="submit"
-                                style={{
-                                    border: '0px', height: '40px', display: 'inline-block', borderRadius: '20px', WebkitFontSmoothing: 'antialiased', padding: '0px 18px', fontSize: '15px', fontWeight: 'bold', cursor: 'pointer', marginTop: '8px',
-                                    verticalAlign: 'middle', textAlign: 'center', backgroundColor: '#9e561f', color: 'rgb(255, 255, 255)', width: '100%'
-                                }}><div className="zI7 iyn Hsu">Log in</div></button>
+                        <div className='form-field mb-2'>
+                            <label htmlFor='password' className='mb-1'>Password Confirmation</label>
+                            <input type='password' ref={passwordConfirmationRef} id="password" className='form-control' />
                         </div>
-                        <div className="mb-2 mt-3">
-                            <h5><a href="/signup" id="signup-word">Not  registerd?</a><a href="/signup"> Sign Up</a></h5>
+                        <div className='row mt-2'>
+                            <div className='col-6' id='register-btnn'>
+                                <button
+                                    className='btn w-100'
+                                    id='signup-bttn'
+                                    onClick={Signup}>
+                                        {loading ? 'Please Wait' : 'Sign UP'}
+                                    </button>
+                            </div>
                         </div>
-                    </form>
-                    {/* </div> */}
-                    {/* </div> */}
+                        <div className="mt-2">
+                            <h5><a href="/signup" id="signup-word">Already have an account, go to</a><a href="/login"> Login</a></h5>
+                        </div>
+                    </div>
                 </div>
             </div>
-            {/* <Footer /> */}
+            </div>
         </>
     )
 }
