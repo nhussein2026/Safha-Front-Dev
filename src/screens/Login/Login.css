@@ -7,7 +7,7 @@
     align-items: center;
 }
 #logo {
-        
+    width: 160px;
 }
 .optionButtons {
     display: flex;
@@ -36,11 +36,10 @@
 #signup-word {
     color: black;
 }
-#login-container {
-    width: 450px;
-    border-radius: 35px;
-    display: flex;
-    justify-content: center !important;
-    align-items: center !important;
-    background-color: blue;
+#login-child{
+    padding-top: 30px;
+    padding: 30px;
+    border-radius: 32px;
+    background-color: rgb(255, 255, 255);
+    width: 484px;
 }
