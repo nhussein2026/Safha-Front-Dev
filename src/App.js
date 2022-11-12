@@ -8,8 +8,11 @@ import Categories from './Components/Categories/Categories';
 import About from './Components/About/About';
 import Suggested from './Components/SuggestedCategories/Suggested';
 import SingleBook from "./Components/SingleBook/SingleBook";
+import { useContext } from 'react';
+import { AuthContext } from './contexts/Authcontext';
 
 function App() {
+  const { loggedIn } = useContext(AuthContext)
   return (
     <>
     <Routes>
