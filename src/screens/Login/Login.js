@@ -37,40 +37,42 @@ const Login = () => {
     }
     return (
         <>
-            <div id='rang' className="container">
-                <div className="row">
-                    <div className="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4 border border-ligh rounded-3">
-                        <a href='/'><img id='logo' src={logo} alt="Safha Logo" /></a>
+        <div className="login">
+            {/* <div id="login-container" className="container-"> */}
+                    {/* <div className="row"> */}
+                        <div className="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4 border border-ligh rounded-3 w-100%">
                         <h2 className="mb-3" style={{
-                            display: "flex",
-                            justifyContent: "center",
-                        }}>Create Account</h2>
-                        <form>
-                            <div className="mb-2">
-                                <label htmlFor="name" className="form-label">UserName</label>
-                                <input ref={usernameRef} placeholder="Enter Your username or email" type="text" className="form-control" id="name" />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="password" className="form-label">Password</label>
-                                <input ref={passwordRef} placeholder="Enter Your password" type="password" className="form-control" id="password" />
-                            </div>
-                            <div style={{
                                 display: "flex",
-                                justifyContent: "space-between",
-                            }}>
+                                justifyContent: "center",
+                            }}>Welcome in</h2>
+                            <a href='/'><img id='logo' src={logo} alt="Safha Logo" /></a>
+                            <form>
+                                <div className="mb-2">
+                                    <label htmlFor="name" className="form-label">UserName</label>
+                                    <input ref={usernameRef} placeholder="Enter Your username or email" type="text" className="form-control" id="name" />
+                                </div>
+                                <div className="mb-3">
+                                    <label htmlFor="password" className="form-label">Password</label>
+                                    <input ref={passwordRef} placeholder="Enter Your password" type="password" className="form-control" id="password" />
+                                </div>
+                                <div style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                }}>
 
-                                <button onClick={login}
-                                    type="button"
-                                    className="btn  mb-3"
-                                    id='signup-btn'
-                                >Signin
-                                </button>
-                            </div>
-                            <div className="mb-2">
-                                    <h5><a href="/signup" id="signup-word">Not  registerd?</a><a href="/signup"> Sign Up</a></h5>
-                            </div>
-                        </form>
-                    </div>
+                                    <button onClick={login}
+                                        type="button"
+                                        className="btn  mb-3"
+                                        id='signup-btn'
+                                    >Signin
+                                    </button>
+                                </div>
+                                <div className="mb-2">
+                                        <h5><a href="/signup" id="signup-word">Not  registerd?</a><a href="/signup"> Sign Up</a></h5>
+                                </div>
+                            </form>
+                        {/* </div> */}
+                    {/* </div> */}
                 </div>
             </div>
         </>

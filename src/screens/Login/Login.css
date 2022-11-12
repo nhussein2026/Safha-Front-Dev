@@ -27,9 +27,20 @@
 #email {
     border-radius: 25px;
 }
-#rang{
-    background-color: #f4f4f4;
+.login{
+    min-height: 400px;
+    padding: 20px 10px 24px;
+    justify-content: center;
+  align-items: center;
 }
 #signup-word {
     color: black;
+}
+#login-container {
+    width: 450px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: blue;
 }
