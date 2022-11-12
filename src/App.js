@@ -11,8 +11,8 @@ import SingleBook from "./Components/SingleBook/SingleBook";
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
 
-function App() {
-  const { loggedIn } = useContext(AuthContext)
+const App = () => {
+  
   return (
     <>
     <Routes>
