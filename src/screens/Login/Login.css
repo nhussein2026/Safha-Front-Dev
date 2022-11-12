@@ -1,0 +1,10 @@
+#logooo-IN {
+    margin-top: 10px;
+    min-width: 100px;
+    height: 120px;
+   
+}
+#logo-div{
+    justify-content: center;
+    flex-direction: column;
+}

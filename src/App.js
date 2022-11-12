@@ -10,14 +10,16 @@ import Suggested from './Components/SuggestedCategories/Suggested';
 import SingleBook from "./Components/SingleBook/SingleBook";
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
+import Login from './screens/Login/Login';
 
 const App = () => {
-  
+
   return (
     <>
     <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/books' element={<Books />} />
         <Route path='/single-book' element={<SingleBook/>} />
         <Route path='/reviews' element={<Reviews />} />
