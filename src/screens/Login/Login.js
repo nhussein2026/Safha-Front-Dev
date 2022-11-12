@@ -40,31 +40,57 @@ const Login = () => {
             <div className="login">
                 {/* <div id="login-container" className="container-"> */}
                 {/* <div className="row"> */}
-                <div id="login-child" className="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4 border border-ligh rounded-3 w-100%">
-                    <a href='/'><img id='logo' src={logo} alt="Safha Logo" /></a>
+                <div id="login-child" className="col-12 col-sm-8 offset-sm-2 col-md-8 offset-md-4 border border-ligh rounded-3 w-100%">
+                    <a style={{
+                        display: "flex",
+                        justifyContent: "center",
+                    }} href='/'><img id='logo' src={logo} alt="Safha Logo" /></a>
                     <h2 className="mb-3" style={{
                         display: "flex",
                         justifyContent: "center",
-                    }}>Welcome to SAFHA</h2>
-                    <form>
-                        <div className="mb-2">
-                            <label htmlFor="name" className="form-label">UserName</label>
-                            <input ref={usernameRef} placeholder="Enter Your username or email" type="text" className="form-control" id="name" />
+                    }}>Welcome to Safha</h2>
+                    <form style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                    }}>
+                        <div className="mb-2 col-md-12"
+                            style={{
+                                paddingLeft: "65px",
+                                paddingRight: '30px',
+                            }}>
+                            <label htmlFor="name" className="form-label col-md-8" style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                marginLeft: '20px'
+                            }}>UserName</label>
+                            <input ref={usernameRef} placeholder="Enter Your username or email" type="text" className="form-control col-md-8" id="name" />
                         </div>
-                        <div className="mb-3">
-                            <label htmlFor="password" className="form-label">Password</label>
+                        <div className="mb-2 col-md-11"
+                            style={{
+                                paddingLeft: "65px",
+                                paddingRight: '30px'
+                            }}>
+                            <label htmlFor="password" className="form-label col-md-8" style={{
+                                display: 'flex',
+                                justifyContent: 'center'
+                            }}>Password</label>
                             <input ref={passwordRef} placeholder="Enter Your password" type="password" className="form-control" id="password" />
                         </div>
                         <div style={{
                             display: "flex",
                             justifyContent: "center",
-                        }}>
+                            paddingBottom: "30px"
 
-                            <button aria-label className="red SignupButton active" type="submit"
-                             style={{ border: '0px', height: '40px', display: 'inline-block', borderRadius: '20px', WebkitFontSmoothing: 'antialiased', padding: '0px 18px', fontSize: '15px', fontWeight: 'bold', cursor: 'pointer', marginTop: '8px',
-                             verticalAlign: 'middle', textAlign: 'center', backgroundColor: '#9e561f', color: 'rgb(255, 255, 255)', width: '100%' }}><div className="zI7 iyn Hsu">Log in</div></button>
+                        }}>
+                            <button aria-label className="signin SignupButton active col-md-8" type="submit"
+                                style={{
+                                    border: '0px', height: '40px', display: 'inline-block', borderRadius: '20px', WebkitFontSmoothing: 'antialiased', padding: '0px 18px', fontSize: '15px', fontWeight: 'bold', cursor: 'pointer', marginTop: '8px',
+                                    verticalAlign: 'middle', textAlign: 'center', backgroundColor: '#9e561f', color: 'rgb(255, 255, 255)'
+                                }}><div className="zI7 iyn Hsu">Log in</div></button>
                         </div>
-                        <div className="mb-2 mt-3">
+                        <span style={{ borderBottom: "1px solid rgb(222, 222, 222)" }}></span>
+                        <div className="mt-3">
                             <h5><a href="/signup" id="signup-word">Not  registerd?</a><a href="/signup"> Sign Up</a></h5>
                         </div>
                     </form>

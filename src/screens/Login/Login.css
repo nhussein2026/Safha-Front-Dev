@@ -31,15 +31,22 @@
     min-height: 400px;
     padding: 20px 10px 24px;
     justify-content: center;
-  align-items: center;
+    align-items: center;
 }
 #signup-word {
     color: black;
 }
 #login-child{
     padding-top: 30px;
-    padding: 30px;
+    /* padding: 30px; */
+    padding-bottom: 0;
     border-radius: 32px;
     background-color: rgb(255, 255, 255);
     width: 484px;
+}
+#form{
+    
+}
+.signin {
+    
 }
