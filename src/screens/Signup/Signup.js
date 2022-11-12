@@ -12,7 +12,7 @@ const Signup = () => {
     const passwordConfirmationRef = useRef()
     const register = async () => {
         console.log(usernameRef.current.value)
-        const response = await fetch('http://ferasjobeir.com/api/users/register', {
+        const response = await fetch('http://localhost:3000/api/v1/users/signup', {
             method: 'post',
             body: JSON.stringify({
                 name: usernameRef.current.value,
@@ -31,9 +31,9 @@ const Signup = () => {
         }
         
     }
-    const login = () => {
-        navigate('/login')
-    }
+    // const login = () => {
+    //     navigate('/login')
+    // }
     return (
         <>
         <Navbar />
