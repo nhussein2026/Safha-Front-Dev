@@ -1,4 +1,4 @@
-import Book from "../Book/Book";
+import Book from "../Book/SingleBookElement";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import Sidebar from "../SideBar/SideBar";
