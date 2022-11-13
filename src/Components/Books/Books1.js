@@ -1,15 +1,15 @@
-import Book from "../Book/Book";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import Sidebar from "../SideBar/SideBar";
 
 const Books = () => {
 
+    
+
     return(
         <>
         <Navbar/>
         <SecondNavbar/>
-        <Book/>
         <div  className='manal'>
                 <Sidebar/>
                 <div className="page-wrapper">
@@ -26,7 +26,7 @@ const Books = () => {
                               'items': 3
                           }
                       }
-                    }">
+                  }">
                             <div className="info-box info-box-icon-left">
                                 <i className="icon-shipping" />
                                 <div className="info-box-content">
@@ -173,7 +173,7 @@ const Books = () => {
                         </div>
                     </main>{/* End .main */}
 
-                </div>End .page-wrapper
+                </div>{/* End .page-wrapper */}
             </div>
         </>
     )
