@@ -8,7 +8,7 @@ import Footer from "../../Components/Footer/Footer";
 
 
 const Login = () => {
-    const { signin } = useContext(AuthContext)
+    const { signIn } = useContext(AuthContext)
     const navigate = useNavigate()
     const accountRef = useRef();
     const passwordRef = useRef();
@@ -32,7 +32,9 @@ const Login = () => {
         window.alert(json.messages)
         if (json.success) {
             console.log(json)
-            Login(json)
+            // Login(json)
+            signIn(json)
+            console.log("json.token", json.token)
             // go to homeBage
             navigate('/')
         }
@@ -62,7 +64,7 @@ const Login = () => {
                                         className='btn w-100'
                                         id='signup-bttn'
                                         onClick={login}>
-                                        {loading ? 'Please Wait' : 'Sign UP'}
+                                        {loading ? 'Please Wait' : 'Sign In'}
                                     </button>
                                 </div>
                             </div>

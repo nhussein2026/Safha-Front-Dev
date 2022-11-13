@@ -26,7 +26,7 @@ const Signup = () => {
                 'Content-Type': 'application/json'
             }
         })
-        console.log(json)
+        console.log("json", response.json)
         const json = await response.json()
         window.alert(json.messages)
         if (json.success) {
