@@ -14,7 +14,7 @@ const Signup = () => {
     const [loading, setLoading] = useState(false)
     const Signup = async () => {
         setLoading(true)
-        const response = await fetch('http://localhost:3000/api/v1/users/signup', {
+        const response = await fetch(`${process.env.APP_URL}/users/signup`, {
             method: 'POST',
             body: JSON.stringify({
                 username: usernameRef.current.value,
