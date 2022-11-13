@@ -1,3 +1,4 @@
+import Book from "../Book/Book";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import Sidebar from "../SideBar/SideBar";
@@ -10,6 +11,7 @@ const Books = () => {
         <>
         <Navbar/>
         <SecondNavbar/>
+        <Book/>
         <div  className='manal'>
                 <Sidebar/>
                 <div className="page-wrapper">

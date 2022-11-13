@@ -15,7 +15,7 @@ const Login = () => {
     const [loading, setLoading] = useState(false)
     const login = async () => {
         setLoading(true)
-        const response = await fetch(`http://192.168.122.5:3000/api/v1/users/login`,
+        const response = await fetch(`http://localhost:3000/api/v1/users/login`,
             {
                 method: "POST",
                 body: JSON.stringify({
