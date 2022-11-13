@@ -11,6 +11,7 @@ import SingleBook from "./Components/SingleBook/SingleBook";
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
 import Login from './screens/Login/Login';
+// require('dotenv').config()
 
 const App = () => {
 
