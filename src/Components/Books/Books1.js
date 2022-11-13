@@ -4,6 +4,8 @@ import Sidebar from "../SideBar/SideBar";
 
 const Books = () => {
 
+    
+
     return(
         <>
         <Navbar/>
@@ -24,7 +26,7 @@ const Books = () => {
                               'items': 3
                           }
                       }
-                    }">
+                  }">
                             <div className="info-box info-box-icon-left">
                                 <i className="icon-shipping" />
                                 <div className="info-box-content">
@@ -171,7 +173,7 @@ const Books = () => {
                         </div>
                     </main>{/* End .main */}
 
-                </div>End .page-wrapper
+                </div>{/* End .page-wrapper */}
             </div>
         </>
     )
