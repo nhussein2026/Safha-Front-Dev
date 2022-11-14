@@ -717,7 +717,7 @@
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url("../images/owl.video.play.png") no-repeat;
+  /* background: url("../images/owl.video.play.png") no-repeat; */
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -2598,7 +2598,7 @@ a:focus {
   margin-left: 1px;
   vertical-align: middle;
   line-height: 0;
-  background: url(../images/flags.png) no-repeat;
+  /* background: url(../images/flags.png) no-repeat; */
 }
 .flag.flag-ad {
   background-position: -16px 0;
@@ -3362,8 +3362,8 @@ a:focus {
 
 @font-face {
   font-family: "porto";
-  src: url("../fonts/porto.eot?64334846");
-  src: url("../fonts/porto.eot?64334846#iefix") format("embedded-opentype"), url("../fonts/porto.woff2?64334846") format("woff2"), url("../fonts/porto.woff?64334846") format("woff"), url("../fonts/porto.ttf?64334846") format("truetype"), url("../fonts/porto.svg?64334846#porto") format("svg");
+  /* src: url("../fonts/porto.eot?64334846"); */
+  /* src: url("../fonts/porto.eot?64334846#iefix") format("embedded-opentype"), url("../fonts/porto.woff2?64334846") format("woff2"), url("../fonts/porto.woff?64334846") format("woff"), url("../fonts/porto.ttf?64334846") format("truetype"), url("../fonts/porto.svg?64334846#porto") format("svg"); */
   font-style: normal;
   font-weight: normal;
   font-display: swap;

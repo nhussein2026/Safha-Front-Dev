@@ -1,8 +1,8 @@
-import Book from "../Book/SingleBookElement";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import Sidebar from "../SideBar/SideBar";
 import { useState, useEffect } from "react";
+import Book from "../Book/Book";
 
 
 const Books = () => {
