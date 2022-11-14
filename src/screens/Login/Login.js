@@ -15,7 +15,7 @@ const Login = () => {
     const [loading, setLoading] = useState(false)
     const login = async () => {
         setLoading(true)
-        const response = await fetch(`http://localhost:3000/api/v1/users/login`,
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/users/login`,
             {
                 method: "POST",
                 body: JSON.stringify({
