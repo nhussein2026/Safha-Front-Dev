@@ -11,7 +11,7 @@ const Books1 = () => {
     const [books, setBooks] = useState([])
     useEffect(() => {
         const getBooks = async () => {
-            const booksList = await fetch(`http://192.168.122.5:3000/api/v1/books/8`, {
+            const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books/8`, {
                 method: 'get',
                 headers: {
                     'Content-Type': 'application/json',
