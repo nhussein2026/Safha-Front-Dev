@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SingleBookElement from "../Book/Book";
+import SingleBookElement from "../Book/SingleBookElement";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
@@ -11,7 +11,7 @@ const Books1 = () => {
     const [books, setBooks] = useState([])
     useEffect(() => {
         const getBooks = async () => {
-            const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books/1`, {
+            const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books`, {
                 method: 'get',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,33 +28,18 @@ const Books1 = () => {
     console.log("books",books)
     return(
         <>
-            {/* <Navbar/> */}
-            {/* <SecondNavbar/> */}
+            <Navbar/>
+            <SecondNavbar/>
             {/* <SingleBookElement /> */}
-            {/* <div className="books" >
+            <div className="books" >
                 {
                     books.map((book, i) => {
                         return <SingleBookElement book={book} key={i} />
                     })
                 }
-            </div> */}
-            <div class='container d-flex'>
-                <div class='row'>
-                    <div class='col'>
-                        {/* {book?.cover} */}
-                        <img src={books?.cover} width={217} height={217} alt="product" />
-
-                    </div>
-                    <div class='col'>
-                        {books?.Category?.name}
-                        
-                    </div>
-                    <div class='col'>
-                        {books?.name}
-                    </div>
-                </div>
             </div>
-            {/* <Footer /> */}
+            
+            <Footer />
         </>
     )
 }
