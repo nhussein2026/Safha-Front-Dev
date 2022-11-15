@@ -11,7 +11,7 @@ const Books1 = () => {
     const [books, setBooks] = useState([])
     useEffect(() => {
         const getBooks = async () => {
-            const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books`, {
+            const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books/all`, {
                 method: 'get',
                 headers: {
                     'Content-Type': 'application/json',
