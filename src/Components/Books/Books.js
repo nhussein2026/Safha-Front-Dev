@@ -10,7 +10,7 @@ const Books = () => {
     const [books, setBooks] = useState([])
     useEffect(() => {
         const getBooks = async () => {
-            const books = await fetch(`http://localhost:3000/api/v1/books`, {
+            const books = await fetch(`http://localhost:3000/api/v1/books/all`, {
                 method: 'get',
                 headers: {
                     'Content-Type': 'application/json',
