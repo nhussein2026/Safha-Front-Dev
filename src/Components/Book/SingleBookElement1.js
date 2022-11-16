@@ -5,7 +5,7 @@ const SingleBookElement1 = ({book,i}) => {
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
                         <a href="demo25-product.html">
-                            <img src="https://m.media-amazon.com/images/I/513j4X3mFjL.jpg"
+                            <img src={book?.cover}
                                 width="217" height="217" alt="product"/>
                         </a>
                         <div class="label-group">
