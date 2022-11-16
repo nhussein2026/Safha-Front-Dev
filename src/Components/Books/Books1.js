@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SingleBookElement from "../Book/SingleBookElement";
+import SingleBookElement1 from "../Book/SingleBookElement1";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
@@ -31,12 +32,14 @@ const Books1 = () => {
             <Navbar/>
             <SecondNavbar/>
             {/* <SingleBookElement /> */}
-            <div className="books" >
-                {
-                    books.map((book, i) => {
-                        return <SingleBookElement book={book} key={i} />
-                    })
-                }
+            <div className="container" >
+                <div class="row">
+                    {
+                        books.map((book, i) => {
+                            return <SingleBookElement1 book={book} key={i} />
+                        })
+                    }
+                </div>
             </div>
             
             <Footer />
