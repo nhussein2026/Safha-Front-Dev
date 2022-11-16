@@ -3,7 +3,6 @@ import card from "../../assets/images/logo.png"
 const HomeCategories = () => {
 
           return (
-      
             <main className="main">
               <div className="intro-section">
                

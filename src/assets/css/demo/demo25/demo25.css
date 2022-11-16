@@ -7654,7 +7654,7 @@ body {
   font-family: "Open Sans", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  /* overflow-x: hidden;*/
 }
 body:not(.loaded) > :not(.loading-overlay) {
   visibility: hidden !important;
