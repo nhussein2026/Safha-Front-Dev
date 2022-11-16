@@ -29,10 +29,10 @@ const Footer = () => {
                     <li><a href="dashboard.html">My Account</a></li>
                     {/* <li><a href="#">Track Your Order</a></li> */}
                     {/* <li><a href="#">Payment Methods</a></li> */}
-                    <li><a href="#">Shipping Guide</a></li>
+                    <li><a href="#">My reviews</a></li>
                     {/* <li><a href="#">FAQs</a></li> */}
                     {/* <li><a href="#">Product Support</a></li> */}
-                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">My favrites</a></li>
                   </ul>
                 </div>{/* End .widget */}
               </div>{/* End .col-lg-2 */}
@@ -42,7 +42,7 @@ const Footer = () => {
                   <ul className="links">
                     <li><a href="/about">About Safha</a></li>
                     <li><a href="safha-team">Safha Team</a></li>
-                    <li><a href="#">Terms And Conditions</a></li>
+                    {/* <li><a href="#">Terms And Conditions</a></li> */}
                     <li><a href="#">Privacy policy</a></li>
                     {/* <li><a href="#">Return Policy</a></li> */}
                     {/* <li><a href="#">Intellectual Property Claims</a></li> */}
@@ -54,9 +54,9 @@ const Footer = () => {
                 <div className="widget">
                   <h4 className="widget-title">Features</h4>
                   <ul className="links">
-                    <li><a href="#">Powerful Admin Panel</a></li>
-                    <li><a href="#">Mobile &amp; Retina Optimized</a></li>
-                    <li><a href="#">Super Fast HTML Template</a></li>
+                    <li><a href="#">Admin Dashboard</a></li>
+                    {/* <li><a href="#">Mobile &amp; Retina Optimized</a></li> */}
+                    {/* <li><a href="#">Super Fast HTML Template</a></li> */}
                     {/* <li><a href="#">1st Fully Working Ajax Theme</a></li> */}
                     {/* <li><a href="#">33 Unique Shop Demos</a></li> */}
                   </ul>
