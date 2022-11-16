@@ -1,13 +1,40 @@
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import SideBarWrapper from "../SideBarWrapper/SideBarWrapper";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 
 
 
 
 const SingleBook = () => {
+    console.log("I`m in the single book")
+    const { id } = useParams()
+    console.log("id", id)
+
+    const [book, setBook] = useState({})
+    useEffect(() => {
+        const getBook = async () => {
+            const getOneBook = await fetch(`https://safha.fjobeir.com/backend/books/${id}`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+
+            const json = await getOneBook.json()
+            console.log("json", json)
+            if (json?.success) {
+                setBook(json?.data)
+            }
+        }
+        getBook()
+    }, [id])
+    console.log("book", book)
 
     return (
+
         <>
             <Navbar />
 
@@ -18,7 +45,7 @@ const SingleBook = () => {
                             <div className="col-lg-9 product-sidebar-right">
                                 <div className="product-single-container product-single-default">
                                     <div className="cart-message d-none">
-                                        <strong className="single-cart-notice">“The Night Before”</strong>
+                                        <strong className="single-cart-notice">{book?.name}</strong>
                                         <span>has been added to your cart.</span>
                                     </div>
                                     <div className="row">
@@ -37,14 +64,13 @@ const SingleBook = () => {
                                                     <i className="icon-plus" />
                                                 </span>
                                             </div>
-                                            <div className="prod-thumbnail owl-dots">
-                                                <div className="owl-dot">
-                                                    <img src="assets/images/demoes/demo25/products/zoom/product-1-thumb.jpg" width={110} height={110} alt="product-thumbnail" />
-                                                </div>
-                                            </div>
+                                            <a href="demo25-product.html">
+                                                <img src="https://m.media-amazon.com/images/I/513j4X3mFjL.jpg"
+                                                    width="217" height="217" alt="product" />
+                                            </a>
                                         </div>{/* End .product-single-gallery */}
                                         <div className="col-md-6 product-single-details font2">
-                                            <h1 className="product-title">The Night Before</h1>
+                                            <h1 className="product-title">{book?.name}</h1>
                                             <div className="product-nav">
                                                 <div className="product-prev">
                                                     <a href="#">
