@@ -130,7 +130,7 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </li>
-                                <li className="d-none d-xl-block">
+                                {/* <li className="d-none d-xl-block">
                                     <a href="/books">REviews</a>
                                     <div className="megamenu megamenu-fixed-width">
                                         <div className="row">
@@ -181,7 +181,7 @@ const Navbar = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </li> */}
                                 <li>
                                     <a href="/about">About</a>
                                     <ul>
