@@ -11,7 +11,6 @@ import SingleBook from "./Components/SingleBook/SingleBook";
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
 import Login from './screens/Login/Login';
-import Books1 from './Components/Books/Books1';
 import Profile from './Components/Profile/Profile';
 // require('dotenv').config()
 
@@ -23,8 +22,7 @@ const App = () => {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/' element={<Home />} />
-        {/* <Route path='/books' element={<Books />} /> */}
-        <Route path='/books' element={<Books1 />} />
+        <Route path='/books' element={<Books />} />
         <Route path='/:id' element={<SingleBook/>} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/categories' element={<Categories />} />

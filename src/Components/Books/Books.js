@@ -1,40 +1,76 @@
+import { useEffect, useState } from "react";
+import SingleBookElement from "../Book/SingleBookElement";
+import Footer from "../Footer/Footer";
+import HeroSection from "../HeroSection/HeroSection";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import Sidebar from "../SideBar/SideBar";
-import { useState, useEffect } from "react";
-import Book from "../Book/Book";
-
+// import '../../assets/css/demo/demo25/demo25.css'
+// import '../../assets/css/demo25.min.css'
 
 const Books = () => {
-
     const [books, setBooks] = useState([])
+    // const [booksSideBar, setBooksSideBar] = useState([])
     useEffect(() => {
         const getBooks = async () => {
-            const books = await fetch(`http://localhost:3000/api/v1/books/all`, {
+            const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books/all`, {
                 method: 'get',
                 headers: {
                     'Content-Type': 'application/json',
                 }
             })
-            const json = await books.json()
+            const json = await booksList.json()
             console.log(json)
-            if (json?.data?.length) {
+            if (json?.success) {
                 setBooks(json?.data)
+                // setBooksSideBar(json?.data[0],json?.data[1])
             }
         }
         getBooks()
     }, [])
-
-
-    return (
+    // console.log("books",books)
+    return(
         <>
-            <div className="books" >
-                {
-                    books.map((book, i) => {
-                        return <Book book={book} key={i} />
-                    })
-                }
-            </div>
+            {/* <body className="boxed"> */}
+                <div className="page-wrapper">
+                    <Navbar/>
+                    <HeroSection />
+                    <SecondNavbar/>
+                    <main className="main">
+                        <div className="bg-white">
+                            <div className="container">
+                                <div className="row main-content">
+                                    
+                                        {/* <nav className="toolbox sticky-header" data-sticky-options="{'mobile': true}"> */}
+                                            {/* <div className="toolbox-left"> */}
+                                                        {/* {
+                                                            books.map((book, i) => {
+                                                                console.log(i)
+                                                                if(i<2){
+                                                                    return (<Sidebar book={book} />)
+                                                                }
+                                                            })
+                                                        } */}
+                                                <Sidebar books={books} />
+                                                <div className="col-lg-9">
+                                                    <div className="row">
+                                                        {
+                                                            books.map((book, i) => {
+                                                                return <SingleBookElement book={book} key={i} />
+                                                            })
+                                                        }
+                                                    </div>
+                                                </div>  
+                                            {/* </div> */}
+                                        {/* </nav> */}
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <Footer />
+                </div>
+            {/* </body> */}
         </>
     )
 }
