@@ -1006,7 +1006,7 @@ button::-moz-focus-inner {
   color: #FFF;
   font-style: normal;
   font-size: 28px;
-  font-family: Arial, Baskerville, monospace;
+  font-family: Helvetica, Arial, sans-serif;
 }
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
@@ -2284,7 +2284,7 @@ a.btn.disabled {
   padding-top: 0;
   padding-bottom: 0;
   color: #3256f4;
-  font-family: "Open Sans", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
   letter-spacing: 0;
   text-transform: initial;
@@ -2444,7 +2444,7 @@ a:focus {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  font-family: "porto";
+  font-family: "Helvetica, Arial, sans-serif";
   transition: 0.35s;
 }
 .card.card-accordion .card-header.collapsed:after {
@@ -9626,7 +9626,7 @@ header .separator {
 .main-nav .menu {
   text-transform: uppercase;
   font-size: 1.4rem;
-  font-family: Poppins, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 .main-nav .menu > li {
   margin-right: 1px;
@@ -9664,7 +9664,7 @@ header .separator {
   padding: 3px 4px;
   border-radius: 2px;
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1;
   text-transform: uppercase;

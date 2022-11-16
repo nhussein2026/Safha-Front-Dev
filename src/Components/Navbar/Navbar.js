@@ -1,8 +1,12 @@
-import "./Navbar.css"
 import logo from "../../assets/images/cuted-logo.png"
+import Entrance from "../Signup&Login/Entrance";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/Authcontext";
+import { Route, Routes } from "react-router-dom";
+import Profile from "../Profile/Profile";
 
 const Navbar = () => {
-
+	const { loggedIn } = useContext(AuthContext)
     return(
         <>
         <header className="header">
@@ -219,16 +223,7 @@ const Navbar = () => {
                         </div>
 
                         <span className="separator d-none d-lg-inline"></span>
-
-                        <a href="login.html">
-                            <div className="header-user">
-                                <i className="icon-user-2"></i>
-                                <div className="header-userinfo">
-                                    <span className="d-inline-block font2 line-height-1">Hello!</span>
-                                    <h4 className="mb-0">My Account</h4>
-                                </div>
-                            </div>
-                        </a>
+				          <Entrance />   
                     </div>
                 </div>
             </div>

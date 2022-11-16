@@ -1,0 +1,40 @@
+/* this is the styling of login button */
+.button {
+    position: relative;
+    background-color: hsl(37, 51%, 53%);
+    border: none;
+    font-size: 21px;
+    color: #FFFFFF;
+    padding: 5px;
+    width: 88px;
+    border-radius: 34px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  .button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    /* padding-top: 300%; */
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+  /* End of login button */
+
+ 
