@@ -32,13 +32,21 @@ const Books1 = () => {
             <Navbar/>
             <SecondNavbar/>
             {/* <SingleBookElement /> */}
-            <div className="container" >
-                <div class="row">
-                    {
-                        books.map((book, i) => {
-                            return <SingleBookElement1 book={book} key={i} />
-                        })
-                    }
+            <div class="bg-white">
+                <div class="container">
+                    <div class="row main-content">
+                        <div class="col-lg-9">
+                            <nav class="toolbox sticky-header" data-sticky-options="{'mobile': true}">
+                                <div class="row">
+                                    {
+                                        books.map((book, i) => {
+                                            return <SingleBookElement1 book={book} key={i} />
+                                        })
+                                    }
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
             

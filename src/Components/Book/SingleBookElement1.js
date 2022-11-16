@@ -17,8 +17,7 @@ const SingleBookElement1 = ({book,i}) => {
                                     class="icon-shopping-cart"></i></a> */}
                         </div>
                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                          title="Quick View">Quick
-                          View</a>
+                          title="Quick View">More Details</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
