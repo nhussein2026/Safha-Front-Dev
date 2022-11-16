@@ -12,6 +12,7 @@ import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
 import Login from './screens/Login/Login';
 import Books1 from './Components/Books/Books1';
+import Profile from './Components/Profile/Profile';
 // require('dotenv').config()
 
 const App = () => {
@@ -19,9 +20,9 @@ const App = () => {
   return (
     <>
     <Routes>
-        <Route path='/' element={<Home />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/' element={<Home />} />
         {/* <Route path='/books' element={<Books />} /> */}
         <Route path='/books' element={<Books1 />} />
         <Route path='/:id' element={<SingleBook/>} />
@@ -30,6 +31,7 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/footer' element={<Footer />} />
         <Route path='/suggested' element={<Suggested />} />
+        <Route path='/profile' element={<Profile />} />
       </Routes>
     </>
   );
