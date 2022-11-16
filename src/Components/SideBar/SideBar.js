@@ -2,7 +2,7 @@ const Sidebar = () => {
 
     return (
         <>
-
+            <div class="sidebar-overlay"></div>
             <aside className="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
                 <div className="sidebar-wrapper">
                     <div className="widget">

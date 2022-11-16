@@ -46,7 +46,7 @@ const Books1 = () => {
                             <div className="container">
                                 <div className="row main-content">
                                     <div className="col-lg-9">
-                                        <nav className="toolbox sticky-header" data-sticky-options="{'mobile': true}">
+                                        {/* <nav className="toolbox sticky-header" data-sticky-options="{'mobile': true}"> */}
                                             <div className="toolbox-left">
                                                 <Sidebar/>
                                                 <div className="row">
@@ -57,7 +57,7 @@ const Books1 = () => {
                                                     }
                                                 </div>
                                             </div>  
-                                        </nav>
+                                        {/* </nav> */}
                                     </div>
                                 </div>
                             </div>
