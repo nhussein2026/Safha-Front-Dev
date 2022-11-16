@@ -10,7 +10,6 @@ import Sidebar from "../SideBar/SideBar";
 
 const Books = () => {
     const [books, setBooks] = useState([])
-    // const [booksSideBar, setBooksSideBar] = useState([])
     useEffect(() => {
         const getBooks = async () => {
             const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books/all`, {
@@ -23,7 +22,6 @@ const Books = () => {
             console.log(json)
             if (json?.success) {
                 setBooks(json?.data)
-                // setBooksSideBar(json?.data[0],json?.data[1])
             }
         }
         getBooks()
@@ -40,30 +38,16 @@ const Books = () => {
                         <div className="bg-white">
                             <div className="container">
                                 <div className="row main-content">
-                                    
-                                        {/* <nav className="toolbox sticky-header" data-sticky-options="{'mobile': true}"> */}
-                                            {/* <div className="toolbox-left"> */}
-                                                        {/* {
-                                                            books.map((book, i) => {
-                                                                console.log(i)
-                                                                if(i<2){
-                                                                    return (<Sidebar book={book} />)
-                                                                }
-                                                            })
-                                                        } */}
-                                                <Sidebar books={books} />
-                                                <div className="col-lg-9">
-                                                    <div className="row">
-                                                        {
-                                                            books.map((book, i) => {
-                                                                return <SingleBookElement book={book} key={i} />
-                                                            })
-                                                        }
-                                                    </div>
-                                                </div>  
-                                            {/* </div> */}
-                                        {/* </nav> */}
-                                    
+                                    <Sidebar books={books} />
+                                    <div className="col-lg-9">
+                                        <div className="row">
+                                            {
+                                                books.map((book, i) => {
+                                                    return <SingleBookElement book={book} key={i} />
+                                                })
+                                            }
+                                        </div>
+                                    </div>  
                                 </div>
                             </div>
                         </div>
