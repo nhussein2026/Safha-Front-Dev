@@ -5,10 +5,10 @@ import { useContext } from "react";
 
 
 const Entrance = () => {
-    const { loggedIn } = useContext(AuthContext)
+    const { loggedIn, signOut } = useContext(AuthContext)
     return(
         <>
-            {loggedIn?<a href="/signout"><button id='signup-bttn' className="button">Signout</button></a> : <a href="/login"><button id='signup-bttn' className="button">Login</button></a>}
+            {loggedIn?<a href="/signout"><button onClick={signOut} id='signup-bttn' className="button">Signout</button></a> : <a href="/login"><button id='signup-bttn' className="button">Login</button></a>}
         </>
     )
 }
