@@ -14,7 +14,7 @@ const SingleBookElement = ({book,i}) => {
                         {/* <div className="product-label label-hot">HOT</div> */}
                       </div>
                       <div className="btn-icon-group">
-                          {/* <a href="demo25-product.html"
+                          {/* <a href="#"
                               className="btn-icon btn-add-cart product-type-simple"><i
                                   className="icon-shopping-cart"></i></a> */}
                       </div>
@@ -24,9 +24,9 @@ const SingleBookElement = ({book,i}) => {
                   <div className="product-details">
                       <div className="category-wrap">
                           <div className="category-list">
-                            <a href="demo25-shop.html" className="product-category">{book?.Category?.name}</a>
+                            <a href="#" className="product-category">{book?.Category?.name}</a>
                           </div>
-                          <a href="wishlist.html" className="btn-icon-wish"><i
+                          <a href="#" className="btn-icon-wish"><i
                                 className="icon-heart"></i></a>
                       </div>
                       <h3 className="product-title">
