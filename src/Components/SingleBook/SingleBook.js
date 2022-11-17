@@ -8,7 +8,6 @@ const SingleBook = () => {
     const { id } = useParams()
     console.log("id", id)
     const [book, setBook] = useState({})
-    const [books, setBooks] = useState({})
     useEffect(() => {
         const getBook = async () => {
             const getOneBook = await fetch(`${process.env.REACT_APP_API_URL}/books/${id}`, {
@@ -26,7 +25,6 @@ const SingleBook = () => {
         getBook()
     }, [id])
     console.log("book", book)
-    console.log("books", books)
     return (
         <>
             <Navbar />
