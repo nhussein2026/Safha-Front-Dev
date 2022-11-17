@@ -31,8 +31,8 @@ const CategoriesSideBar = () => {
                                                 categorires.map((category, i) => {
                                                     console.log("category?.name",category?.name)
                                                     return(
-                                                        // <li><a href="#">{category?.name}<span className="products-count">({category?.Books?.length()})</span></a></li>
-                                                        <li><a href="#">{category?.name}<span className="products-count">(no)</span></a></li>
+                                                        <li><a href="#">{category?.name}<span className="products-count">({category?.Books?.length})</span></a></li>
+                                                        // <li><a href="#">{category?.name}<span className="products-count">(no)</span></a></li>
                                                     )
                                                 })
                                             }
