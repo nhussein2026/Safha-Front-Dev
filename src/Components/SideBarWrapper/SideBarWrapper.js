@@ -42,7 +42,6 @@ const SideBarWrapper = () => {
                     {/* <Sidebar/> */}
 
                     <div className="sidebar-wrapper">
-                        <CategoriesSideBar />
                         <div className="widget widget-featured pb-0">
                             <h3 className="widget-title">Books</h3>
                             {
