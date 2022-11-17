@@ -10,7 +10,7 @@ const SingleBook = () => {
     const [book, setBook] = useState({})
     useEffect(() => {
         const getBook = async () => {
-            const getOneBook = await fetch(`https://safha.fjobeir.com/backend/books/${id}`, {
+            const getOneBook = await fetch(`${process.env.REACT_APP_API_URL}/books/${id}`, {
                 method: 'get',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,8 +47,12 @@ const SingleBook = () => {
                                                 </span>
                                             </div>
                                             {/* <img src={book?.cover} /> */}
-                                            <a href="demo25-product.html">
+                                            {/* <a href="demo25-product.html">
                                                 <img src="https://m.media-amazon.com/images/I/513j4X3mFjL.jpg"
+                                                    width="217" height="217" alt="product" />
+                                            </a> */}
+                                            <a href="demo25-product.html">
+                                                <img src={book?.cover}
                                                     width="217" height="217" alt="product" />
                                             </a>
                                         </div>
@@ -90,8 +94,11 @@ const SingleBook = () => {
                                 </div>
                                 <div className="product-single-tabs font2">
                                     <ul className="nav nav-tabs" role="tablist">
+                                        {/* <li className="nav-item">
+                                            <a className="nav-link active" id="product-tab-desc" data-toggle="tab" href="#product-desc-content" role="tab" aria-controls="product-desc-content" aria-selected="true">Description :</a>
+                                        </li> */}
                                         <li className="nav-item">
-                                            <a className="nav-link active" id="product-tab-desc" data-toggle="tab" href="#product-desc-content" role="tab" aria-controls="product-desc-content" aria-selected="true">Comments :</a>
+                                            <a className="nav-link active" id="product-tab-desc" data-toggle="tab" href="#product-desc-content" role="tab" aria-controls="product-desc-content" aria-selected="true">Reviews :</a>
                                         </li>
                                     </ul>
                                     <div className="tab-content">
@@ -104,7 +111,7 @@ const SingleBook = () => {
                                 </div>
                             </div>
                             <div className="sidebar-overlay" />
-                            <div className="sidebar-toggle custom-sidebar-toggle"><i className="fas fa-sliders-h" /></div>  
+                            <div className="sidebar-toggle custom-sidebar-toggle"><i className="fas fa-sliders-h" /></div>
                         </div>
                     </div>
                 </div>
