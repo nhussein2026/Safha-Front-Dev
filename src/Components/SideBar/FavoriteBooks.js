@@ -6,13 +6,13 @@ const FavoriteBooks = ({book}) => {
             <div className="featured-col">
                 <div className="product-default left-details product-widget">
                     <figure>
-                        <a href="demo25-product.html">
+                        <a href="#">
                             <img src={book?.cover} width={217} height={217} alt="product" />
                         </a>
                     </figure>
                     <div className="product-details">
                         <h3 className="product-title">
-                            <a href="demo25-product.html">{book?.name}</a>
+                            <a href="#">{book?.name}</a>
                         </h3>
                         <div className="ratings-container">
                             <div className="product-ratings">
