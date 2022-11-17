@@ -51,7 +51,7 @@ const Navbar1 = () => {
                         </div>
 
                         <span className="separator d-none d-lg-inline"></span>
-				          <Entrance />   
+				          <Entrance />
                     </div>
                 </div>
             </div>
