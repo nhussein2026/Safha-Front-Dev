@@ -8,6 +8,7 @@ const SingleBook = () => {
     const { id } = useParams()
     console.log("id", id)
     const [book, setBook] = useState({})
+    const [books, setBooks] = useState({})
     useEffect(() => {
         const getBook = async () => {
             const getOneBook = await fetch(`${process.env.REACT_APP_API_URL}/books/${id}`, {
@@ -23,7 +24,22 @@ const SingleBook = () => {
             }
         }
         getBook()
-    }, [id])
+
+        const getBooks = async () => {
+            const getOneBook = await fetch(`${process.env.REACT_APP_API_URL}/books/all`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            const json = await getOneBook.json()
+            console.log("json", json)
+            if (json?.success) {
+                setBooks(json?.data)
+            }
+        }
+        getBooks()
+    }, [])
     console.log("book", book)
     return (
         <>
@@ -115,7 +131,7 @@ const SingleBook = () => {
                         </div>
                     </div>
                 </div>
-                <SideBarWrapper />
+                <SideBarWrapper books={books} />
             </div>
             <Footer />
         </>
