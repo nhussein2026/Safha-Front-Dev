@@ -20,7 +20,6 @@ const SingleBookElement = ({book,i}) => {
                       </div>
                       <Link className="btn-quickview"
                         title="Quick View" to={`/book/${book?.id}`}>More Details</Link>
-                      {/* <a href="" ></a> */}
                   </figure>
                   <div className="product-details">
                       <div className="category-wrap">
