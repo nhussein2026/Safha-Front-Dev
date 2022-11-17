@@ -6,10 +6,10 @@ const SingleBookElement = ({book,i}) => {
           <div className="col-6 col-sm-4 col-lg-3">
               <div className="product-default inner-quickview inner-icon">
                   <figure>
-                      <a href="demo25-product.html">
+                    <Link to={`/book/${book?.id}`}>
                           <img src={book?.cover}
                               width="217" height="217" alt="product"/>
-                      </a>
+                    </Link>
                       <div className="label-group">
                         {/* <div className="product-label label-hot">HOT</div> */}
                       </div>
@@ -18,8 +18,8 @@ const SingleBookElement = ({book,i}) => {
                               className="btn-icon btn-add-cart product-type-simple"><i
                                   className="icon-shopping-cart"></i></a> */}
                       </div>
-                      <Link className="btn-quickview"
-                        title="Quick View" to={`/book/${book?.id}`}>More Details</Link>
+                      <a href='#'><Link className="btn-quickview"
+                        title="Quick View" to={`/book/${book?.id}`}>More Details</Link></a>
                   </figure>
                   <div className="product-details">
                       <div className="category-wrap">
@@ -30,7 +30,8 @@ const SingleBookElement = ({book,i}) => {
                                 className="icon-heart"></i></a>
                       </div>
                       <h3 className="product-title">
-                          <a href="demo25-product.html">{book?.name}</a>
+                        
+                        <a href="#"><Link to={`/book/${book?.id}`}>{book?.name}</Link></a>
                       </h3>
                       <div className="ratings-container">
                           <div className="product-ratings">
