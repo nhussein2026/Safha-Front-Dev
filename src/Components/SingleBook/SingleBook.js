@@ -24,23 +24,9 @@ const SingleBook = () => {
             }
         }
         getBook()
-
-        const getBooks = async () => {
-            const getOneBook = await fetch(`${process.env.REACT_APP_API_URL}/books/all`, {
-                method: 'get',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            })
-            const json = await getOneBook.json()
-            console.log("json", json)
-            if (json?.success) {
-                setBooks(json?.data)
-            }
-        }
-        getBooks()
-    }, [])
+    }, [id])
     console.log("book", book)
+    console.log("books", books)
     return (
         <>
             <Navbar />
@@ -131,7 +117,7 @@ const SingleBook = () => {
                         </div>
                     </div>
                 </div>
-                    <SideBarWrapper books={books} />
+                    <SideBarWrapper/>
             </div>
             <Footer />
         </>
