@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const SingleBookElement = ({book,i}) => {
   return (
     <>
@@ -16,8 +18,9 @@ const SingleBookElement = ({book,i}) => {
                               className="btn-icon btn-add-cart product-type-simple"><i
                                   className="icon-shopping-cart"></i></a> */}
                       </div>
-                      <a href="ajax/product-quick-view.html" className="btn-quickview"
-                        title="Quick View">More Details</a>
+                      <Link className="btn-quickview"
+                        title="Quick View" to={`/book/${book?.id}`}>More Details</Link>
+                      {/* <a href="" ></a> */}
                   </figure>
                   <div className="product-details">
                       <div className="category-wrap">
