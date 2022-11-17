@@ -131,7 +131,15 @@ const SingleBook = () => {
                         </div>
                     </div>
                 </div>
-                <SideBarWrapper books={books} />
+                    {
+                        books.map((book, i) => {
+                            // console.log(i)
+                            if(i<2){
+                                return (<SideBarWrapper book={book} />)
+                            }
+                        })
+                    }
+                
             </div>
             <Footer />
         </>
