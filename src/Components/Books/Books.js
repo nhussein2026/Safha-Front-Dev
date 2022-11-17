@@ -5,6 +5,7 @@ import HeroSection from "../HeroSection/HeroSection";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import Sidebar from "../SideBar/SideBar";
+import Navbar1 from "../Navbar/Navbar1";
 // import '../../assets/css/demo/demo25/demo25.css'
 // import '../../assets/css/demo25.min.css'
 
@@ -31,7 +32,7 @@ const Books = () => {
         <>
             {/* <body className="boxed"> */}
                 <div className="page-wrapper">
-                    <Navbar/>
+                    <Navbar1/>
                     <HeroSection />
                     <SecondNavbar/>
                     <main className="main">

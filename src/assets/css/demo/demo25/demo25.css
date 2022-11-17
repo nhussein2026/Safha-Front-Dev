@@ -8039,6 +8039,7 @@ a:focus {
 
 .text-secondary {
   color: #fe1656 !important;
+  
 }
 
 .text-body {
@@ -9641,6 +9642,7 @@ header .separator {
 }
 .main-nav .menu > li:hover > a, .main-nav .menu > li.show > a, .main-nav .menu > li.active > a {
   color: #fe1656;
+  /* color: #9e561f; */
 }
 .main-nav .menu.sf-arrows ul {
   border-top: none;
@@ -10141,6 +10143,7 @@ header .separator {
   padding: 1.6rem 4rem;
   background-color: #f4f4f4;
   color: #fe1656;
+  /* color: #9e561f; */
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -15038,6 +15041,7 @@ span.toggle {
 }
 .widget-info a {
   color: #fe1656;
+  /* color: #9e561f; */
   font-family: Poppins, sans-serif;
   font-weight: 700;
   line-height: 1.2;
