@@ -4,7 +4,7 @@ const Entrance = () => {
 
     return(
         <>
-        <a href="/login"><button className="button">Login</button></a>
+        <a href="/login"><button id='signup-bttn' className="button">Login</button></a>
         </>
     )
 }
