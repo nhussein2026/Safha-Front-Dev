@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SingleBookElement from "../Book/SingleBookElement";
+import SingleBookElement from "./SingleBookElement/SingleBookElement";
 import Footer from "../Footer/Footer";
 import HeroSection from "../HeroSection/HeroSection";
 import Navbar from "../Navbar/Navbar";
