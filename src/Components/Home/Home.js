@@ -11,7 +11,6 @@ const Home = () => {
 
     return (
         <>
-            <Navbar />
             <HeroSection />
 
             <SecondNavbar />
@@ -19,7 +18,6 @@ const Home = () => {
             <Featured />
             {/* <Sidebar/> */}
             <Suggested />
-            <Footer />
             {/* <SingleBook/> */}
         </>
     )
