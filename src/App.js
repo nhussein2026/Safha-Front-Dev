@@ -39,7 +39,9 @@ const App = () => {
             <Route path='/footer' element={<Footer />} />
             <Route path='/suggested' element={<Suggested />} />
             <Route path='/profile' element={<Profile />} />
-            <Route path='/scroll' element={<HomeCategories />} />
+            {/* <Route path='/scroll' element={<HomeCategories />} /> */}
+            <Route path='/scroll' element={<ScrolledSectioin />} />
+
 
           </Routes>
         </div>
