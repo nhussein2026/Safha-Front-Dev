@@ -7,10 +7,32 @@ import literatureCover from "../../assets/images/categories/cover/literature-fic
 import artCover from "../../assets/images/categories/cover/arts-photography.jpg";
 import noval from "../../assets/images/categories/cover/business-investing.jpg";
 import polticsCover from "../../assets/images/categories/cover/mystery-suspense.jpg"
-import bookImg from "../../assets/images/categories/product-5.jpg"
+import { useState, useEffect } from 'react';
 
 
 const ScrolledSectioin = () => {
+    const [categories, setCategories] = useState([])
+    useEffect(() => {
+        const getCategories = async () => {
+            const categoriesList = await fetch(`${process.env.REACT_APP_API_URL}/categories/all`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            const json = await categoriesList.json()
+            console.log(json)
+            if (json?.success) {
+                setCategories(json?.data)
+            }
+        }
+        getCategories()
+    }, [])
+
+
+console.log("this is the scroll cat", categories.name)
+
+    // this is for the scroll section
     let reactSwipeEl;
     return (
         <>
@@ -34,7 +56,7 @@ const ScrolledSectioin = () => {
                                             <a href="/">
                                                 <img src={artCover} alt="slider" id='category-img' />
                                                 <div className="home-slide-content text-center">
-                                                    <h3 className="ls-n-10 text-white mb-0">Arts &amp; Photography</h3>
+                                                    <h3 className="ls-n-10 text-white mb-0">{categories.name}</h3>
                                                 </div>
                                             </a>
                                         </div>

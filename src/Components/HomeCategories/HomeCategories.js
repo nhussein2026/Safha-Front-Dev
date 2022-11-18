@@ -19,6 +19,7 @@ const HomeCategories = () => {
       }
       getCategories()
   }, [])
+  // console.log("catrgories", categories)
   return (
     <main className="main">
       <div className="intro-section">
