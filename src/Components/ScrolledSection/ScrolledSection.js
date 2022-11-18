@@ -73,7 +73,7 @@ const ScrolledSectioin = () => {
                     </div>
                     {/*2nd category  */}
                     <div>
-                        <div class="d-flex justify-content-between">
+                        <div className="d-flex justify-content-between">
                             <div className='main'>
                                 <div className="intro-section">
                                     <div className="home-slider ">
@@ -136,10 +136,10 @@ const ScrolledSectioin = () => {
                         </div>
                     </div>
                 </ReactSwipe>
-                {/* <div> */}
+                <div className='d-flex justify-content-between'>
                 <button onClick={() => reactSwipeEl.next()}>Next</button>
                 <button onClick={() => reactSwipeEl.prev()}>Previous</button>
-                {/* </div> */}
+                </div>
             </div>
 
 
