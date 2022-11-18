@@ -27,7 +27,7 @@ const SingleBook = () => {
     console.log("book", book)
     return (
         <>
-            <Navbar />
+
             <div className="d-flex">
                 <div className="bg-white">
                     <div className="container">
@@ -115,9 +115,9 @@ const SingleBook = () => {
                         </div>
                     </div>
                 </div>
-                    <SideBarWrapper/>
+                    {/* <SideBarWrapper/> */}
             </div>
-            <Footer />
+        
         </>
     );
 }

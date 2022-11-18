@@ -25,8 +25,8 @@ const SideBarWrapper = () => {
     }, [])
     return (
         <>
-            <div>
-                <aside className="sidebar-product col-lg-3 mobile-sidebar">
+            <div >
+                <aside className="sidebar-product col-lg mobile-sidebar">
                     <div classname="sidebar-wrapper">
                         <div className="widget widget-info">
                             <h3 className="widget-title m-b-3">AUTHOR</h3>

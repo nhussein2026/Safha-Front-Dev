@@ -18,6 +18,7 @@ import HomeCategories from './Components/HomeCategories/HomeCategories2';
 
 import Home1 from './Components/Home/Home1';
 import Navbar1 from './Components/Navbar/Navbar1';
+import SingleBookIndex from './Components/SingleBook/SingleBookIndex';
 // require('dotenv').config()
 
 const App = () => {
@@ -32,7 +33,7 @@ const App = () => {
             {/* <Route path='/' element={<Home />} /> */}
             <Route path='/' element={<Home />} />
             <Route path='/books' element={<Books />} />
-            <Route path='/book/:id' element={<SingleBook/>} />
+            <Route path='/book/:id' element={<SingleBookIndex/>} />
             <Route path='/reviews' element={<Reviews />} />
             <Route path='/categories' element={<Categories />} />
             <Route path='/about' element={<About />} />
