@@ -1,6 +1,6 @@
 import card from "../../assets/images/logo.png"
 
-const HomeCategories = () => {
+const HomeCategories1 = () => {
 
           return (
            <>
@@ -163,4 +163,4 @@ const HomeCategories = () => {
       
 }
 
-export default HomeCategories;
+export default HomeCategories1;

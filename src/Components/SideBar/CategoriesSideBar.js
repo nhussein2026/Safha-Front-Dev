@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react"
 
 const CategoriesSideBar = () => {
-    const [categorires, setCategories] = useState([])
+    const [categories, setCategories] = useState([])
     useEffect(() => {
-        const getCategorires = async () => {
-            const categoriresList = await fetch(`${process.env.REACT_APP_API_URL}/categories/all`, {
+        const getCategories = async () => {
+            const categoriesList = await fetch(`${process.env.REACT_APP_API_URL}/categories/all`, {
                 method: 'get',
                 headers: {
                     'Content-Type': 'application/json',
                 }
             })
-            const json = await categoriresList.json()
+            const json = await categoriesList.json()
             console.log(json)
             if (json?.success) {
                 setCategories(json?.data)
             }
         }
-        getCategorires()
+        getCategories()
     }, [])
     return (
         <>
@@ -28,7 +28,7 @@ const CategoriesSideBar = () => {
                     <div className="widget-body">
                         <ul className="cat-list">
                             {
-                                categorires.map((category, i) => {
+                                categories.map((category, i) => {
                                     console.log("category?.name",category?.name)
                                     return(
                                         <li><a href="#">{category?.name}<span className="products-count">({category?.Books?.length})</span></a></li>

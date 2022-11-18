@@ -1,6 +1,6 @@
 const HomeCategories = () => {
     return (
-  
+        <>
         <main className="main">
           <div className="intro-section">
             <div className="home-slider owl-carousel owl-theme appear-animate" data-owl-options="{
@@ -982,7 +982,8 @@ const HomeCategories = () => {
             </div>
           </section>
         </main>{/* End .main */}
-      );
+        </>
+    )
 }
 export default HomeCategories;
 

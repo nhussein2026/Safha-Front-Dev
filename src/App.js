@@ -16,6 +16,8 @@ import ScrolledSectioin from './Components/ScrolledSection/ScrolledSection';
 import HomeCategories from './Components/HomeCategories/HomeCategories';
 
 
+import Home1 from './Components/Home/Home1';
+// require('dotenv').config()
 
 const App = () => {
 
@@ -24,7 +26,8 @@ const App = () => {
     <Routes>
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/' element={<Home />} />
+        {/* <Route path='/' element={<Home />} /> */}
+        <Route path='/' element={<Home1 />} />
         <Route path='/books' element={<Books />} />
         <Route path='/book/:id' element={<SingleBook/>} />
         <Route path='/reviews' element={<Reviews />} />
