@@ -118,23 +118,6 @@ const ScrolledSectioin = () => {
                             </div>
                         </div>
                     </div>
-                    {/* 3rd Category */}
-                    <div>
-                        <div className='main'>
-                            <div className="intro-section">
-                                <div className="home-slider ">
-                                    <div className="home-slide">
-                                        <a href="/">
-                                            <img src={noval} alt="slider" id='category-img' />
-                                            <div className="home-slide-content text-center">
-                                                <h3 className="ls-n-10 text-white mb-0">None Fiction</h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </ReactSwipe>
                 <div className='d-flex justify-content-between'>
                 <button onClick={() => reactSwipeEl.next()}>Next</button>
