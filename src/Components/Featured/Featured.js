@@ -1,5 +1,7 @@
 import './Featured.css'
 import bookImg from "../../assets/images/booksImages/Atomic-Habits_.jpg"
+import featureImg1 from "../../assets/images/demoes/demo25/products/product-6.jpg"
+import featurImg2 from "../../assets/images/demoes/demo25/products/product-9.jpg"
 const Featured = () => {
 
     return (
@@ -9,7 +11,7 @@ const Featured = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4 m-b-3">
-                            <div className="banner banner2">
+                            <div className="banner banner2" id='banner-place'>
                                 <div className="banner-layer">
                                     <h3 className="text-uppercase text-white m-b-2">Award Winners</h3>
                                     <p className="font2 m-b-3">12 Books</p>
@@ -18,7 +20,7 @@ const Featured = () => {
                             </div>
                         </div>
                         <div className="col-lg-4 m-b-3">
-                            <div className="banner banner3">
+                            <div className="banner banner3" id='banner-palce3'>
                                 <div className="banner-layer">
                                     <h3 className="text-uppercase text-white m-b-2">Deal in books</h3>
                                     <p className="font2 m-b-3">21 Books</p>
@@ -27,7 +29,7 @@ const Featured = () => {
                             </div>
                         </div>
                         <div className="col-lg-4 m-b-5">
-                            <div className="banner banner4">
+                            <div className="banner banner4" id='banner-place4'>
                                 <div className="banner-layer">
                                     <h3 className="text-uppercase text-white m-b-2">Most gifted</h3>
                                     <p className="font2 m-b-3">38 Books</p>
@@ -37,13 +39,13 @@ const Featured = () => {
                         </div>
                     </div>
                     <div>
-                        <h2 className="section-title pb-3 mb-2">Featured Books</h2>
+                        <h2 className="section-title pb-3 mb-3">Featured Books</h2>
                         <div className="row">
                             <div className="col-6 col-md-4 col-lg-3 col-xl-2">
                                 <div className="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo25-product.html">
-                                            <img src={bookImg} width={217} height={217} alt="product" />
+                                            <img src={featureImg1} width={217} height={217} alt="product" />
                                         </a>
                                         <div className="btn-icon-group">
                                             <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
@@ -59,7 +61,7 @@ const Featured = () => {
                                             <a href="wishlist.html" title="Wishlist" className="btn-icon-wish"><i className="icon-heart" /></a>
                                         </div>
                                         <h3 className="product-title">
-                                            <a href="demo25-product.html">The Night Before</a>
+                                            <a href="demo25-product.html">Gray</a>
                                         </h3>
                                         <div className="ratings-container">
                                             <div className="product-ratings">
@@ -74,7 +76,7 @@ const Featured = () => {
                                 <div className="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo25-product.html">
-                                            <img src={bookImg} width={217} height={217} alt="product" />
+                                            <img src={featurImg2} width={220} height={217} alt="product" />
                                         </a>
                                         <div className="btn-icon-group">
                                             <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
@@ -90,7 +92,7 @@ const Featured = () => {
                                             <a href="wishlist.html" title="Wishlist" className="btn-icon-wish"><i className="icon-heart" /></a>
                                         </div>
                                         <h3 className="product-title">
-                                            <a href="demo25-product.html">Call an Audible</a>
+                                            <a href="demo25-product.html">The Bear and the Dragon</a>
                                         </h3>
                                         <div className="ratings-container">
                                             <div className="product-ratings">
@@ -105,7 +107,7 @@ const Featured = () => {
                                 <div className="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo25-product.html">
-                                            <img src={bookImg} width={217} height={217} alt="product" />
+                                            <img src={featurImg2} width={217} height={217} alt="product" />
                                         </a>
                                         <div className="btn-icon-group">
                                             <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
@@ -136,7 +138,7 @@ const Featured = () => {
                                 <div className="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo25-product.html">
-                                            <img src={bookImg} width={217} height={217} alt="product" />
+                                            <img src={featureImg1} width={217} height={217} alt="product" />
                                         </a>
                                         <div className="btn-icon-group">
                                             <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>

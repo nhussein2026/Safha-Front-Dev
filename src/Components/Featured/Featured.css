@@ -1,4 +1,12 @@
 #banner-place {
     background-color: #343339;
-    background-image: url('../../assets/images//demoes/demo25/banners/banner-1.png');
+    background-image: url('../../assets/images//demoes/demo25/banners/banner-2.jpg');
+}
+
+#banner-palce3{
+    background-image: url('../../assets/images/demoes/demo25/banners/banner-sidebar.jpg')
+}
+
+#banner-place4{
+    background-image: url('../../assets/images/demoes/demo25/banners/banner-4.jpg');
 }
