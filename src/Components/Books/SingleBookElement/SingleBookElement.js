@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/Authcontext";
 
@@ -7,22 +7,25 @@ const SingleBookElement = ({book,i}) => {
   const userId = useRef()
   const bookId = useRef()
   // const [favorite, setFavorite] = useState(false)
-  const addFavorite = async () => {
-      const putFavorite = await fetch(`${process.env.REACT_APP_API_URL}/favorites/favorite`, {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            bookId: bookId.current.value,
-          }),
-      })
-      const json = await putFavorite.json()
-      console.log(json)
-      if (json?.success) {
-          setBooks(json?.data)
-      }
+  const addFavorite = async (id) => {
+    console.log("bookId.current.value",bookId.current.value)
+    const postFavorite = await fetch(`${process.env.REACT_APP_API_URL}/favorites/favorite`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          bookId: id,
+        }),
+    })
+    console.log("after put add");
+    const json = await postFavorite.json()
+    console.log(json)
+    window.alert(json.messages)
+    if (json?.success) {
+      console.log(json.messages)
+    }
   }
   return (
     <>
@@ -30,7 +33,7 @@ const SingleBookElement = ({book,i}) => {
               <div className="product-default inner-quickview inner-icon">
                   <figure>
                     <Link to={`/book/${book?.id}`}>
-                          <img src={book?.cover}
+                          <img src={book?.cover} className="img-fluid img-thumbnail"
                               width="217" height="217" alt="product"/>
                     </Link>
                       <div className="label-group">
@@ -49,8 +52,8 @@ const SingleBookElement = ({book,i}) => {
                           <div className="category-list">
                             <a href="#" className="product-category">{book?.Category?.name}</a>
                           </div>
-                          <a href="#" ref={bookId} value={book?.id} className="btn-icon-wish">
-                            <i className="icon-heart"></i>
+                          <a href="#" onClick={()=>{addFavorite(book?.id)}} className="btn-icon-wish">
+                            <i ref={bookId} value={book?.id} key={i} className="icon-heart"></i>
                           </a>
                       </div>
                       <h3 className="product-title">
