@@ -31,7 +31,7 @@ const SideBarWrapper = () => {
                         <div className="widget widget-info">
                             <h3 className="widget-title m-b-3">AUTHOR</h3>
                             <div className="widget-body bg-gray">
-                                <h4 className="font2 text-dark line-height-1 m-b-1">Wendy Walker</h4>
+                                <h4 className="font2 text-dark line-height-1 m-b-1">{books?.author}</h4>
                                 <p className="font2 font-weight-normal line-height-1 ls-0 text-uppercase">12
                                     Books</p>
                                 <a href="#" className="d-inline-block text-uppercase">View All
