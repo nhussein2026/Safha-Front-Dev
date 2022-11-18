@@ -1,6 +1,29 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/Authcontext";
 
 const SingleBookElement = ({book,i}) => {
+  const { token } = useContext(AuthContext)
+  const userId = useRef()
+  const bookId = useRef()
+  // const [favorite, setFavorite] = useState(false)
+  const addFavorite = async () => {
+      const putFavorite = await fetch(`${process.env.REACT_APP_API_URL}/favorites/favorite`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            bookId: bookId.current.value,
+          }),
+      })
+      const json = await putFavorite.json()
+      console.log(json)
+      if (json?.success) {
+          setBooks(json?.data)
+      }
+  }
   return (
     <>
           <div className="col-6 col-sm-4 col-lg-3">
@@ -26,8 +49,9 @@ const SingleBookElement = ({book,i}) => {
                           <div className="category-list">
                             <a href="#" className="product-category">{book?.Category?.name}</a>
                           </div>
-                          <a href="#" className="btn-icon-wish"><i
-                                className="icon-heart"></i></a>
+                          <a href="#" ref={bookId} value={book?.id} className="btn-icon-wish">
+                            <i className="icon-heart"></i>
+                          </a>
                       </div>
                       <h3 className="product-title">
                         
