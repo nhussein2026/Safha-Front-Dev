@@ -45,9 +45,6 @@ const Featured = () => {
                                         <a href="demo25-product.html">
                                             <img src={bookImg} width={217} height={217} alt="product" />
                                         </a>
-                                        <div className="label-group">
-                                            <div className="product-label label-hot">HOT</div>
-                                        </div>
                                         <div className="btn-icon-group">
                                             <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
                                         </div>
@@ -70,9 +67,6 @@ const Featured = () => {
                                                 <span className="tooltiptext tooltip-top" />
                                             </div>{/* End .product-ratings */}
                                         </div>{/* End .product-container */}
-                                        <div className="price-box">
-                                            <span className="product-price">$299.0</span>
-                                        </div>{/* End .price-box */}
                                     </div>{/* End .product-details */}
                                 </div>
                             </div>
@@ -82,9 +76,6 @@ const Featured = () => {
                                         <a href="demo25-product.html">
                                             <img src={bookImg} width={217} height={217} alt="product" />
                                         </a>
-                                        <div className="label-group">
-                                            <div className="product-label label-hot">HOT</div>
-                                        </div>
                                         <div className="btn-icon-group">
                                             <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
                                         </div>
@@ -107,9 +98,6 @@ const Featured = () => {
                                                 <span className="tooltiptext tooltip-top" />
                                             </div>{/* End .product-ratings */}
                                         </div>{/* End .product-container */}
-                                        <div className="price-box">
-                                            <span className="product-price">$299.0</span>
-                                        </div>{/* End .price-box */}
                                     </div>{/* End .product-details */}
                                 </div>
                             </div>
@@ -119,9 +107,6 @@ const Featured = () => {
                                         <a href="demo25-product.html">
                                             <img src={bookImg} width={217} height={217} alt="product" />
                                         </a>
-                                        <div className="label-group">
-                                            <div className="product-label label-hot">HOT</div>
-                                        </div>
                                         <div className="btn-icon-group">
                                             <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
                                         </div>
@@ -144,9 +129,6 @@ const Featured = () => {
                                                 <span className="tooltiptext tooltip-top" />
                                             </div>{/* End .product-ratings */}
                                         </div>{/* End .product-container */}
-                                        <div className="price-box">
-                                            <span className="product-price">$55.0</span>
-                                        </div>{/* End .price-box */}
                                     </div>{/* End .product-details */}
                                 </div>
                             </div>
@@ -156,9 +138,6 @@ const Featured = () => {
                                         <a href="demo25-product.html">
                                             <img src={bookImg} width={217} height={217} alt="product" />
                                         </a>
-                                        <div className="label-group">
-                                            <div className="product-label label-hot">HOT</div>
-                                        </div>
                                         <div className="btn-icon-group">
                                             <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
                                         </div>
@@ -181,9 +160,6 @@ const Featured = () => {
                                                 <span className="tooltiptext tooltip-top" />
                                             </div>{/* End .product-ratings */}
                                         </div>{/* End .product-container */}
-                                        <div className="price-box">
-                                            <span className="product-price">$599.0</span>
-                                        </div>{/* End .price-box */}
                                     </div>{/* End .product-details */}
                                 </div>
                             </div>
