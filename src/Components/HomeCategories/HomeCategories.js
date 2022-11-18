@@ -2,8 +2,8 @@ import card from "../../assets/images/logo.png"
 
 const HomeCategories = () => {
 
-  return (
-    <>
+          return (
+           <>
       <div className="intro-section">
         <div className="home-slider owl-carousel owl-theme appear-animate" data-owl-options="{
                     'lazyLoad': false,
@@ -36,7 +36,7 @@ const HomeCategories = () => {
                 <h3 className="product-title"><a href="demo25-product.html">The Night Before</a></h3>
                 <div className="ratings-container">
                   <div className="product-ratings">
-                    <span className="ratings" style={{ width: '80%' }} />{/* End .ratings */}
+                    <span className="ratings" style={{width: '80%'}} />{/* End .ratings */}
                     <span className="tooltiptext tooltip-top" />
                   </div>{/* End .product-ratings */}
                 </div>{/* End .product-container */}
@@ -63,7 +63,7 @@ const HomeCategories = () => {
                 <h3 className="product-title"><a href="demo25-product.html">Call an Audible</a></h3>
                 <div className="ratings-container">
                   <div className="product-ratings">
-                    <span className="ratings" style={{ width: '0%' }} />{/* End .ratings */}
+                    <span className="ratings" style={{width: '0%'}} />{/* End .ratings */}
                     <span className="tooltiptext tooltip-top" />
                   </div>{/* End .product-ratings */}
                 </div>{/* End .product-container */}
@@ -90,7 +90,7 @@ const HomeCategories = () => {
                 <h3 className="product-title"><a href="demo25-product.html">Ask Again Yes</a></h3>
                 <div className="ratings-container">
                   <div className="product-ratings">
-                    <span className="ratings" style={{ width: '0%' }} />{/* End .ratings */}
+                    <span className="ratings" style={{width: '0%'}} />{/* End .ratings */}
                     <span className="tooltiptext tooltip-top" />
                   </div>{/* End .product-ratings */}
                 </div>{/* End .product-container */}
@@ -118,7 +118,7 @@ const HomeCategories = () => {
                 <h3 className="product-title"><a href="demo25-product.html">The Butterfly Garden</a></h3>
                 <div className="ratings-container">
                   <div className="product-ratings">
-                    <span className="ratings" style={{ width: '80%' }} />{/* End .ratings */}
+                    <span className="ratings" style={{width: '80%'}} />{/* End .ratings */}
                     <span className="tooltiptext tooltip-top" />
                   </div>{/* End .product-ratings */}
                 </div>{/* End .product-container */}
@@ -145,7 +145,7 @@ const HomeCategories = () => {
                 <h3 className="product-title"><a href="demo25-product.html">Sorcery of Thorns</a></h3>
                 <div className="ratings-container">
                   <div className="product-ratings">
-                    <span className="ratings" style={{ width: '80%' }} />{/* End .ratings */}
+                    <span className="ratings" style={{width: '80%'}} />{/* End .ratings */}
                     <span className="tooltiptext tooltip-top" />
                   </div>{/* End .product-ratings */}
                 </div>{/* End .product-container */}
@@ -157,9 +157,10 @@ const HomeCategories = () => {
           </div>
         </div>
       </div>
-    </>
-  );
 
+           </>
+          );
+      
 }
 
 export default HomeCategories;
