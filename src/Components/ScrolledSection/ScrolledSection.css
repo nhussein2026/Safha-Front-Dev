@@ -2,7 +2,7 @@
 @import "https://unpkg.com/open-props/normalize.min.css";
 
 .scrollport {
-  -webkit-mask-image: linear-gradient(to right, #be9349, #b1774ecc, #bb794b, #c99131);
+  /* -webkit-mask-image: linear-gradient(to right, #be9349, #b1774ecc, #bb794b, #c99131); */
   
   /* overflow-x: auto; */
   /* overscroll-behavior-x: contain; */
