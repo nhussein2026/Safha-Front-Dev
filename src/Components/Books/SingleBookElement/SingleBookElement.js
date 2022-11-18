@@ -1,7 +1,7 @@
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/Authcontext";
-
+import './SingleBookElement.css'
 const SingleBookElement = ({book,i}) => {
   const { token } = useContext(AuthContext)
   const userId = useRef()
@@ -54,7 +54,7 @@ const SingleBookElement = ({book,i}) => {
                           </div>
                           <a href="#" onClick={()=>{addFavorite(book?.id)}} className="btn-icon-wish">
                             {/* <i className="icon-heart"></i> */}
-                            <i className="icon-heart bi bi-suit-heart"></i>
+                            <i className="icon-heart bi bi-suit-heart crop"></i>
                           </a>
                       </div>
                       <h3 className="product-title">
