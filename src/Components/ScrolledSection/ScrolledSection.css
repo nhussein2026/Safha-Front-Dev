@@ -14,7 +14,7 @@
 }
 
 .scrollport > div {
-  block-size: var(--size-16);
+  block-size: var(--size-15);
   aspect-ratio: var(--ratio-square);
   background-color: var(--surface-2);
   border-radius: var(--radius-3);
@@ -23,10 +23,12 @@
   position: relative;
 }
 .big-dev{
-    position: reletive;
+    position: absolute;
     width: 320px;
     background-color: red !important;
-    margin-top: 170px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 30px;
     width: 240px;
     height: 250px;
 }
