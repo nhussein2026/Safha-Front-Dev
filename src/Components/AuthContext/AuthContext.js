@@ -17,6 +17,7 @@ const AuthProvider = ({ children }) => {
         setToken('')
         // console.log(logOut+"logOut delete token")
     }
+    
     return (
         <AuthContext.Provider value={{
             loggedIn,

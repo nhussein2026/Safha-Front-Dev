@@ -1,4 +1,4 @@
-import { useRef, useContext, useState } from "react";
+import { useRef, useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../../contexts/Authcontext';
 import logo from "../../assets/images/logo.png";
@@ -13,6 +13,7 @@ const Login = () => {
     const accountRef = useRef();
     const passwordRef = useRef();
     const [loading, setLoading] = useState(false)
+    
     const login = async () => {
         setLoading(true)
         const response = await fetch(`${process.env.REACT_APP_API_URL}/users/login`,
@@ -39,6 +40,23 @@ const Login = () => {
             navigate('/')
         }
     }
+    // useEffect(()=>{
+    //     const getUserInfo = async () => {
+    //         const userInfoFetch = await fetch(`${process.env.REACT_APP_API_URL}/users`, {
+    //             method: 'get',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //                 'Authorization': `Bearer ${token}`,
+    //             }
+    //         })
+    //         const json = await userInfoFetch.json()
+    //         console.log("user info",json)
+    //         if (json?.success) {
+    //             setUserInfo(json?.data)
+    //         }
+    //     }
+    //     getUserInfo()
+    // },[loading])
     return (
         <>
             {/* <div className="nav-z"><Navbar /></div> */}

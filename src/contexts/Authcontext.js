@@ -6,6 +6,7 @@ const AuthProvider = ({children}) => {
     const [token, setToken] = useState(window.localStorage.getItem('token'))
     const [loggedIn, setLoggedIn] = useState(!!token)
     const [user, setUser] = useState({})
+    const [userInfo, setUserInfo] = useState({})
 
     useEffect(() => {
         const u = window.localStorage.getItem('user')
@@ -21,6 +22,7 @@ const AuthProvider = ({children}) => {
         setUser(response.data)
         window.localStorage.setItem('user', JSON.stringify(response.data))
     }
+    
     const signOut = () => {
         window.localStorage.removeItem('token')
         setLoggedIn(false)

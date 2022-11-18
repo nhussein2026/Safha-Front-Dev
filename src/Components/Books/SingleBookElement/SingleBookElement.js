@@ -4,11 +4,11 @@ import { AuthContext } from "../../../contexts/Authcontext";
 import './SingleBookElement.css'
 const SingleBookElement = ({book,i}) => {
   const { token } = useContext(AuthContext)
-  const userId = useRef()
-  const bookId = useRef()
+  // const userId = useRef()
+  // const bookId = useRef()
   // const [favorite, setFavorite] = useState(false)
   const addFavorite = async (id) => {
-    console.log("bookId.current.value",bookId.current.value)
+    // console.log("bookId.current.value",bookId.current.value)
     const postFavorite = await fetch(`${process.env.REACT_APP_API_URL}/favorites/favorite`, {
         method: 'POST',
         headers: {
@@ -33,7 +33,7 @@ const SingleBookElement = ({book,i}) => {
               <div className="product-default inner-quickview inner-icon">
                   <figure>
                     <Link to={`/book/${book?.id}`}>
-                          <img src={book?.cover} className="img-fluid img-thumbnail"
+                          <img src={book?.cover} className="img-fluid img-thumbnail crop"
                               width="217" height="217" alt="product"/>
                     </Link>
                       <div className="label-group">
@@ -53,9 +53,10 @@ const SingleBookElement = ({book,i}) => {
                             <a href="#" className="product-category">{book?.Category?.name}</a>
                           </div>
                           <a href="#" onClick={()=>{addFavorite(book?.id)}} className="btn-icon-wish">
-                            {/* <i className="icon-heart"></i> */}
-                            <i className="icon-heart bi bi-suit-heart crop"></i>
-                          </a>
+                            {/* <i className="icon-heart bi bi-suit-heart redHeart"></i> */}
+                            <i class="icon-heart"></i>
+                          </a> 
+                          
                       </div>
                       <h3 className="product-title">
                         
