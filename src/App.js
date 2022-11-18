@@ -12,6 +12,8 @@ import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
 import Login from './screens/Login/Login';
 import Profile from './Components/Profile/Profile';
+import ScrolledSectioin from './Components/ScrolledSection/ScrolledSection';
+import Featured from './Components/Featured/Featured';
 // require('dotenv').config()
 
 const App = () => {
@@ -30,6 +32,9 @@ const App = () => {
         <Route path='/footer' element={<Footer />} />
         <Route path='/suggested' element={<Suggested />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/scroll' element={<ScrolledSectioin />} />
+        <Route path='/featur' element={<Featured />} />
+
       </Routes>
     </>
   );

@@ -1,0 +1,41 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+.scrollport {
+  -webkit-mask-image: linear-gradient(to right, #be9349, #b1774ecc, #bb794b, #c99131);
+  
+  overflow-x: auto;
+  /* overscroll-behavior-x: contain; */
+  
+  display: flex;
+  gap: var(--size-10);
+  align-items: start;
+  padding: var(--size-10);
+}
+
+.scrollport > div {
+  block-size: var(--size-16);
+  aspect-ratio: var(--ratio-square);
+  background-color: var(--surface-2);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-4);
+  background-color: #99806e23;
+  position: relative;
+}
+.big-dev{
+    position: reletive;
+    width: 320px;
+    background-color: red !important;
+    margin-top: 170px;
+    width: 240px;
+    height: 250px;
+}
+/* .small-dev{
+    position: absolute;
+    width: 250px;
+    margin-top: 150px;
+    margin-left: 35px;
+
+    background-color: green !important;
+
+} */
