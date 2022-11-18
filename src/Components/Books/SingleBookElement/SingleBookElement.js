@@ -53,7 +53,8 @@ const SingleBookElement = ({book,i}) => {
                             <a href="#" className="product-category">{book?.Category?.name}</a>
                           </div>
                           <a href="#" onClick={()=>{addFavorite(book?.id)}} className="btn-icon-wish">
-                            <i ref={bookId} value={book?.id} key={i} className="icon-heart"></i>
+                            {/* <i className="icon-heart"></i> */}
+                            <i className="icon-heart bi bi-suit-heart"></i>
                           </a>
                       </div>
                       <h3 className="product-title">
