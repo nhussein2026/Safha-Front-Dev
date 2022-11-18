@@ -22,7 +22,7 @@ const ScrolledSectioin = () => {
                     }
                 }" data-animation-name="fadeIn" data-animation-delay={200}>
                     <div className="home-slide">
-                        <a href="demo25-shop.html">
+                        <a href="#">
                             <img src="assets/images/demoes/demo25/slider/arts-photography.jpg" alt="slider" width={545} height={398} />
                             <div className="home-slide-content text-center">
                                 <h3 className="ls-n-10 text-white mb-0">Arts &amp; Photography</h3>
@@ -49,7 +49,7 @@ const ScrolledSectioin = () => {
                         </div>
                     </div>
                     <div className="home-slide">
-                        <a href="demo25-shop.html">
+                        <a href="#">
                             <img src="assets/images/demoes/demo25/slider/business-investing.jpg" alt="slider" width={545} height={398} />
                             <div className="home-slide-content text-center">
                                 <h3 className="ls-n-10 text-white mb-0">Business &amp; Investing</h3>
@@ -76,7 +76,7 @@ const ScrolledSectioin = () => {
                         </div>
                     </div>
                     <div className="home-slide">
-                        <a href="demo25-shop.html">
+                        <a href="#">
                             <img src="assets/images/demoes/demo25/slider/literature-fiction.jpg" alt="slider" width={545} height={398} />
                             <div className="home-slide-content text-center">
                                 <h3 className="ls-n-10 text-white mb-0">Literature &amp; Fiction</h3>
@@ -104,7 +104,7 @@ const ScrolledSectioin = () => {
                         </div>
                     </div>
                     <div className="home-slide">
-                        <a href="demo25-shop.html">
+                        <a href="#">
                             <img src="assets/images/demoes/demo25/slider/mystery-suspense.jpg" alt="slider" width={545} height={398} />
                             <div className="home-slide-content text-center">
                                 <h3 className="ls-n-10 text-white mb-0">Mystery Suspense</h3>
@@ -131,7 +131,7 @@ const ScrolledSectioin = () => {
                         </div>
                     </div>
                     <div className="home-slide">
-                        <a href="demo25-shop.html">
+                        <a href="#">
                             <img src="assets/images/demoes/demo25/slider/scifi-fantasy.jpg" alt="slider" width={545} height={398} />
                             <div className="home-slide-content text-center">
                                 <h3 className="ls-n-10 text-white mb-0">Scifi Fantasy</h3>
