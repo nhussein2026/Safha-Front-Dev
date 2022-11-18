@@ -1,6 +1,6 @@
 import Footer from "../Footer/Footer";
 import HeroSection from "../HeroSection/HeroSection";
-import HomeCategories from "../HomeCategories/HomeCategories";
+import HomeCategories from "../HomeCategories/HomeCategories2";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 // import Sidebar from "../SideBar/SideBar";

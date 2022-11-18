@@ -1,6 +1,6 @@
 import Footer from "../Footer/Footer";
 import HeroSection from "../HeroSection/HeroSection";
-import HomeCategories from "../HomeCategories/HomeCategoriesGhadir";
+import HomeCategories from "../HomeCategories/HomeCategories";
 import Navbar from "../Navbar/Navbar";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 // import Sidebar from "../SideBar/SideBar";
@@ -13,7 +13,8 @@ const Home1 = () => {
             <Navbar />
             <HeroSection />
 
-            <SecondNavbar />
+            {/* <SecondNavbar /> */}
+
             <HomeCategories />
             {/* <Sidebar/> */}
             <Suggested />

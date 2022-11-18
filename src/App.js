@@ -13,7 +13,7 @@ import { AuthContext } from './contexts/Authcontext';
 import Login from './screens/Login/Login';
 import Profile from './Components/Profile/Profile';
 import ScrolledSectioin from './Components/ScrolledSection/ScrolledSection';
-import HomeCategories from './Components/HomeCategories/HomeCategories';
+import HomeCategories from './Components/HomeCategories/HomeCategories2';
 
 
 import Home1 from './Components/Home/Home1';
