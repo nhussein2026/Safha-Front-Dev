@@ -32,7 +32,7 @@ const Books = () => {
         <>
             {/* <body className="boxed"> */}
                 <div className="page-wrapper">
-                    <Navbar1/>
+                    {/* <Navbar1/> */}
                     <HeroSection />
                     <SecondNavbar/>
                     <main className="main">
@@ -53,7 +53,7 @@ const Books = () => {
                             </div>
                         </div>
                     </main>
-                    <Footer />
+                    {/* <Footer /> */}
                 </div>
             {/* </body> */}
         </>
