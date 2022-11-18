@@ -38,3 +38,19 @@
 #viewed-card{
   display: flex;
 }
+
+
+
+
+/* new desgin */
+#small-img{
+  width: 250px;
+  height: 375px;
+}
+#category-img {
+  width: 545px;
+  height: 398px;
+}
+#parent-item{
+  width: 409px;
+}
