@@ -1,3 +1,4 @@
+import Featured from "../Featured/Featured";
 import Footer from "../Footer/Footer";
 import HeroSection from "../HeroSection/HeroSection";
 import HomeCategories from "../HomeCategories/HomeCategories";
@@ -15,6 +16,7 @@ const Home = () => {
 
             <SecondNavbar />
             <HomeCategories />
+            <Featured />
             {/* <Sidebar/> */}
             <Suggested />
             <Footer />
