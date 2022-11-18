@@ -15,7 +15,7 @@ const Featured = () => {
                                 <div className="banner-layer">
                                     <h3 className="text-uppercase text-white m-b-2">Award Winners</h3>
                                     <p className="font2 m-b-3">12 Books</p>
-                                    <a href="demo25-shop.html" className="btn btn-primary">View Collections<i className="fas fa-long-arrow-alt-right" /></a>
+                                    <a href="#" className="btn btn-primary">View Collections<i className="fas fa-long-arrow-alt-right" /></a>
                                 </div>
                             </div>
                         </div>
