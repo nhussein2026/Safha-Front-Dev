@@ -40,11 +40,12 @@ const App = () => {
             <Route path='/reviews' element={<Reviews />} />
             <Route path='/categories' element={<Categories />} />
             {/* <Route path='/mybooks' element={<MyBooks />} /> */}
-            {loggedIn&&
-              <Route path='/mybooks' element={<MyBooks />} />}
-            
-            {!loggedIn&&
-              <Route path='/about' element={<About />} />}
+            {
+              loggedIn?
+                <Route path='/mybooks' element={<MyBooks />} />
+                :
+                <Route path='/about' element={<About />} />
+            }
             <Route path='/footer' element={<Footer />} />
             <Route path='/suggested' element={<Suggested />} />
             <Route path='/profile' element={<Profile />} />
