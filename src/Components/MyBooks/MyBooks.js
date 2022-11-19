@@ -31,31 +31,27 @@ const MyBooks = () => {
     // console.log("books",books)
     return(
         <>
-            {/* <body className="boxed"> */}
-                <div className="page-wrapper">
-                    {/* <Navbar1/> */}
-                    <HeroSection />
-                    {/* <main className="main">
-                        <div className="bg-white">
-                            <div className="container">
-                                <div className="row main-content">
-                                    <Sidebar books={books} />
-                                    <div className="col-lg-9">
-                                        <div className="row">
-                                            {
-                                                books.map((book, i) => {
-                                                    return <SingleBookElement book={book} key={i} />
-                                                })
-                                            }
-                                        </div>
-                                    </div>  
-                                </div>
+            <div className="page-wrapper">
+                <HeroSection />
+                {/* <main className="main">
+                    <div className="bg-white">
+                        <div className="container">
+                            <div className="row main-content">
+                                <Sidebar books={books} />
+                                <div className="col-lg-9">
+                                    <div className="row">
+                                        {
+                                            books.map((book, i) => {
+                                                return <SingleBookElement book={book} key={i} />
+                                            })
+                                        }
+                                    </div>
+                                </div>  
                             </div>
                         </div>
-                    </main> */}
-                    {/* <Footer /> */}
-                </div>
-            {/* </body> */}
+                    </div>
+                </main> */}
+            </div>
         </>
     )
 }

@@ -39,11 +39,11 @@ const App = () => {
             <Route path='/book/:id' element={<SingleBookIndex/>} />
             <Route path='/reviews' element={<Reviews />} />
             <Route path='/categories' element={<Categories />} />
-            {logggedIn?
-              <Route path='/mybooks' element={<MyBooks />} />
-              :
-              <Route path='/about' element={<About />} />
-            }
+            {logggedIn&&
+              <Route path='/mybooks' element={<MyBooks />} />}
+            
+            {!logggedIn&&
+              <Route path='/about' element={<About />} />}
             <Route path='/footer' element={<Footer />} />
             <Route path='/suggested' element={<Suggested />} />
             <Route path='/profile' element={<Profile />} />
