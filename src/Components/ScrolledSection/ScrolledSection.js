@@ -30,16 +30,14 @@ const ScrolledSectioin = () => {
     }, [])
 
 
-console.log("this is the scroll cat", categories.name)
+    // console.log("this is the scroll cat", categories.name)
 
     // this is for the scroll section
     let reactSwipeEl;
     return (
         <>
+    
             {/* begining of the scroll part */}
-
-
-
             <div>
                 <ReactSwipe
                     className="carousel"
@@ -48,7 +46,7 @@ console.log("this is the scroll cat", categories.name)
                 >
                     {/* 1st category */}
                     <div>
-                        <div class="d-flex justify-content-between">
+                        <div className="d-flex justify-content-between">
                             <div className='main'>
                                 <div className="intro-section">
                                     <div className="home-slider ">
@@ -56,7 +54,7 @@ console.log("this is the scroll cat", categories.name)
                                             <a href="/">
                                                 <img src={artCover} alt="slider" id='category-img' />
                                                 <div className="home-slide-content text-center">
-                                                    <h3 className="ls-n-10 text-white mb-0">{categories.name}</h3>
+                                                    <h3 className="ls-n-10 text-white mb-0">{categories.des}</h3>
                                                 </div>
                                             </a>
                                         </div>
@@ -142,8 +140,8 @@ console.log("this is the scroll cat", categories.name)
                     </div>
                 </ReactSwipe>
                 <div className='d-flex justify-content-between'>
-                <button onClick={() => reactSwipeEl.next()}>Next</button>
-                <button onClick={() => reactSwipeEl.prev()}>Previous</button>
+                    <button onClick={() => reactSwipeEl.next()}>Next</button>
+                    <button onClick={() => reactSwipeEl.prev()}>Previous</button>
                 </div>
             </div>
 
