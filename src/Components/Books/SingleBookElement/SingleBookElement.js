@@ -69,9 +69,13 @@ const SingleBookElement = ({book,i,customize}) => {
                                     <span className="tooltiptext tooltip-top"></span>
                                 </div>
                             </div>
-                            <div className="price-box">
+                            {
+                              !(customize="Features")&&
+                              <div className="price-box">
                                 <span className="product-price">{book?.reviewsCount}</span>
-                            </div>
+                              </div>
+                            }
+                            
                         </>
                     }
                     {
