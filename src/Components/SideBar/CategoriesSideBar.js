@@ -11,7 +11,7 @@ const CategoriesSideBar = () => {
                 }
             })
             const json = await categoriesList.json()
-            console.log(json)
+            // console.log(json)
             if (json?.success) {
                 setCategories(json?.data)
             }
@@ -29,7 +29,7 @@ const CategoriesSideBar = () => {
                         <ul className="cat-list">
                             {
                                 categories.map((category, i) => {
-                                    console.log("category?.name",category?.name)
+                                    // console.log("category?.name",category?.name)
                                     return(
                                         <li><a href="#">{category?.name}<span className="products-count">({category?.Books?.length})</span></a></li>
                                     )

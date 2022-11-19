@@ -14,3 +14,9 @@ ul li{
     color:#fe1656;
     border-bottom: 3px solid #fe1656;
 }
+#addIcon{
+    color:#fe1658ce;
+}
+#addIcon:hover{
+    color:#fe1656;
+}
