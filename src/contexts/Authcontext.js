@@ -6,6 +6,7 @@ const AuthProvider = ({children}) => {
     const [token, setToken] = useState(window.localStorage.getItem('token'))
     const [loggedIn, setLoggedIn] = useState(!!token)
     const [user, setUser] = useState({})
+    const [userInfo, setUserInfo] = useState({})
     const [homeNav, setHomeNav] = useState(false)
     const [categoriesNav, setCategoriesNav] = useState(false)
     const [booksNav, setBooksNav] = useState(false)
@@ -44,6 +45,7 @@ const AuthProvider = ({children}) => {
             categoriesNav, setCategoriesNav,
             booksNav, setBooksNav,
             aboutNav, setAboutNav,
+            userInfo, setUserInfo,
         }}>
             {children}
         </AuthContext.Provider>
