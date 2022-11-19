@@ -3,7 +3,6 @@ import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
 
 const Categories = () => {
-
     const { setHomeNav, setAboutNav, setCategoriesNav, setBooksNav } = useContext(AuthContext)
     useEffect(()=>{
         setCategoriesNav(true);
