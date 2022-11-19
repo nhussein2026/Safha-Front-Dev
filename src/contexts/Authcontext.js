@@ -6,7 +6,10 @@ const AuthProvider = ({children}) => {
     const [token, setToken] = useState(window.localStorage.getItem('token'))
     const [loggedIn, setLoggedIn] = useState(!!token)
     const [user, setUser] = useState({})
-    const [userInfo, setUserInfo] = useState({})
+    const [homeNav, setHomeNav] = useState(false)
+    const [categoriesNav, setCategoriesNav] = useState(false)
+    const [booksNav, setBooksNav] = useState(false)
+    const [aboutNav, setAboutNav] = useState(false)
 
     useEffect(() => {
         const u = window.localStorage.getItem('user')
@@ -36,7 +39,11 @@ const AuthProvider = ({children}) => {
             token,
             signIn,
             signOut,
-            user
+            user,
+            homeNav, setHomeNav,
+            categoriesNav, setCategoriesNav,
+            booksNav, setBooksNav,
+            aboutNav, setAboutNav,
         }}>
             {children}
         </AuthContext.Provider>

@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Profile from "../Profile/Profile";
 
 const Navbar1 = () => {
-	const { loggedIn } = useContext(AuthContext)
+	const { homeNav, categoriesNav, booksNav, aboutNav } = useContext(AuthContext)
     return(
         <>
         <header className="header">
@@ -21,18 +21,38 @@ const Navbar1 = () => {
                         </a>
                         <nav className="main-nav">
                             <ul className="menu">
-                                <li className="active">
-                                    <a href="/">Home</a>
-                                </li>
-                                <li>
-                                    <a href="/categories">Categories</a>
-                                </li>
-                                <li className="d-none d-xl-block">
-                                    <a href="/books">Books</a>
-                                </li>
-                                <li>
-                                    <a href="/about">About</a>
-                                </li>
+                                { homeNav? 
+                                    <li className="active">
+                                        <a href="/">Home</a>
+                                    </li> :
+                                    <li>
+                                        <a href="/">Home</a>
+                                    </li> 
+                                }
+                                { categoriesNav? 
+                                    <li className="active">
+                                        <a href="/categories">Categories</a>
+                                    </li> :
+                                    <li>
+                                        <a href="/categories">Categories</a>
+                                    </li> 
+                                }
+                                { booksNav? 
+                                    <li className="active d-none d-xl-block">
+                                        <a href="/books">Books</a>
+                                    </li> :
+                                    <li className="d-none d-xl-block">
+                                        <a href="/books">Books</a>
+                                    </li> 
+                                }
+                                { aboutNav? 
+                                    <li className="active">
+                                        <a href="/about">About</a>
+                                    </li> :
+                                    <li>
+                                        <a href="/about">About</a>
+                                    </li> 
+                                }
                             </ul>
                         </nav>
                     </div>
