@@ -5,6 +5,7 @@ import HeroSection from "../HeroSection/HeroSection";
 import Sidebar from "../SideBar/SideBar";
 // import '../../assets/css/demo/demo25/demo25.css'
 // import '../../assets/css/demo25.min.css'
+import './MyBooks.css'
 
 const MyBooks = () => {
     console.log("InsideMyBooks")
@@ -50,15 +51,19 @@ const MyBooks = () => {
                         <div className="container">
                             <div className="row main-content">
                                 <Sidebar books={books} />
-                                <div className="col-lg-9">
-                                    <div className="row">
-                                        {
-                                            books.map((book, i) => {
-                                                return <SingleBookElement book={book} key={i}/>
-                                            })
-                                        }
-                                    </div>
-                                </div>  
+                                <div class="sidebar-overlay"></div>
+                                    <div className="col-lg-9">
+                                        <div className="col-6 col-sm-4 col-lg-4">
+                                            <h3>Favorite Books</h3>
+                                        </div>
+                                        <div className="row">
+                                            {
+                                                books.map((book, i) => {
+                                                    return <SingleBookElement book={book} key={i}/>
+                                                })
+                                            }
+                                        </div>
+                                    </div> 
                             </div>
                         </div>
                     </div>
