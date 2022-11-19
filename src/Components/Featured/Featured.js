@@ -1,5 +1,4 @@
 import './Featured.css'
-import SingleFeature from './SingleFeature.js/SingleFeature'
 import { useEffect, useState } from 'react'
 import SingleBookElement from '../Books/SingleBookElement/SingleBookElement'
 const Featured = () => {
