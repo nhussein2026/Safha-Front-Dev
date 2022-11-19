@@ -2,3 +2,34 @@
     max-height:170px; 
     max-width:180px;
 }
+
+.redHeart{
+    /* margin-top: -2px;
+    border: 1px solid #f4f4f4;
+    background: #f4f4f4;
+    color: #6f6e6b;
+    line-height: 34px;
+
+    display: inline-block;
+  position: absolute;
+  top: 0;
+  margin: 0 2px;
+  width: 36px;
+  height: 36px;
+  font-size: 1.6rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.25s ease;
+  left: 0;
+  transform: none;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  border: none;
+  overflow: visible;
+  font-size: 1.5rem;
+  line-height: 0;
+    color:red;
+    font-size: 1.6rem;
+    padding-top: 1px; */
+}
