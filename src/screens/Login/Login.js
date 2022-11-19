@@ -5,7 +5,10 @@ import logo from "../../assets/images/logo.png";
 import './Login.css';
 
 const Login = () => {
-    const { signIn, setHomeNav } = useContext(AuthContext)
+    const { signIn, setHomeNav, setAboutNav, setCategoriesNav, setBooksNav } = useContext(AuthContext)
+    useEffect(() => {
+
+    }, [])
     const navigate = useNavigate()
     const accountRef = useRef();
     const passwordRef = useRef();
@@ -35,6 +38,9 @@ const Login = () => {
             console.log("json.token", json.token)
             // go to homeBage
             setHomeNav(true)
+            setCategoriesNav(false)
+            setBooksNav(false)
+            setAboutNav(false)
             navigate('/')
         }
     }
