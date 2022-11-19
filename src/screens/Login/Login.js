@@ -10,7 +10,7 @@ const Login = () => {
     const accountRef = useRef();
     const passwordRef = useRef();
     const [loading, setLoading] = useState(false)
-    console
+    
     const login = async () => {
         setLoading(true)
         const response = await fetch(`${process.env.REACT_APP_API_URL}/users/login`,
@@ -50,20 +50,33 @@ const Login = () => {
                             </div>
                             <h2 id='title' className='mb-1'>Welcom to Safha</h2>
                             <form>
-                                <div class="mb-3">
-                                    <label htmlFor='email' class="form-label">Email Or Username</label>
-                                    <input type="email" ref={accountRef} id="email" class="form-control" placeholder="name@example.com" />
+                                <div className='form-field mb-2'>
+                                    <label htmlFor='email' className='mb-1'>Email Or Username</label>
+                                    <input type='email' ref={accountRef} id="email" className='form-control' placeholder="name@example.com" />
                                 </div>
-                                <div class="mb-3">
-                                    <label htmlFor='password' className="form-label">Password</label>
-                                    <input type="password" ref={passwordRef} id="password" className="form-control" placeholder="*******" />
+                                <div className='form-field mb-1'>
+                                    <label htmlFor='password' className='mb-1'>Password</label>
+                                    <input type='password' ref={passwordRef} id="password" className='form-control' placeholder="*******" />
                                 </div>
+                                {/* <div className='row mt-1'>
+                                    <div className='col-6' id='register-btnn'>
+                                        <button
+                                            className='btn w-100'
+                                            id='signup-bttn'
+                                            onClick={login}>
+                                            {loading ? 'Please Wait' : 'Sign In'}
+                                        </button>
+                                    </div>
+                                </div> */}
                                 <button
-                                        type="submit" 
-                                        className="btn btn-primary w-49"
-                                        id='signup-bttn'
-                                        onClick={login}>
-                                        {loading ? 'Please Wait' : 'Sign In'}</button>
+                                    type="submit" 
+                                    className="btn btn-primary w-49"
+                                    id='signup-bttn'
+                                    onClick={login}>
+                                    {loading ? 'Please Wait' : 'Sign In'}</button>
+                                {/* <div className="mt-2">
+                                    <h5><a href="/signup" id="signup-word">Not registerd, go to</a><a href="/signup"> Sign Up</a></h5>
+                                </div> */}
                             </form>
                             <div className="mt-2">
                                 <h5><a href="/signup" id="signup-word">Not registerd, go to</a><a href="/signup" id="signUpBtn"> Sign Up</a></h5>
