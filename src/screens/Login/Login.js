@@ -4,7 +4,7 @@ import { AuthContext } from '../../contexts/Authcontext';
 import logo from "../../assets/images/logo.png";
 import './Login.css';
 
-const Login1 = () => {
+const Login = () => {
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate()
     const accountRef = useRef();
@@ -95,4 +95,4 @@ const Login1 = () => {
     );
 };
 
-export default Login1;
+export default Login;
