@@ -1,5 +1,7 @@
+import AddReview from "../AddReviews/AddReviews"
 import SideBarWrapper from "../SideBarWrapper/SideBarWrapper"
 import SingleBook from "./SingleBook"
+import './SingleBook.css'
 
 
 
@@ -10,6 +12,7 @@ const SingleBookIndex = () => {
             <SingleBook/>
             <SideBarWrapper/>
         </div>
+        <AddReview/>
         
         </>
     )

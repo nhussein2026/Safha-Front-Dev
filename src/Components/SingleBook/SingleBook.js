@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import SideBarWrapper from "../SideBarWrapper/SideBarWrapper";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import AddReview from "../AddReviews/AddReviews";
 const SingleBook = () => {
     console.log("I`m in the single book")
     const { id } = useParams()
@@ -93,14 +94,20 @@ const SingleBook = () => {
                                     </div>
                                 </div>
                                 <div className="product-single-tabs font2">
-                                    <ul className="nav nav-tabs" role="tablist">
+                                    <div className="nav nav-tabs d-flex" id="reviews" role="tablist">
                                         {/* <li className="nav-item">
                                             <a className="nav-link active" id="product-tab-desc" data-toggle="tab" href="#product-desc-content" role="tab" aria-controls="product-desc-content" aria-selected="true">Description :</a>
                                         </li> */}
-                                        <li className="nav-item">
+                                        <div className="nav-item">
+                                            
                                             <a className="nav-link active" id="product-tab-desc" data-toggle="tab" href="#product-desc-content" role="tab" aria-controls="product-desc-content" aria-selected="true">Reviews :</a>
-                                        </li>
-                                    </ul>
+                    
+                                        </div>
+                                        
+                                        <div id="addReview">
+                                        <AddReview/>
+                                        </div>
+                                    </div>
                                     <div className="tab-content">
                                         <div className="tab-pane fade show active" id="product-desc-content" role="tabpanel" aria-labelledby="product-tab-desc">
                                             <div className="product-desc-content">

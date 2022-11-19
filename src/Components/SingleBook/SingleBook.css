@@ -1,0 +1,6 @@
+#reviews{
+    flex-direction: column;
+}
+#addReview{
+    padding-top: 30px;
+}
