@@ -1,12 +1,36 @@
 import logo from "../../assets/images/cuted-logo.png"
 import Entrance from "../Signup&Login/Entrance";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
 import { Route, Routes } from "react-router-dom";
 import Profile from "../Profile/Profile";
 
 const Navbar1 = () => {
-	const { homeNav, categoriesNav, booksNav, aboutNav } = useContext(AuthContext)
+	const { loggedIn, signIn, setHomeNav, homeNav, 
+        setCategoriesNav, categoriesNav,
+        setBooksNav, booksNav,
+        setAboutNav, aboutNav} = useContext(AuthContext)
+    useEffect(()=>{
+        if(homeNav){
+            setCategoriesNav(false);
+            setBooksNav(false);
+            setAboutNav(false);
+        }else if(categoriesNav){
+            setHomeNav(false);
+            setBooksNav(false);
+            setAboutNav(false);
+        }else if(booksNav){
+            setCategoriesNav(false);
+            setHomeNav(false);
+            setAboutNav(false);
+        }else if(aboutNav){
+            setCategoriesNav(false);
+            setHomeNav(false);
+            setBooksNav(false);
+        }else{
+            setHomeNav(true)
+        }
+    },[homeNav,categoriesNav,booksNav,aboutNav])
     return(
         <>
         <header className="header">
@@ -45,13 +69,27 @@ const Navbar1 = () => {
                                         <a href="/books">Books</a>
                                     </li> 
                                 }
-                                { aboutNav? 
-                                    <li className="active">
-                                        <a href="/about">About</a>
-                                    </li> :
-                                    <li>
-                                        <a href="/about">About</a>
-                                    </li> 
+                                
+                                {loggedIn? 
+                                    ( aboutNav? 
+                                        <li className="active">
+                                        <a href="/mybooks">Mybooks</a>
+                                        </li>
+                                        :
+                                        <li>
+                                            <a href="/mybooks">Mybooks</a>
+                                        </li>  
+                                    )
+                                    :
+                                    ( aboutNav? 
+                                        <li className="active">
+                                            <a href="/about">About</a>
+                                        </li>
+                                        :
+                                        <li>
+                                            <a href="/about">About</a>
+                                        </li> 
+                                    )
                                 }
                             </ul>
                         </nav>

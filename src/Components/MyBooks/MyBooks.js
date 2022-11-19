@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import SingleBookElement from "./SingleBookElement/SingleBookElement";
 import Footer from "../Footer/Footer";
 import HeroSection from "../HeroSection/HeroSection";
 import Navbar from "../Navbar/Navbar";
@@ -7,10 +6,11 @@ import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import Sidebar from "../SideBar/SideBar";
 import Navbar1 from "../Navbar/Navbar1";
 import { AuthContext } from "../../contexts/Authcontext";
+import SingleBookElement from "../Books/SingleBookElement/SingleBookElement";
 // import '../../assets/css/demo/demo25/demo25.css'
 // import '../../assets/css/demo25.min.css'
 
-const Books = () => {
+const MyBooks = () => {
     const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav } = useContext(AuthContext)
     const [books, setBooks] = useState([])
     useEffect(() => {
@@ -40,7 +40,6 @@ const Books = () => {
                 <div className="page-wrapper">
                     {/* <Navbar1/> */}
                     <HeroSection />
-                    <SecondNavbar/>
                     <main className="main">
                         <div className="bg-white">
                             <div className="container">
@@ -65,4 +64,4 @@ const Books = () => {
         </>
     )
 }
-export default Books;
+export default MyBooks;
