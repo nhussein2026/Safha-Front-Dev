@@ -4,9 +4,6 @@ import { AuthContext } from "../../../contexts/Authcontext";
 import './SingleBookElement.css'
 const SingleBookElement = ({book,i}) => {
   const { token } = useContext(AuthContext)
-  // const userId = useRef()
-  // const bookId = useRef()
-  // const [favorite, setFavorite] = useState(false)
   const addFavorite = async (id) => {
     // console.log("bookId.current.value",bookId.current.value)
     const postFavorite = await fetch(`${process.env.REACT_APP_API_URL}/favorites/favorite`, {
@@ -59,7 +56,6 @@ const SingleBookElement = ({book,i}) => {
                         
                     </div>
                     <h3 className="product-title">
-                      
                       <a href="#"><Link to={`/book/${book?.id}`}>{book?.name}</Link></a>
                     </h3>
                     <div className="ratings-container">
