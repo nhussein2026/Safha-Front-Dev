@@ -69,24 +69,9 @@ const Navbar1 = () => {
                                         <a href="/books">Books</a>
                                     </li> 
                                 }
-                                {/* { aboutNav? 
-                                    (<li className="active">
-                                        {loggedIn?
-                                            <a href="/myBooks">myBooks</a>
-                                            :
-                                            <a href="/about">About</a>
-                                        }
-                                    </li>) :
-                                    (<li>
-                                        {loggedIn?
-                                            <a href="/myBooks">myBooks</a>
-                                            :
-                                            <a href="/about">About</a>
-                                        }
-                                    </li>)
-                                } */}
+                                
                                 {loggedIn? 
-                                    (aboutNav? 
+                                    ( aboutNav? 
                                         <li className="active">
                                         <a href="/mybooks">Mybooks</a>
                                         </li>
@@ -97,7 +82,6 @@ const Navbar1 = () => {
                                     )
                                     :
                                     ( aboutNav? 
-                                       
                                         <li className="active">
                                             <a href="/about">About</a>
                                         </li>
