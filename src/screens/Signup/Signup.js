@@ -63,18 +63,18 @@ const Signup = () => {
                             <label htmlFor='password' className='mb-1'>Password Confirmation</label>
                             <input type='password' ref={passwordConfirmationRef} id="password" className='form-control' />
                         </div>
-                        <div className='row mt-2'>
-                            <div className='col-6' id='register-btnn'>
+                        {/* <div className='row mt-2'> */}
+                            {/* <div className='col-6' id='register-btnn'> */}
                                 <button
-                                    className='btn w-100'
+                                    className='btn btn-primary w-49'
                                     id='signup-bttn'
                                     onClick={Signup}>
                                         {loading ? 'Please Wait' : 'Sign UP'}
                                     </button>
-                            </div>
-                        </div>
+                            {/* </div> */}
+                        {/* </div> */}
                         <div className="mt-2">
-                            <h5><a href="/signup" id="signup-word">Already have an account, go to</a><a href="/login"> Login</a></h5>
+                            <h5><a href="/signup" id="signup-word">Already have an account, go to</a><a href="/login" id="signUpBtn"> Login</a></h5>
                         </div>
                     </div>
                 </div>

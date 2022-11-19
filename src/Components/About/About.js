@@ -1,4 +1,5 @@
-import "./About.css"
+import "./About.css";
+import aboutImg from "../../assets/images/About-img/879028-Many-Library-Book-Glasses-Bokeh.jpg"
 const About = () => {
 
     return (
@@ -8,7 +9,7 @@ const About = () => {
                 <div className="container-fluid bg-primary p-5 bg-hero mb-5">
                     <div className="row py-5">
                         <div className="col-12 text-center">
-                            <h1 className="display-2 text-uppercase text-white mb-md-4">About Safha</h1>
+                            <h1 className="display-3 text-uppercase text-white mb-md-4">About Safha</h1>
                             <a href="/" className="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
                             <a href="/about" className="btn btn-light py-md-3 px-md-5">About</a>
                         </div>
@@ -20,40 +21,30 @@ const About = () => {
                     <div className="row gx-5">
                         <div className="col-lg-5 mb-5 mb-lg-0" style={{ minHeight: '500px' }}>
                             <div className="position-relative h-100">
-                                <img className="position-absolute w-100 h-100 rounded" src="img/about.jpg" style={{ objectFit: 'cover' }} />
+                                <img className="position-absolute w-100 h-100 rounded" src={aboutImg} style={{ objectFit: 'cover' }} />
                             </div>
                         </div>
                         <div className="col-lg-7">
                             <div className="mb-4">
                                 <h5 className="text-primary text-uppercase">About Us</h5>
-                                <h1 className="display-3 text-uppercase mb-0">Welcome to Gymster</h1>
+                                <h1 className="display-3 text-uppercase mb-0">Welcome to Safha</h1>
                             </div>
-                            <h4 className="text-body mb-4">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h4>
-                            <p className="mb-4">Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum, diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
-                            <div className="rounded bg-dark p-5">
-                                <ul className="nav nav-pills justify-content-between mb-3">
-                                    <li className="nav-item w-50">
-                                        <a className="nav-link text-uppercase text-center w-100 active" data-bs-toggle="pill" href="#pills-1">About Us</a>
-                                    </li>
-                                    <li className="nav-item w-50">
-                                        <a className="nav-link text-uppercase text-center w-100" data-bs-toggle="pill" href="#pills-2">Why Choose Us</a>
-                                    </li>
-                                </ul>
-                                <div className="tab-content">
-                                    <div className="tab-pane fade show active" id="pills-1">
-                                        <p className="text-secondary mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
-                                    </div>
-                                    <div className="tab-pane fade" id="pills-2">
-                                        <p className="text-secondary mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <h4 className="text-body mb-4">Safha is a webpage to show books reviews. Our mission is to help reader to find and share book's review and discuss it with others.
+
+                            </h4>
+                            <p className="mb-4">
+                                See what books your friends are reading.
+                                Track the books you're reading, have read, and want to read.
+                                Check out your personalized book recommendations. Our recommendation engine analyzes 20 billion data points to give suggestions tailored to your literary tastes.
+                                Find out if a book is a good fit for you from our community’s reviews.
+                            </p>
+
                         </div>
                     </div>
                 </div>
                 {/* About End */}
                 {/* Programe Start */}
-                <div className="container-fluid programe position-relative px-5 mt-5" style={{ marginBottom: '180px' }}>
+                {/* <div className="container-fluid programe position-relative px-5 mt-5" style={{ marginBottom: '180px' }}>
                     <div className="row g-5 gb-5">
                         <div className="col-lg-4 col-md-6">
                             <div className="bg-light rounded text-center p-5">
@@ -84,10 +75,10 @@ const About = () => {
                             <a href className="btn btn-primary py-3 px-5">Become A Member</a>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* Programe Start */}
                 {/* Facts Start */}
-                <div className="container-fluid bg-dark facts p-5" style={{ marginBottom: '90px' }}>
+                <div className="container-fluid facts p-5" id="count-place" style={{ marginBottom: '90px' }}>
                     <div className="row gx-5 gy-4 py-5">
                         <div className="col-lg-3 col-md-6">
                             <div className="d-flex">
@@ -95,7 +86,7 @@ const About = () => {
                                     <i className="fa fa-star fs-4 text-white" />
                                 </div>
                                 <div className="ps-4">
-                                    <h5 className="text-secondary text-uppercase">Experience</h5>
+                                    <h5 className=" text-uppercase">Experience</h5>
                                     <h1 className="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
                                 </div>
                             </div>
@@ -106,7 +97,7 @@ const About = () => {
                                     <i className="fa fa-users fs-4 text-white" />
                                 </div>
                                 <div className="ps-4">
-                                    <h5 className="text-secondary text-uppercase">Our Trainers</h5>
+                                    <h5 className=" text-uppercase">Our Trainers</h5>
                                     <h1 className="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
                                 </div>
                             </div>
@@ -117,7 +108,7 @@ const About = () => {
                                     <i className="fa fa-check fs-4 text-white" />
                                 </div>
                                 <div className="ps-4">
-                                    <h5 className="text-secondary text-uppercase">Complete Project</h5>
+                                    <h5 className=" text-uppercase">Complete Project</h5>
                                     <h1 className="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
                                 </div>
                             </div>
@@ -128,7 +119,7 @@ const About = () => {
                                     <i className="fa fa-mug-hot fs-4 text-white" />
                                 </div>
                                 <div className="ps-4">
-                                    <h5 className="text-secondary text-uppercase">Happy Clients</h5>
+                                    <h5 className="text-uppercase">Happy Clients</h5>
                                     <h1 className="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
                                 </div>
                             </div>

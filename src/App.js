@@ -10,7 +10,6 @@ import Suggested from './Components/SuggestedCategories/Suggested';
 import SingleBook from "./Components/SingleBook/SingleBook";
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
-import Login from './screens/Login/Login';
 import Profile from './Components/Profile/Profile';
 import ScrolledSectioin from './Components/ScrolledSection/ScrolledSection';
 import HomeCategories from './Components/HomeCategories/HomeCategories2';
@@ -19,6 +18,7 @@ import HomeCategories from './Components/HomeCategories/HomeCategories2';
 import Home1 from './Components/Home/Home1';
 import Navbar1 from './Components/Navbar/Navbar1';
 import SingleBookIndex from './Components/SingleBook/SingleBookIndex';
+import Login from './screens/Login/Login';
 // require('dotenv').config()
 
 const App = () => {
