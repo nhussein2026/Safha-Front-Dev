@@ -36,7 +36,7 @@ const SingleBook = () => {
                             <div className="col-lg-9 product-sidebar-right">
                                 <div className="product-single-container product-single-default">
                                     <div className="row">
-                                        <div className="col-md-6 product-single-gallery">
+                                        <div className="col-md-4 product-single-gallery">
                                             <div className="product-slider-container">
                                                 <div className="product-single-carousel owl-carousel owl-theme show-nav-hover">
                                                     <div className="product-item">
@@ -57,7 +57,7 @@ const SingleBook = () => {
                                                     width="217" height="217" alt="product" />
                                             </a>
                                         </div>
-                                        <div className="col-md-6 product-single-details font2">
+                                        <div className="col-md-6 product-single-details font2" id="font2">
                                             <h1 className="product-title">{book?.name}</h1>
                                             <div className="ratings-container">
                                                 <div className="product-ratings">
@@ -98,11 +98,11 @@ const SingleBook = () => {
                                         {/* <li className="nav-item">
                                             <a className="nav-link active" id="product-tab-desc" data-toggle="tab" href="#product-desc-content" role="tab" aria-controls="product-desc-content" aria-selected="true">Description :</a>
                                         </li> */}
-                                        <div className="nav-item">
+                                        {/* <div className="nav-item">
                                             
                                             <a className="nav-link active" id="product-tab-desc" data-toggle="tab" href="#product-desc-content" role="tab" aria-controls="product-desc-content" aria-selected="true">Reviews :</a>
                     
-                                        </div>
+                                        </div> */}
                                         
                                         <div id="addReview">
                                         <AddReview/>

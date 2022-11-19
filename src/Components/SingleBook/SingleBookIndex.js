@@ -12,7 +12,7 @@ const SingleBookIndex = () => {
             <SingleBook/>
             <SideBarWrapper/>
         </div>
-        <AddReview/>
+        {/* <AddReview/> */}
         
         </>
     )

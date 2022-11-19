@@ -11,6 +11,10 @@
     flex-direction: column;
    
 }
+#buttoColor{
+    background-color: #9e561f;
+    color: white;
+}
 .textArea{
     position: relative;
     left: 70px;
