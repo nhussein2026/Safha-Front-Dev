@@ -7,7 +7,7 @@ import { useState, useContext } from 'react';
 
 
 const Profile = () => {
-    const  token  = useContext(AuthContext);
+    const  {token}  = useContext(AuthContext);
     console.log("My token is: ", token)
     const [profile, setProfile] = useState({})
     useEffect(() => {
