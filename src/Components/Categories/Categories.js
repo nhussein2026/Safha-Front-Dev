@@ -10,7 +10,7 @@ const Categories = () => {
         setHomeNav(false);
         setBooksNav(false);
         setAboutNav(false);
-    })
+    },[])
     return(
         <>
         {/* <Navbar /> */}

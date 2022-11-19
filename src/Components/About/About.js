@@ -1,7 +1,16 @@
 import "./About.css";
 import aboutImg from "../../assets/images/About-img/879028-Many-Library-Book-Glasses-Bokeh.jpg"
-const About = () => {
+import { AuthContext } from '../../contexts/Authcontext';
+import { useContext, useEffect } from "react";
 
+const About = () => {
+    const { setHomeNav, setAboutNav, setCategoriesNav, setBooksNav } = useContext(AuthContext)
+    useEffect(()=>{
+        setCategoriesNav(false);
+        setHomeNav(false);
+        setBooksNav(false);
+        setAboutNav(true);
+    },[])
     return (
         <>
             <div>
