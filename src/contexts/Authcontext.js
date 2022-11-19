@@ -29,6 +29,7 @@ const AuthProvider = ({children}) => {
         setToken('')
         setUser({})
     }
+
     return (
         <AuthContext.Provider value={{
             loggedIn,

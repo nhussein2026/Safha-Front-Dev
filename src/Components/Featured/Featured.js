@@ -1,7 +1,4 @@
 import './Featured.css'
-import bookImg from "../../assets/images/booksImages/Atomic-Habits_.jpg"
-import featureImg1 from "../../assets/images/demoes/demo25/products/product-6.jpg"
-import featurImg2 from "../../assets/images/demoes/demo25/products/product-9.jpg"
 import SingleFeature from './SingleFeature.js/SingleFeature'
 import { useEffect, useState } from 'react'
 const Featured = () => {
@@ -23,7 +20,6 @@ const Featured = () => {
         getBooks()
     }, [])
     return (
-
         <>
             <section className="featured-section bg-white">
                 <div className="container">
