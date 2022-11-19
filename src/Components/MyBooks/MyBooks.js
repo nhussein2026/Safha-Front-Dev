@@ -5,8 +5,8 @@ import HeroSection from "../HeroSection/HeroSection";
 // import '../../assets/css/demo25.min.css'
 
 const MyBooks = () => {
+    console.log("InsideMyBooks")
     const { setHomeNav, setAboutNav, setCategoriesNav, setBooksNav } = useContext(AuthContext)
-    
     const [books, setBooks] = useState([])
     useEffect(() => {
         setCategoriesNav(false);

@@ -25,7 +25,7 @@ import MyBooks from './Components/MyBooks/MyBooks';
 // require('dotenv').config()
 
 const App = () => {
-  const { logggedIn } = useContext(AuthContext)
+  const { loggedIn } = useContext(AuthContext)
   return (
     <>
       <div className="page-wrapper">
@@ -39,10 +39,11 @@ const App = () => {
             <Route path='/book/:id' element={<SingleBookIndex/>} />
             <Route path='/reviews' element={<Reviews />} />
             <Route path='/categories' element={<Categories />} />
-            {logggedIn&&
+            {/* <Route path='/mybooks' element={<MyBooks />} /> */}
+            {loggedIn&&
               <Route path='/mybooks' element={<MyBooks />} />}
             
-            {!logggedIn&&
+            {!loggedIn&&
               <Route path='/about' element={<About />} />}
             <Route path='/footer' element={<Footer />} />
             <Route path='/suggested' element={<Suggested />} />

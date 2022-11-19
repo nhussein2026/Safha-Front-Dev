@@ -28,8 +28,10 @@ const Navbar1 = () => {
             setHomeNav(false);
             setBooksNav(false);
         }else{
-            setHomeNav(true)
+            // return
+            // setHomeNav(true)
         }
+        console.log("homeNav",homeNav)
     },[homeNav,categoriesNav,booksNav,aboutNav])
     return(
         <>
