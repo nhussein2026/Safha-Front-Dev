@@ -13,10 +13,12 @@ const MyBooks = () => {
             setCategoriesNav, setBooksNav,
             userInfo, token, setUserInfo} = useContext(AuthContext)
     const [books, setBooks] = useState([])
+    const [addedBooks, setAddedBooks] = useState([])
     // setBooks(userInfo?.FavoriteBooks)
     // console.log("user",userInfo?.FavoriteBooks)
     // console.log("before getUserInfo token",token);
     // console.log("userInfo?.FavoriteBooks",userInfo?.FavoriteBooks);
+    const [added, setAdded] = useState(false)
     useEffect(()=>{
         setCategoriesNav(false);
         setHomeNav(false);
@@ -36,11 +38,20 @@ const MyBooks = () => {
             if (json?.success) {
                 console.log("insied if user info",json)
                 setUserInfo(json?.data)
-                setBooks(json?.data?.FavoriteBooks)
             }
         }
         getUserInfo()
     },[])
+
+    const setFavBooksFun= () => {
+        setBooks(userInfo.FavoriteBooks)
+        setAdded(false)
+    }
+    const setAddedBooksFun= () => {
+        setAddedBooks(userInfo.AddedBooks)
+        setAdded(true)
+    }
+
     console.log("books",books);
     return(
         <>
@@ -53,16 +64,46 @@ const MyBooks = () => {
                                 <Sidebar books={books} />
                                 <div class="sidebar-overlay"></div>
                                     <div className="col-lg-9">
-                                        <div className="col-6 col-sm-4 col-lg-4">
-                                            <h3>Favorite Books</h3>
+                                        <div className="col-6 col-sm-4 col-lg-6">
+                                            {/* <h3 className="widget-title">Favorite Books</h3> */}
+                                            <ul class="nav nav-tabs" id="ulStyle">
+                                                { !added?
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" id="active" aria-current="page" href="#">Favorite</a>
+                                                    </li> 
+                                                    :
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" aria-current="page" href="#">Favorite</a>
+                                                    </li>
+                                                }
+                                                { added?
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" id="active" aria-current="page" href="#">Added</a>
+                                                    </li> 
+                                                    :
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" aria-current="page" href="#">Added</a>
+                                                    </li>
+                                                }
+                                            </ul>
                                         </div>
-                                        <div className="row">
-                                            {
-                                                books.map((book, i) => {
-                                                    return <SingleBookElement book={book} key={i}/>
-                                                })
-                                            }
-                                        </div>
+                                        {!added?
+                                            <div className="row">
+                                                {
+                                                    books.map((book, i) => {
+                                                        return <SingleBookElement book={book} key={i}/>
+                                                    })
+                                                }
+                                            </div>
+                                            :
+                                            <div className="row">
+                                                {
+                                                    books.map((book, i) => {
+                                                        return <SingleBookElement book={book} key={i}/>
+                                                    })
+                                                }
+                                            </div>
+                                        }
                                     </div> 
                             </div>
                         </div>
