@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Profile from "../Profile/Profile";
 
 const Navbar1 = () => {
-	const { signIn, setHomeNav, homeNav, 
+	const { loggedIn, signIn, setHomeNav, homeNav, 
         setCategoriesNav, categoriesNav,
         setBooksNav, booksNav,
         setAboutNav, aboutNav} = useContext(AuthContext)
@@ -69,13 +69,43 @@ const Navbar1 = () => {
                                         <a href="/books">Books</a>
                                     </li> 
                                 }
-                                { aboutNav? 
-                                    <li className="active">
-                                        <a href="/about">About</a>
-                                    </li> :
-                                    <li>
-                                        <a href="/about">About</a>
-                                    </li> 
+                                {/* { aboutNav? 
+                                    (<li className="active">
+                                        {loggedIn?
+                                            <a href="/myBooks">myBooks</a>
+                                            :
+                                            <a href="/about">About</a>
+                                        }
+                                    </li>) :
+                                    (<li>
+                                        {loggedIn?
+                                            <a href="/myBooks">myBooks</a>
+                                            :
+                                            <a href="/about">About</a>
+                                        }
+                                    </li>)
+                                } */}
+                                {loggedIn? 
+                                    (aboutNav? 
+                                        <li className="active">
+                                        <a href="/mybooks">Mybooks</a>
+                                        </li>
+                                        :
+                                        <li>
+                                            <a href="/mybooks">Mybooks</a>
+                                        </li>  
+                                    )
+                                    :
+                                    ( aboutNav? 
+                                       
+                                        <li className="active">
+                                            <a href="/about">About</a>
+                                        </li>
+                                        :
+                                        <li>
+                                            <a href="/about">About</a>
+                                        </li> 
+                                    )
                                 }
                             </ul>
                         </nav>
