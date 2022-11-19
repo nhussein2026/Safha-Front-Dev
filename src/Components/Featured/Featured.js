@@ -2,8 +2,26 @@ import './Featured.css'
 import bookImg from "../../assets/images/booksImages/Atomic-Habits_.jpg"
 import featureImg1 from "../../assets/images/demoes/demo25/products/product-6.jpg"
 import featurImg2 from "../../assets/images/demoes/demo25/products/product-9.jpg"
+import SingleFeature from './SingleFeature.js/SingleFeature'
+import { useEffect, useState } from 'react'
 const Featured = () => {
-
+    const [books, setBooks] = useState([])
+    useEffect(() => {
+        const getBooks = async () => {
+            const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books/all`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            const json = await booksList.json()
+            console.log(json)
+            if (json?.success) {
+                setBooks(json?.data)
+            }
+        }
+        getBooks()
+    }, [])
     return (
 
         <>
@@ -41,130 +59,13 @@ const Featured = () => {
                     <div>
                         <h2 className="section-title pb-3 mb-3">Featured Books</h2>
                         <div className="row">
-                            <div className="col-6 col-md-4 col-lg-3 col-xl-2">
-                                <div className="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo25-product.html">
-                                            <img src={featureImg1} width={217} height={217} alt="product" />
-                                        </a>
-                                        <div className="btn-icon-group">
-                                            <a href="#" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" className="btn-quickview" title="Quick View">Quick
-                                            View</a>
-                                    </figure>
-                                    <div className="product-details">
-                                        <div className="category-wrap">
-                                            <div className="category-list">
-                                                <a href="#" className="product-category">category</a>
-                                            </div>
-                                            <a href="#" title="Wishlist" className="btn-icon-wish"><i className="icon-heart" /></a>
-                                        </div>
-                                        <h3 className="product-title">
-                                            <a href="#">Gray</a>
-                                        </h3>
-                                        <div className="ratings-container">
-                                            <div className="product-ratings">
-                                                <span className="ratings" style={{ width: '80%' }} />{/* End .ratings */}
-                                                <span className="tooltiptext tooltip-top" />
-                                            </div>{/* End .product-ratings */}
-                                        </div>{/* End .product-container */}
-                                    </div>{/* End .product-details */}
-                                </div>
-                            </div>
-                            <div className="col-6 col-md-4 col-lg-3 col-xl-2">
-                                <div className="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="#">
-                                            <img src={featurImg2} width={220} height={217} alt="product" />
-                                        </a>
-                                        <div className="btn-icon-group">
-                                            <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
-                                        </div>
-                                        <a href="/" className="btn-quickview" title="Quick View">Quick
-                                            View</a>
-                                    </figure>
-                                    <div className="product-details">
-                                        <div className="category-wrap">
-                                            <div className="category-list">
-                                                <a href="demo25-shop.html" className="product-category">category</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" className="btn-icon-wish"><i className="icon-heart" /></a>
-                                        </div>
-                                        <h3 className="product-title">
-                                            <a href="demo25-product.html">The Bear and the Dragon</a>
-                                        </h3>
-                                        <div className="ratings-container">
-                                            <div className="product-ratings">
-                                                <span className="ratings" style={{ width: '0%' }} />{/* End .ratings */}
-                                                <span className="tooltiptext tooltip-top" />
-                                            </div>{/* End .product-ratings */}
-                                        </div>{/* End .product-container */}
-                                    </div>{/* End .product-details */}
-                                </div>
-                            </div>
-                            <div className="col-6 col-md-4 col-lg-3 col-xl-2">
-                                <div className="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="#">
-                                            <img src={featurImg2} width={217} height={217} alt="product" />
-                                        </a>
-                                        <div className="btn-icon-group">
-                                            <a href="demo25-product.html" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" className="btn-quickview" title="Quick View">Quick
-                                            View</a>
-                                    </figure>
-                                    <div className="product-details">
-                                        <div className="category-wrap">
-                                            <div className="category-list">
-                                                <a href="demo25-shop.html" className="product-category">category</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" className="btn-icon-wish"><i className="icon-heart" /></a>
-                                        </div>
-                                        <h3 className="product-title">
-                                            <a href="demo25-product.html">Grey</a>
-                                        </h3>
-                                        <div className="ratings-container">
-                                            <div className="product-ratings">
-                                                <span className="ratings" style={{ width: '80%' }} />{/* End .ratings */}
-                                                <span className="tooltiptext tooltip-top" />
-                                            </div>{/* End .product-ratings */}
-                                        </div>{/* End .product-container */}
-                                    </div>{/* End .product-details */}
-                                </div>
-                            </div>
-                            <div className="col-6 col-md-4 col-lg-3 col-xl-2">
-                                <div className="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="#">
-                                            <img src={featureImg1} width={217} height={217} alt="product" />
-                                        </a>
-                                        <div className="btn-icon-group">
-                                            <a href="#" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart" /></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" className="btn-quickview" title="Quick View">Quick
-                                            View</a>
-                                    </figure>
-                                    <div className="product-details">
-                                        <div className="category-wrap">
-                                            <div className="category-list">
-                                                <a href="demo25-shop.html" className="product-category">category</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" className="btn-icon-wish"><i className="icon-heart" /></a>
-                                        </div>
-                                        <h3 className="product-title">
-                                            <a href="#">Sorcery of Thorns</a>
-                                        </h3>
-                                        <div className="ratings-container">
-                                            <div className="product-ratings">
-                                                <span className="ratings" style={{ width: '0%' }} />{/* End .ratings */}
-                                                <span className="tooltiptext tooltip-top" />
-                                            </div>{/* End .product-ratings */}
-                                        </div>{/* End .product-container */}
-                                    </div>{/* End .product-details */}
-                                </div>
-                            </div>
+                            {
+                                books.map((book, i) => {
+                                    if(i<5){
+                                        return <SingleFeature book={book} key={i} />
+                                    }
+                                })
+                            }
                         </div>
                     </div>
                 </div>
