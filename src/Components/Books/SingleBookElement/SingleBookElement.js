@@ -2,8 +2,11 @@ import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/Authcontext";
 import './SingleBookElement.css'
-const SingleBookElement = ({book,i}) => {
+const SingleBookElement = ({book,i,customize}) => {
   const { token } = useContext(AuthContext)
+  // const userId = useRef()
+  // const bookId = useRef()
+  // const [favorite, setFavorite] = useState(false)
   const addFavorite = async (id) => {
     // console.log("bookId.current.value",bookId.current.value)
     const postFavorite = await fetch(`${process.env.REACT_APP_API_URL}/favorites/favorite`, {
@@ -16,12 +19,13 @@ const SingleBookElement = ({book,i}) => {
           bookId: id,
         }),
     })
-    console.log("after put add");
+    // console.log("after put add");
+    console.log("customize",customize)
     const json = await postFavorite.json()
-    console.log(json)
+    // console.log(json)
     window.alert(json.messages)
     if (json?.success) {
-      console.log(json.messages)
+    //   console.log(json.messages)
     }
   }
   return (
@@ -45,28 +49,37 @@ const SingleBookElement = ({book,i}) => {
                       title="Quick View" to={`/book/${book?.id}`}>More Details</Link></a>
                 </figure>
                 <div className="product-details">
-                    <div className="category-wrap">
-                        <div className="category-list">
-                          <a href="#" className="product-category">{book?.Category?.name}</a>
-                        </div>
-                        <a href="#" onClick={()=>{addFavorite(book?.id)}} className="btn-icon-wish">
-                          {/* <i className="icon-heart bi bi-suit-heart redHeart"></i> */}
-                          <i class="icon-heart"></i>
-                        </a> 
-                        
-                    </div>
-                    <h3 className="product-title">
-                      <a href="#"><Link to={`/book/${book?.id}`}>{book?.name}</Link></a>
-                    </h3>
-                    <div className="ratings-container">
-                        <div className="product-ratings">
-                            <span className="ratings" style={{ width: `${Number(book?.avgRating)}%` }}></span>
-                            <span className="tooltiptext tooltip-top"></span>
-                        </div>
-                    </div>
-                    <div className="price-box">
-                        <span className="product-price">{book?.reviewsCount}</span>
-                    </div>
+                    {
+                        !(customize=="MyBooks")&&
+                        <>
+                            <div className="category-wrap">
+                                <div className="category-list">
+                                    <a href="#" className="product-category">{book?.Category?.name}</a>
+                                </div>
+                                <a href="#" onClick={()=>{addFavorite(book?.id)}} className="btn-icon-wish">
+                                    <i class="icon-heart"></i>
+                                </a>
+                            </div>
+                            <h3 className="product-title">
+                                <a href="#"><Link to={`/book/${book?.id}`}>{book?.name}</Link></a>
+                            </h3>
+                            <div className="ratings-container">
+                                <div className="product-ratings">
+                                    <span className="ratings" style={{ width: `${Number(book?.avgRating)}%` }}></span>
+                                    <span className="tooltiptext tooltip-top"></span>
+                                </div>
+                            </div>
+                            <div className="price-box">
+                                <span className="product-price">{book?.reviewsCount}</span>
+                            </div>
+                        </>
+                    }
+                    {
+                        (customize=="MyBooks")&&
+                        <h3 className="product-title">
+                                <a href="#"><Link to={`/book/${book?.id}`}>{book?.name}</Link></a>
+                        </h3>
+                    }   
                 </div>
             </div>
         </div>

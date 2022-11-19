@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
+import SingleBookElement from "../Books/SingleBookElement/SingleBookElement";
 import SingleBookElement1 from "../Books/SingleBookElement/SingleBookELement1";
 import HeroSection from "../HeroSection/HeroSection";
 import Sidebar from "../SideBar/SideBar";
@@ -93,7 +94,7 @@ const MyBooks = () => {
                                             <div className="row">
                                                 {
                                                     books.map((book, i) => {
-                                                        return <SingleBookElement1 book={book} key={i} customize="MyBooks"/>
+                                                        return <SingleBookElement book={book} key={i} customize="MyBooks"/>
                                                     })
                                                 }
                                             </div>
@@ -101,7 +102,7 @@ const MyBooks = () => {
                                             <div className="row">
                                                 {
                                                     addedBooks.map((book, i) => {
-                                                        return <SingleBookElement1 book={book} key={i} customize="MyBooks"/>
+                                                        return <SingleBookElement book={book} key={i} customize="MyBooks"/>
                                                     })
                                                 }
                                                 {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
