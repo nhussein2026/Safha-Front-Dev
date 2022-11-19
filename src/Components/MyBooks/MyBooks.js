@@ -10,30 +10,37 @@ const MyBooks = () => {
     console.log("InsideMyBooks")
     const { setHomeNav, setAboutNav, 
             setCategoriesNav, setBooksNav,
-            userInfo } = useContext(AuthContext)
-    console.log("user",userInfo)
+            userInfo, token, setUserInfo} = useContext(AuthContext)
     const [books, setBooks] = useState([])
-    useEffect(() => {
+    // setBooks(userInfo?.FavoriteBooks)
+    // console.log("user",userInfo?.FavoriteBooks)
+    // console.log("before getUserInfo token",token);
+    // console.log("userInfo?.FavoriteBooks",userInfo?.FavoriteBooks);
+    useEffect(()=>{
         setCategoriesNav(false);
         setHomeNav(false);
         setBooksNav(false);
         setAboutNav(true);
-        // const getBooks = async () => {
-        //     const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books/all`, {
-        //         method: 'get',
-        //         headers: {
-        //             'Content-Type': 'application/json',
-        //         }
-        //     })
-        //     const json = await booksList.json()
-        //     console.log(json)
-        //     if (json?.success) {
-        //         setBooks(json?.data)
-        //     }
-        // }
-        // getBooks()
-    }, [])
-    // console.log("books",books)
+
+        const getUserInfo = async () => {
+            const userInfoFetch = await fetch(`${process.env.REACT_APP_API_URL}/users`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                }
+            })
+            const json = await userInfoFetch.json()
+            console.log("user info",json)
+            if (json?.success) {
+                console.log("insied if user info",json)
+                setUserInfo(json?.data)
+                setBooks(json?.data?.FavoriteBooks)
+            }
+        }
+        getUserInfo()
+    },[])
+    console.log("books",books);
     return(
         <>
             <div className="page-wrapper">
