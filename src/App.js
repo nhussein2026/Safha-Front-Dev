@@ -19,6 +19,7 @@ import Home1 from './Components/Home/Home1';
 import Navbar1 from './Components/Navbar/Navbar1';
 import SingleBookIndex from './Components/SingleBook/SingleBookIndex';
 import Login from './screens/Login/Login';
+import Updateprofile from './Components/Profile/Updateprofile';
 // require('dotenv').config()
 
 const App = () => {
@@ -42,6 +43,8 @@ const App = () => {
             <Route path='/profile' element={<Profile />} />
             {/* <Route path='/scroll' element={<HomeCategories />} /> */}
             <Route path='/scroll' element={<ScrolledSectioin />} />
+            <Route path='/pro' element={<Updateprofile />} />
+
 
 
           </Routes>
