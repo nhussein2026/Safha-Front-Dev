@@ -49,22 +49,40 @@ const Login = () => {
                                 <img src={logo} alt='' />
                             </div>
                             <h2 id='title' className='mb-1'>Welcom to Safha</h2>
-                            <form>
+                            {/* <form>
                                 <div class="mb-3">
-                                    <label htmlFor='email' class="form-label">Email Or Username</label>
-                                    <input type="email" ref={accountRef} id="email" class="form-control" placeholder="name@example.com" />
+                                    <label for="exampleInputEmail1" class="mb-1 form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                 </div>
                                 <div class="mb-3">
-                                    <label htmlFor='password' className="form-label">Password</label>
-                                    <input type="password" ref={passwordRef} id="password" className="form-control" placeholder="*******" />
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" />
                                 </div>
-                                <button
-                                        type="submit" 
-                                        className="btn btn-primary w-49"
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form> */}
+                            <div className='form-field mb-2'>
+                                <label htmlFor='email' className='mb-1'>Email Or Username</label>
+                                <input type='email' ref={accountRef} id="email" className='form-control' />
+                            </div>
+                            <div className='form-field mb-1'>
+                                <label htmlFor='password' className='mb-1'>Password</label>
+                                <input type='password' ref={passwordRef} id="password" className='form-control' />
+                            </div>
+                            {/* <div className='row mt-1'> */}
+                                {/* <div className='col-6' id='register-btnn'> */}
+                                    <button
+                                        className='btn btn-primary w-49'
                                         id='signup-bttn'
                                         onClick={login}>
-                                        {loading ? 'Please Wait' : 'Sign In'}</button>
-                            </form>
+                                        {loading ? 'Please Wait' : 'Sign In'}
+                                    </button>
+                                {/* </div> */}
+                            {/* </div> */}
                             <div className="mt-2">
                                 <h5><a href="/signup" id="signup-word">Not registerd, go to</a><a href="/signup" id="signUpBtn"> Sign Up</a></h5>
                             </div>

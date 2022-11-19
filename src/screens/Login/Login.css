@@ -25,7 +25,7 @@
     border-color: white;
 }
 #signup-bttn:hover{
-    background-color: #9e561fd4;
+    background-color: #9e561fe7;
   
 }
 #signup-word {
@@ -35,7 +35,7 @@
     border-radius: 10px;
 }
 #name {
-    border-radius: 25px;
+    border-radius: 10px;
 }
 #email {
     border-radius: 10px;
