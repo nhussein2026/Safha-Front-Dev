@@ -1,10 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import Footer from "../Footer/Footer";
-import HeroSection from "../HeroSection/HeroSection";
-import Navbar from "../Navbar/Navbar";
-import Sidebar from "../SideBar/SideBar";
 import { AuthContext } from "../../contexts/Authcontext";
-import SingleBookElement from "../Books/SingleBookElement/SingleBookElement";
+import HeroSection from "../HeroSection/HeroSection";
 // import '../../assets/css/demo/demo25/demo25.css'
 // import '../../assets/css/demo25.min.css'
 
@@ -39,7 +35,7 @@ const MyBooks = () => {
                 <div className="page-wrapper">
                     {/* <Navbar1/> */}
                     <HeroSection />
-                    <main className="main">
+                    {/* <main className="main">
                         <div className="bg-white">
                             <div className="container">
                                 <div className="row main-content">
@@ -56,7 +52,7 @@ const MyBooks = () => {
                                 </div>
                             </div>
                         </div>
-                    </main>
+                    </main> */}
                     {/* <Footer /> */}
                 </div>
             {/* </body> */}

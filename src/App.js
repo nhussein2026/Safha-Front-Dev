@@ -19,9 +19,9 @@ import Home1 from './Components/Home/Home1';
 import Navbar1 from './Components/Navbar/Navbar1';
 import SingleBookIndex from './Components/SingleBook/SingleBookIndex';
 import Login from './screens/Login/Login';
-import MyBooks from './Components/MyBooks/MyBooks';
 
 import Updateprofile from './Components/Profile/Updateprofile';
+import MyBooks from './Components/MyBooks/MyBooks';
 // require('dotenv').config()
 
 const App = () => {
