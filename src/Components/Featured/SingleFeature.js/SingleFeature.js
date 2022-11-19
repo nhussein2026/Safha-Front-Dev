@@ -17,12 +17,12 @@ const SingleFeature = ({book,i}) => {
           bookId: id,
         }),
     })
-    console.log("after put add");
+    // console.log("after put add");
     const json = await postFavorite.json()
-    console.log(json)
+    // console.log(json)
     window.alert(json.messages)
     if (json?.success) {
-      console.log(json.messages)
+      // console.log(json.messages)
     }
   }
   return (

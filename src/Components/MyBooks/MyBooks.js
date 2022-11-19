@@ -34,9 +34,9 @@ const MyBooks = () => {
                 }
             })
             const json = await userInfoFetch.json()
-            console.log("user info",json)
+            // console.log("user info",json)
             if (json?.success) {
-                console.log("insied if user info",json)
+                // console.log("insied if user info",json)
                 setUserInfo(json?.data)
             }
         }
@@ -52,7 +52,7 @@ const MyBooks = () => {
         setAdded(true)
     }
 
-    console.log("books",books);
+    // console.log("books",books);
     return(
         <>
             <div className="page-wrapper">
@@ -68,20 +68,20 @@ const MyBooks = () => {
                                             {/* <h3 className="widget-title">Favorite Books</h3> */}
                                             <ul class="nav nav-tabs" id="ulStyle">
                                                 { !added?
-                                                    <li class="nav-item">
+                                                    <li class="nav-item" onClick={setFavBooksFun}>
                                                         <a class="nav-link active" id="active" aria-current="page" href="#">Favorite</a>
                                                     </li> 
                                                     :
-                                                    <li class="nav-item">
+                                                    <li class="nav-item" onClick={setFavBooksFun}>
                                                         <a class="nav-link" aria-current="page" href="#">Favorite</a>
                                                     </li>
                                                 }
                                                 { added?
-                                                    <li class="nav-item">
+                                                    <li class="nav-item" onClick={setAddedBooksFun}>
                                                         <a class="nav-link active" id="active" aria-current="page" href="#">Added</a>
                                                     </li> 
                                                     :
-                                                    <li class="nav-item">
+                                                    <li class="nav-item" onClick={setAddedBooksFun}>
                                                         <a class="nav-link" aria-current="page" href="#">Added</a>
                                                     </li>
                                                 }
@@ -99,7 +99,7 @@ const MyBooks = () => {
                                             <div className="row">
                                                 {
                                                     books.map((book, i) => {
-                                                        return <SingleBookElement book={book} key={i}/>
+                                                        return <SingleBookElement book={added} key={i}/>
                                                     })
                                                 }
                                             </div>

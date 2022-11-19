@@ -21,7 +21,7 @@ const ScrolledSectioin = () => {
                 }
             })
             const json = await categoriesList.json()
-            console.log(json)
+            // console.log(json)
             if (json?.success) {
                 setCategories(json?.data)
             }
