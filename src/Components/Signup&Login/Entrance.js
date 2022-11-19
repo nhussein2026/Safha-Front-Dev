@@ -8,7 +8,23 @@ const Entrance = () => {
     const { loggedIn, signOut } = useContext(AuthContext)
     return(
         <>
-            {loggedIn?<a href="/signout"><button onClick={signOut} id='signup-bttn' className="button">Signout</button></a> : <a href="/login"><button id='signup-bttn' className="button">Login</button></a>}
+            {loggedIn?<a href="/signout">
+                        <button
+                            onClick={signOut}
+                            className="btn btn-primary w-49"
+                            id='signup-bttn'>SIGN OUT
+                        </button>
+                        {/* <button  id='signup-bttn' className="button">Signout</button> */}
+                    </a> : 
+                    <a href="/login">
+                        {/* <button id='signup-bttn' className="button">Login</button> */}
+                        <button
+                            className="btn btn-primary w-49"
+                            id='signup-bttn'>SIGN IN
+                        </button>
+                    </a>
+                    
+            }
         </>
     )
 }

@@ -10,7 +10,7 @@ const Login = () => {
     const accountRef = useRef();
     const passwordRef = useRef();
     const [loading, setLoading] = useState(false)
-    
+    console
     const login = async () => {
         setLoading(true)
         const response = await fetch(`${process.env.REACT_APP_API_URL}/users/login`,
