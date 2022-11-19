@@ -40,7 +40,7 @@ const App = () => {
             <Route path='/reviews' element={<Reviews />} />
             <Route path='/categories' element={<Categories />} />
             {logggedIn?
-              <Route path='/myBooks' element={<MyBooks />} />
+              <Route path='/mybooks' element={<MyBooks />} />
               :
               <Route path='/about' element={<About />} />
             }
