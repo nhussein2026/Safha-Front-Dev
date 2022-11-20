@@ -12,22 +12,8 @@ import NonFictionImg from "../../assets/images/categories/cover/scifi-fantasy.jp
 
 
 
-const Category = ({category}) => {
-    const images = [
-        {
-            politicsImg: "../../assets/images/categories/cover/arts-photography.jpg"
-        },
-        {
-            NovalImage: "../../assets/images/categories/cover/literature-fiction.jpg"
-        },
-        {
-            NonFictionImg: "../../assets/images/categories/cover/scifi-fantasy.jpg"
-        },
-        {
-            religionImg: "../../assets/images/categories/cover/business-investing.jpg"
-        }
-    ]
-    const randomimg = images[Math.floor(Math.random() * images.length)]
+const Category = ({category, image}) => {
+    
     return(
         <>
          <>
@@ -41,7 +27,7 @@ const Category = ({category}) => {
                             <CardMedia
                                 component="img"
                                 height="194"
-                                image={randomimg}
+                                image={image}
                                 alt="Category Image"
                             />
                             <CardContent>
