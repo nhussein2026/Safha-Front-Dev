@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
 import Category from "./Category";
 import './Categories.css';
+import CategoriesSideBar from "../SideBar/CategoriesSideBar";
 
 const Categories = () => {
     const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav } = useContext(AuthContext)
@@ -28,22 +29,20 @@ const Categories = () => {
 
     return (
         <>
-            <div className='container' id="CategoriesPlace">
-                <div className="row main-content">
-                    {
-                        categories.map((category, i) => {
-                            return <Category category={category} key={i} />
-                        })
-                    }
+            {/* <div className="col-6 col-sm-4 col-lg-3">
+                <div className="product-default inner-quickview inner-icon"> */}
+            {/* <div className="widget widget-featured pb-0">
+                <h3 className="widget-title">Books</h3> */}
+                    <div className='container' id="CategoriesPlace">
+                        <div className="row main-content"> 
+                            {
+                                categories.map((category, i) => {
+                                    return <Category category={category} key={i} />
+                                })
+                            }
                 </div>
             </div>
-
-
-
-
-
-
-
+                
         </>
     )
 }
