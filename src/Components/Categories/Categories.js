@@ -10,7 +10,8 @@ const Categories = () => {
     return (
         <>
             <div className='container'>
-            <div className='row' id='categoriesPlace'>
+            <div className='row'>
+            <h2 className="section-title pb-3 mb-3">Categories</h2>
                 <div id='forGap' className='col-12 d-flex'>
                     {/* the first category */}
                     <Card sx={{ maxWidth: 345 }}>
@@ -22,8 +23,8 @@ const Categories = () => {
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography paragraph>Novals</Typography>
-                            <Typography paragraph>
+                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
                                 15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
@@ -44,8 +45,8 @@ const Categories = () => {
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography paragraph>Novals</Typography>
-                            <Typography paragraph>
+                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
                                 15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
@@ -67,8 +68,8 @@ const Categories = () => {
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography paragraph>Novals</Typography>
-                            <Typography paragraph>
+                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
                                 15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
@@ -90,8 +91,8 @@ const Categories = () => {
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography paragraph>Novals</Typography>
-                            <Typography paragraph>
+                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
                                 15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
@@ -112,8 +113,8 @@ const Categories = () => {
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography paragraph>Novals</Typography>
-                            <Typography paragraph>
+                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
                                 15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
@@ -134,8 +135,8 @@ const Categories = () => {
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography paragraph>Novals</Typography>
-                            <Typography paragraph>
+                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
                                 15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
