@@ -4,7 +4,11 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import NovalImage from "../../assets/images/categories/cover/literature-fiction.jpg"
-import './Categories.css'
+import './Categories.css';
+import politicsImg from "../../assets/images/categories/cover/arts-photography.jpg";
+import religionImg from "../../assets/images/categories/cover/business-investing.jpg";
+import scienceImg from "../../assets/images/categories/cover/mystery-suspense.jpg";
+import NonFictionImg from "../../assets/images/categories/cover/scifi-fantasy.jpg"
 
 const Categories = () => {
     return (
@@ -23,7 +27,7 @@ const Categories = () => {
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h3">Politics</Typography>
                             <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
@@ -41,11 +45,11 @@ const Categories = () => {
                         <CardMedia
                             component="img"
                             height="194"
-                            image={NovalImage}
+                            image={politicsImg}
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h3">Novels</Typography>
                             <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
@@ -64,11 +68,11 @@ const Categories = () => {
                         <CardMedia
                             component="img"
                             height="194"
-                            image={NovalImage}
+                            image={religionImg}
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h3">Religion</Typography>
                             <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
@@ -87,11 +91,11 @@ const Categories = () => {
                         <CardMedia
                             component="img"
                             height="194"
-                            image={NovalImage}
+                            image={scienceImg}
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h3">Scientific</Typography>
                             <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
@@ -109,11 +113,11 @@ const Categories = () => {
                         <CardMedia
                             component="img"
                             height="194"
-                            image={NovalImage}
+                            image={religionImg}
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h3">None-Fiction</Typography>
                             <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
@@ -131,11 +135,11 @@ const Categories = () => {
                         <CardMedia
                             component="img"
                             height="194"
-                            image={NovalImage}
+                            image={NonFictionImg}
                             alt="Category Image"
                         />
                         <CardContent>
-                            <Typography variant="h3">Novals</Typography>
+                            <Typography variant="h3">Fiction</Typography>
                             <Typography variant="h6">
                                 Add rice and stir very gently to distribute. Top with artichokes and
                                 peppers, and cook without stirring, until most of the liquid is absorbed,
