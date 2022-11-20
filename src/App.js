@@ -21,6 +21,7 @@ import Updateprofile from './Components/Profile/Updateprofile';
 import MyBooks from './Components/MyBooks/MyBooks';
 import AddBook from './Components/MyBooks/AddBook/AddBook';
 import CategoriesF from './Components/Categories/Categories';
+import CollectionPage from './Components/Featured/OneFeature/CollectionPage';
 // require('dotenv').config()
 
 const App = () => {
@@ -52,7 +53,7 @@ const App = () => {
             <Route path='/scroll' element={<ScrolledSectioin />} />
             <Route path='/pro' element={<Updateprofile />} />
             <Route path='/addbook' element={<AddBook />} />
-
+            <Route path='/collection' element={<CollectionPage />} />
 
           </Routes>
         </div>
