@@ -54,7 +54,9 @@ const SingleBookElement = ({book,i,customize}) => {
                   <>
                     <div className="category-wrap">
                         <div className="category-list">
+                          <Link to={`/category/${book?.Category?.id}`}>
                             <a href="#" className="product-category">{book?.Category?.name}</a>
+                          </Link>
                         </div>
                         <a href="#" onClick={()=>{addFavorite(book?.id)}} className="btn-icon-wish">
                             {/* <i class="icon-heart"></i> */}
