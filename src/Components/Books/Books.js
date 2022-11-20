@@ -3,7 +3,6 @@ import SingleBookElement from "./SingleBookElement/SingleBookElement";
 import Footer from "../Footer/Footer";
 import HeroSection from "../HeroSection/HeroSection";
 import Navbar from "../Navbar/Navbar";
-import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import Sidebar from "../SideBar/SideBar";
 import Navbar1 from "../Navbar/Navbar1";
 import { AuthContext } from "../../contexts/Authcontext";
@@ -40,7 +39,6 @@ const Books = () => {
                 <div className="page-wrapper">
                     {/* <Navbar1/> */}
                     <HeroSection />
-                    <SecondNavbar/>
                     <main className="main">
                         <div className="bg-white">
                             <div className="container">

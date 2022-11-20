@@ -6,7 +6,6 @@ import HeroSection from "../HeroSection/HeroSection";
 import HomeCategories from "../HomeCategories/HomeCategories2";
 import Navbar from "../Navbar/Navbar";
 import ScrolledSectioin from "../ScrolledSection/ScrolledSection";
-import SecondNavbar from "../SecondNavbar/SecondNavbar";
 // import Sidebar from "../SideBar/SideBar";
 import Suggested from "../SuggestedCategories/Suggested";
 // import SingleBook from "../SingleBook/SingleBook";
@@ -36,7 +35,6 @@ const Home = () => {
         <>
             {/* <HeroSection /> */}
             <ScrolledSectioin />
-            <SecondNavbar />
             <HomeCategories />
             <Featured />
             {/* <Sidebar/> */}
