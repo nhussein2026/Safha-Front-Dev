@@ -4,7 +4,7 @@ import Footer from './Components/Footer/Footer';
 import Signup from './screens/Signup/Signup';
 import Books from './Components/Books/Books';
 import Reviews from './Components/Reviews/Reviews';
-import Categories from './Components/Categories/Categories';
+import Categories from './Components/Categories/CategoriesSimple';
 import About from './Components/About/About';
 import Suggested from './Components/SuggestedCategories/Suggested';
 import SingleBook from "./Components/SingleBook/SingleBook";
@@ -20,7 +20,7 @@ import Login from './screens/Login/Login';
 import Updateprofile from './Components/Profile/Updateprofile';
 import MyBooks from './Components/MyBooks/MyBooks';
 import AddBook from './Components/MyBooks/AddBook/AddBook';
-import CategoriesF from './Components/Categories/CategoriesF';
+import CategoriesF from './Components/Categories/Categories';
 // require('dotenv').config()
 
 const App = () => {
@@ -52,7 +52,7 @@ const App = () => {
             <Route path='/scroll' element={<ScrolledSectioin />} />
             <Route path='/pro' element={<Updateprofile />} />
             <Route path='/addbook' element={<AddBook />} />
-            <Route path='/cateogry' element={<CategoriesF />} />
+            <Route path='/category' element={<CategoriesF />} />
 
 
           </Routes>
