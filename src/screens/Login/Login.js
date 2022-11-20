@@ -29,13 +29,13 @@ const Login = () => {
             }
         );
         const json = await response.json();
-        console.log(json)
+        // console.log(json)
         window.alert(json.messages)
         if (json.success) {
-            console.log(json)
+            // console.log(json)
             // Login(json)
             signIn(json)
-            console.log("json.token", json.token)
+            // console.log("json.token", json.token)
             // go to homeBage
             setHomeNav(true)
             setCategoriesNav(false)

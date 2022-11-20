@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AddReview from "../AddReviews/AddReviews";
 const SingleBook = () => {
-    console.log("I`m in the single book")
+    // console.log("I`m in the single book")
     const { id } = useParams()
-    console.log("id", id)
+    // console.log("id", id)
     const [book, setBook] = useState({})
     useEffect(() => {
         const getBook = async () => {
@@ -18,14 +18,14 @@ const SingleBook = () => {
                 }
             })
             const json = await getOneBook.json()
-            console.log("json", json)
+            // console.log("json", json)
             if (json?.success) {
                 setBook(json?.data)
             }
         }
         getBook()
     }, [id])
-    console.log("book", book)
+    // console.log("book", book)
     return (
         <>
 

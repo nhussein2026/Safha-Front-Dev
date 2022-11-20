@@ -1,6 +1,6 @@
 import './Featured.css'
-import SingleFeature from './SingleFeature.js/SingleFeature'
 import { useEffect, useState } from 'react'
+import SingleBookElement from '../Books/SingleBookElement/SingleBookElement'
 const Featured = () => {
     const [books, setBooks] = useState([])
     useEffect(() => {
@@ -58,7 +58,7 @@ const Featured = () => {
                             {
                                 books.map((book, i) => {
                                     if(i<5){
-                                        return <SingleFeature book={book} key={i} />
+                                        return <SingleBookElement book={book} key={i} customize="Features" />
                                     }
                                 })
                             }

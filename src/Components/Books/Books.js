@@ -50,7 +50,7 @@ const Books = () => {
                                         <div className="row">
                                             {
                                                 books.map((book, i) => {
-                                                    return <SingleBookElement book={book} key={i} />
+                                                    return <SingleBookElement book={book} key={i} customize="books" />
                                                 })
                                             }
                                         </div>

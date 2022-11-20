@@ -16,7 +16,7 @@ const SideBarWrapper = () => {
                 }
             })
             const json = await booksList.json()
-            console.log(json)
+            // console.log(json)
             if (json?.success) {
                 setBooks(json?.data)
             }

@@ -1,0 +1,26 @@
+.titlePlace{
+    /* margin-bottom: 400px ; */
+    flex-direction: column;
+}
+ul li{
+    padding-bottom: 20px;
+    margin-block-end: 10px;
+    border-bottom: 0px;
+}
+#ulStyle{
+    border-bottom: 0px;
+}
+#active{
+    color:#fe1656;
+    border-bottom: 3px solid #fe1656;
+}
+#addIcon{
+    color:#fe1658ce;
+}
+#addIcon:hover{
+    color:#fe1656;
+    cursor: pointer;
+}
+#redHeart{
+    color:#fe1656;
+}

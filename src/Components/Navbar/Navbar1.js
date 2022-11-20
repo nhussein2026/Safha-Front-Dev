@@ -29,9 +29,9 @@ const Navbar1 = () => {
             setBooksNav(false);
         }else{
             // return
-            // setHomeNav(true)
+            setHomeNav(true)
         }
-        console.log("homeNav",homeNav)
+        // console.log("homeNav",homeNav)
     },[homeNav,categoriesNav,booksNav,aboutNav])
     return(
         <>
