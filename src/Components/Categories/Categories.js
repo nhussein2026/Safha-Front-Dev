@@ -11,9 +11,8 @@ import scienceImg from "../../assets/images/categories/cover/mystery-suspense.jp
 import NonFictionImg from "../../assets/images/categories/cover/scifi-fantasy.jpg"
 
 const Categories = () => {
-    const randomImg = [
-        
-    ]
+    
+   
     return (
         <>
             <div className='container'>
