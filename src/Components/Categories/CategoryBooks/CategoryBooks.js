@@ -1,11 +1,4 @@
-import AddReview from "../AddReviews/AddReviews"
-import SideBarWrapper from "../SideBarWrapper/SideBarWrapper"
-import SingleBook from "./SingleBook"
-import './SingleBook.css'
-
-
-
-const SingleBookIndex = () => {
+const CategoryBooks = () => {
     return(
         <>
         <div className="d-flex justify-content-between" style={{backgroundColor:'#fff'}}>
@@ -15,4 +8,4 @@ const SingleBookIndex = () => {
         </>
     )
 }
-export default SingleBookIndex
+export default CategoryBooks
