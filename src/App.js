@@ -13,15 +13,13 @@ import { AuthContext } from './contexts/Authcontext';
 import Profile from './Components/Profile/Profile';
 import ScrolledSectioin from './Components/ScrolledSection/ScrolledSection';
 import HomeCategories from './Components/HomeCategories/HomeCategories2';
-
-
-import Home1 from './Components/Home/Home1';
 import Navbar1 from './Components/Navbar/Navbar1';
 import SingleBookIndex from './Components/SingleBook/SingleBookIndex';
 import Login from './screens/Login/Login';
 
 import Updateprofile from './Components/Profile/Updateprofile';
 import MyBooks from './Components/MyBooks/MyBooks';
+import AddBook from './Components/MyBooks/AddBook/AddBook';
 // require('dotenv').config()
 
 const App = () => {
@@ -52,7 +50,7 @@ const App = () => {
             {/* <Route path='/scroll' element={<HomeCategories />} /> */}
             <Route path='/scroll' element={<ScrolledSectioin />} />
             <Route path='/pro' element={<Updateprofile />} />
-
+            <Route path='/addbook' element={<AddBook />} />
 
           </Routes>
         </div>
