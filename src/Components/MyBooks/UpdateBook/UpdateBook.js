@@ -72,35 +72,35 @@ const UpdateBook = () => {
                             <h1 className='mb-2'>Add Books</h1>
                             <div className='form-field mb-3 d-flex flex-column align-items-start'>
                                 <label htmlFor='name' className='mb-2'>Book Name</label>
-                                <input placeholder='Type Your Name' type='text' id="name" value={currentBook?.name} onChange={(e) => setCurrentBook({ ...currentBook, name: e.target.value })} className='form-control' />
+                                <input placeholder='Type Book Name' type='text' id="name" value={currentBook?.name} onChange={(e) => setCurrentBook({ ...currentBook, name: e.target.value })} className='form-control' />
                             </div>
                             <div className='form-field mb-3 d-flex flex-column align-items-start'>
-                                <label htmlFor='name' className='mb-2'>Book Pages Counts</label>
-                                <input placeholder='Type Your Name' type='text' id="name" value={currentBook?.pagesCount} onChange={(e) => setCurrentBook({ ...currentBook, pagesCount: e.target.value })} className='form-control' />
+                                <label htmlFor='page-book' className='mb-2'>Book Pages Counts</label>
+                                <input placeholder='Type Your Name' type='number' id="page-book" value={currentBook?.pagesCount} onChange={(e) => setCurrentBook({ ...currentBook, pagesCount: e.target.value })} className='form-control' />
                             </div>
                             <div className='form-field mb-3 d-flex flex-column align-items-start'>
-                                <label htmlFor='name' className='mb-2'>Book Description</label>
-                                <input placeholder='Type Your Name' type='text' id="name" value={currentBook?.des} onChange={(e) => setCurrentBook({ ...currentBook, des: e.target.value })} className='form-control' />
+                                <label htmlFor='book-des' className='mb-2'>Book Description</label>
+                                <input placeholder='Write Book Description' type='text' id="book-des" value={currentBook?.des} onChange={(e) => setCurrentBook({ ...currentBook, des: e.target.value })} className='form-control' />
                             </div>
                             <div className='form-field mb-3 d-flex flex-column align-items-start'>
-                                <label htmlFor='name' className='mb-2'>Book Cover</label>
-                                <input placeholder='Type Your Name' type='text' id="name" value={currentBook?.cover} onChange={(e) => setCurrentBook({ ...currentBook, cover: e.target.value })} className='form-control' />
+                                <label htmlFor='book-cover' className='mb-2'>Book Cover</label>
+                                <input type='file' id="book-cover" value={currentBook?.cover} onChange={(e) => setCurrentBook({ ...currentBook, cover: e.target.value })} className='form-control' />
                             </div>
                             <div className='form-field mb-3 d-flex flex-column align-items-start'>
-                                <label htmlFor='name' className='mb-2'>Book Publish Date</label>
-                                <input placeholder='Type Your Name' type='text' id="name" value={currentBook?.publish} onChange={(e) => setCurrentBook({ ...currentBook, publish: e.target.value })} className='form-control' />
+                                <label htmlFor='publish-date' className='mb-2'>Book Publish Date</label>
+                                <input placeholder='Type Your Name' type='date' id="publish-date" value={currentBook?.publish} onChange={(e) => setCurrentBook({ ...currentBook, publish: e.target.value })} className='form-control' />
                             </div>
                             <div className='form-field mb-3  d-flex flex-column align-items-start'>
-                                <label htmlFor='email' className='mb-2'>Book Language</label>
-                                <input placeholder='Email Address' type='email' id="email" value={currentBook?.lang} onChange={(e) => setCurrentBook({ ...currentBook, email: e.target.value })} className='form-control' />
+                                <label htmlFor='book-lang' className='mb-2'>Book Language</label>
+                                <input placeholder='Email Address' type='text' id="book-lang" value={currentBook?.lang} onChange={(e) => setCurrentBook({ ...currentBook, email: e.target.value })} className='form-control' />
                             </div>
                             <div className='form-field mb-3  d-flex flex-column align-items-start'>
-                                <label htmlFor='Password' className='mb-2'>Author Name</label>
-                                <input placeholder='Your Password' type='password' id="password"  value={currentBook?.author} onChange={(e) => setCurrentBook({ ...currentBook, author: e.target.value })} className='form-control' />
+                                <label htmlFor='author-name' className='mb-2'>Author Name</label>
+                                <input placeholder='Write Author Name' type='text' id="author-name"  value={currentBook?.author} onChange={(e) => setCurrentBook({ ...currentBook, author: e.target.value })} className='form-control' />
                             </div>
                             <div className='form-field mb-3  d-flex flex-column align-items-start'>
-                                <label htmlFor='Password' className='mb-2'>Book ISBN</label>
-                                <input placeholder='Your Password' type='password' id="password" value={currentBook?.ISBN} onChange={(e) => setCurrentBook({ ...currentBook, ISBN: e.target.value })} className='form-control' />
+                                <label htmlFor='isbn-number' className='mb-2'>Book ISBN</label>
+                                <input placeholder='Write Book ISBN' type='number' id="isbn-number" value={currentBook?.ISBN} onChange={(e) => setCurrentBook({ ...currentBook, ISBN: e.target.value })} className='form-control' />
                             </div>
                             <div className='form-field mb-5  d-flex flex-column align-items-start'>
                                 <label htmlFor='password_confirmation' className='mb-2'>Category Id</label>
