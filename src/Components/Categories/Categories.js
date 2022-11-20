@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
 import Category from "./Category";
+import './Categories.css';
 
 const Categories = () => {
     const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav } = useContext(AuthContext)
@@ -31,13 +32,11 @@ const Categories = () => {
             <div className='container'>
                 <div className='row'>
                     <h2 className="section-title pb-3 mb-3">Categories</h2>
-                    <div id='forGap' className='col-12 d-flex'>
                     {
                         categories.map((category, i) => {
                             return <Category category={category} key={i}  />
                         })
                     }
-                    </div>
                 </div>
             </div>
 

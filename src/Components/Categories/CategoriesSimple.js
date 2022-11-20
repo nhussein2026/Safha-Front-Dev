@@ -4,7 +4,6 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import NovalImage from "../../assets/images/categories/cover/literature-fiction.jpg"
-import './Categories.css';
 import politicsImg from "../../assets/images/categories/cover/arts-photography.jpg";
 import religionImg from "../../assets/images/categories/cover/business-investing.jpg";
 import scienceImg from "../../assets/images/categories/cover/mystery-suspense.jpg";

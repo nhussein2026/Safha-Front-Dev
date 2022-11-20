@@ -4,7 +4,7 @@ import Footer from './Components/Footer/Footer';
 import Signup from './screens/Signup/Signup';
 import Books from './Components/Books/Books';
 import Reviews from './Components/Reviews/Reviews';
-import Categories from './Components/Categories/CategoriesSimple';
+import Categories from './Components/Categories/Categories';
 import About from './Components/About/About';
 import Suggested from './Components/SuggestedCategories/Suggested';
 import SingleBook from "./Components/SingleBook/SingleBook";
@@ -52,7 +52,6 @@ const App = () => {
             <Route path='/scroll' element={<ScrolledSectioin />} />
             <Route path='/pro' element={<Updateprofile />} />
             <Route path='/addbook' element={<AddBook />} />
-            <Route path='/category' element={<CategoriesF />} />
 
 
           </Routes>
