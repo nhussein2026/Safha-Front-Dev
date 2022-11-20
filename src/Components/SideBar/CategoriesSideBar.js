@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 const CategoriesSideBar = () => {
     const [categories, setCategories] = useState([])
@@ -30,7 +31,18 @@ const CategoriesSideBar = () => {
                                 categories.map((category, i) => {
                                     // console.log("category?.name",category?.name)
                                     return(
-                                        <li><a href="#">{category?.name}<span className="products-count">({category?.Books?.length})</span></a></li>
+                                        
+                                        <li>
+                                            {/* <Link to={`/category/${category?.id}`}> */}
+                                                <a href="#">
+                                                    {category?.name}
+                                                    <span className="products-count">
+                                                        ({category?.Books?.length})
+                                                    </span>
+                                                </a>
+                                            {/* </Link> */}
+                                        </li>
+                                        
                                     )
                                 })
                             }

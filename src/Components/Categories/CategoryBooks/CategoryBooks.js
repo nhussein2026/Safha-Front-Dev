@@ -40,7 +40,6 @@ const CategoryBooks = () => {
                                 <div class="sidebar-overlay"></div>
                                     <div className="col-lg-9">
                                         <div className="col-6 col-sm-4 col-lg-6">
-                                            {/* <h3 className="widget-title">Favorite Books</h3> */}
                                             <ul class="nav nav-tabs" id="ulStyle">
                                                 <li class="nav-item">
                                                     <a class="nav-link active" id="active" aria-current="page" href="#">
