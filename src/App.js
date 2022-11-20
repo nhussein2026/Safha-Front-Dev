@@ -55,6 +55,8 @@ const App = () => {
             <Route path='/pro' element={<Updateprofile />} />
             <Route path='/addbook' element={<AddBook />} />
             <Route path='/collection' element={<CollectionPage />} />
+            <Route path='/add-book' element={<AddBook />} />
+
 
           </Routes>
         </div>

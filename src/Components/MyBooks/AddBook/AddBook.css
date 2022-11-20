@@ -1,0 +1,30 @@
+#form-parent {
+    padding-top: 30px;
+    border: 1px solid #dadce0;
+    border-radius: 32px;
+    background-color: rgb(255, 255, 255);
+    /* width: 900px; */
+
+}
+#form-logo {
+    width: 160px;
+    margin: auto;
+}
+#form-title {
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+}
+#form-bttn {
+    border-radius: 30px;
+    background-color: #9e561f;
+}
+#password{
+    border-radius: 10px;
+}
+#name {
+    border-radius: 10px;
+}
+#email {
+    border-radius: 10px;
+}

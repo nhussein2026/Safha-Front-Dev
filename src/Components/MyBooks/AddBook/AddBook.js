@@ -1,113 +1,149 @@
-import { Box, Card, Checkbox, FormControl, FormControlLabel, Grid, Icon, InputLabel, NativeSelect } from "@mui/material"
-import { Button } from "bootstrap"
-import { useContext, useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { AuthContext } from "../../../contexts/Authcontext"
+import './AddBook.css'
+import user from '../../../assets/images/logos/logo with safha.png'
+import logo2 from '../../../assets/images/logos/logo with safha.png'
+import photo2 from '../../../assets/images/logos/logo with safha.png'
+import { Link, useNavigate } from 'react-router-dom'
+import { useState, useRef, useEffect, useContext } from 'react'
+import { AuthContext } from '../../AuthContext/AuthContext'
+
+
+
+
+
 
 const AddBook = () => {
-    const { token } = useContext(AuthContext)
-    const [publish, setPublish] = useState('')
-    const navigate = useNavigate()
-    const AddBook = async (event) => {
-        let BookData = new FormData(event.target)
-        event.preventDefault()
-        console.log("BookData", BookData)
+    const { token, user, setUser } = useContext(AuthContext)
 
-        const added = await fetch(`${process.env.REACT_APP_API_URL}/books`, {
-            method: 'POST',
+    const [loading, setLoading] = useState(false)
+    const [currentBook, setCurrentBook] = useState({
+        publish: "", //this is for date
+        land: "",
+        author: "",
+        ISBN: "",
+        categoryId: "",
+        publisherId: "",
+        kindle: "",
+        paper: ""
+    })
+    const navigate = useNavigate()
+    const { logOut, loggedIn } = useContext(AuthContext)
+    useEffect(() => {
+        const addBook = async () => {
+            const response = await fetch('https://safha.fjobeir.com/backend/books', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            })
+            const json = await response.json()
+            if (json.success) {
+                setCurrentBook({
+                    ...currentBook,
+                    userName: json?.data?.userName,
+                    email: json?.data?.email,
+                })
+            }
+        }
+        getMe()
+    }, [])
+
+
+    const updateBook = async () => {
+        setLoading(true)
+        const response = await fetch(`https://safha.fjobeir.com/backend/edit/: + ${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(currentBook),
             headers: {
                 'Authorization': `Bearer ${token}`,
-            },
-            body: BookData
+                'Content-Type': 'application/json'
+            }
         })
-        const json = await added.json()
-        // console.log(json)
-        alert(json.messages.join(' '))
+        const json = await response.json()
+        setLoading(false)
+        window.alert(json.messages.join(', '))
         if (json.success) {
-            navigate('/books')
+            logOut()
+            if (!loggedIn) navigate('/signin')
         }
     }
-    const [categories, setCategories] = useState()
-    const [publishers, setPublishers] = useState()
-    useEffect(() => {
-        async function getCategories() {
-            const data = await fetch(`${process.env.REACT_APP_API_URL}/categories/all`);
-            const categoriesData = await data.json()
-            setCategories(categoriesData.data)
-        }
-        // console.log("categoriesData",categories)
-        getCategories();
 
-        async function getPublishers() {
-            const data = await fetch(`${process.env.REACT_APP_API_URL}/publishers/all`);
-            const publishersData = await data.json()
-            // console.log("publishersData",publishersData)
-            setPublishers(publishersData.data)
-        }
-        getPublishers();
-    }, []);
-    return ( 
-        <>                            
-                                        
-            <form className="row g-3" method="post" onSubmit={AddBook}>
-                <div className="col-md-6">
-                    <label htmlFor="inputEmail4" className="form-label">Email</label>
-                    <input type="email" className="form-control" id="inputEmail4" />
+    const onChangeHandler = (e, field) => {
+        setCurrentBook((prev) => {
+            return {
+                ...currentBook,
+                ...field
+            }
+        })
+    }
+
+    // const deletePost = async (id) => {
+    //     const response = await fetch(`${process.env.REACT_APP_API}/posts/${id}`, {
+    //         method: 'delete',
+    //         headers: {
+    //             'Authorization': `Bearer ${token}`,
+    //         }
+    //     })
+    //     const json = await response.json()
+    //     if (json.success) {
+    //         const currentPosts = [...currentUser.posts]
+    //         const remainedPosts = currentPosts.filter((p) => p.id != id)
+    //         setCurrentUser({
+    //             ...currentUser,
+    //             posts: remainedPosts
+    //         })
+    //     }
+    // }
+
+    return (
+        <div>
+            <div class='wrapper'>
+                <div class='bg-image'>
+                    <img id='personal' src={photo2} alt='' />
                 </div>
-                <div className="col-md-6">
-                    <label htmlFor="inputPassword4" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="inputPassword4" />
-                </div>
-                <div className="col-12">
-                    <label htmlFor="inputAddress" className="form-label">Address</label>
-                    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
-                </div>
-                <div className="col-12">
-                    <label htmlFor="inputAddress2" className="form-label">Address 2</label>
-                    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-                </div>
-                <div className="col-md-6">
-                    <label htmlFor="inputCity" className="form-label">City</label>
-                    <input type="text" className="form-control" id="inputCity" />
-                </div>
-                <div className="col-md-4">
-                    <label htmlFor="inputState" className="form-label">State</label>
-                    <select id="inputState" className="form-select">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div className="col-md-2">
-                    <label htmlFor="inputZip" className="form-label">Zip</label>
-                    <input type="text" className="form-control" id="inputZip" />
-                </div>
-                <div className="col-12">
-                    <div className="form-check">
-                        <input className="form-check-input" type="checkbox" id="gridCheck" />
-                        <label className="form-check-label" htmlFor="gridCheck">
-                        Check me out
-                        </label>
+                <div class='registration-form'>
+                    <div id='form-div' className='w-100'>
+                        <div className=' mb-4'>
+                            <img id='user' src={user} alt='' />
+                        </div>
+                        <div className=' mb-4'>
+                            <img id='logo2' src={logo2} alt='' />
+                        </div>
+                        <h1 className='mb-2'>My Profile</h1>
+                        <div className='form-field mb-3 d-flex flex-column align-items-start'>
+                            <label htmlFor='name' className='mb-2'>Name</label>
+                            <input placeholder='Type Your Name' type='text' id="name" value={currentUser?.userName} onChange={(e) => setCurrentUser({ ...currentUser, userName: e.target.value })} className='form-control' />
+                        </div>
+                        <div className='form-field mb-3  d-flex flex-column align-items-start'>
+                            <label htmlFor='email' className='mb-2'>Email Address</label>
+                            <input placeholder='Email Address' type='email' id="email" value={currentUser?.email} onChange={(e) => setCurrentUser({ ...currentUser, email: e.target.value })} className='form-control' />
+                        </div>
+                        <div className='form-field mb-3  d-flex flex-column align-items-start'>
+                            <label htmlFor='Password' className='mb-2'>Password</label>
+                            <input placeholder='Your Password' type='password' id="password" onChange={(e) => setCurrentUser({ ...currentUser, password: e.target.value })} className='form-control' />
+                        </div>
+                        <div className='form-field mb-3  d-flex flex-column align-items-start'>
+                            <label htmlFor='Password' className='mb-2'>NewPassword</label>
+                            <input placeholder='Your Password' type='password' id="password" onChange={(e) => setCurrentUser({ ...currentUser, new_password: e.target.value })} className='form-control' />
+                        </div>
+
+                        <div className='form-field mb-5  d-flex flex-column align-items-start'>
+                            <label htmlFor='password_confirmation' className='mb-2'>Password Confirmation</label>
+                            <input placeholder='Password Confirmation' type='password' id="password_confirmation" onChange={(e) => setCurrentUser({ ...currentUser, new_password_confirmation: e.target.value })} className='form-control' />
+                        </div>
+                        {/* <div className='row'> */}
+                            {/* <div className='col-5'>
+                        <Link className='btn btn-dark w-100' to='/signin'>Go To Login</Link>
+                    </div> */}
+                            <div className='col-12 mb-5'>
+                                    <button onClick={updateProfile} disabled={loading} className='btn btn-primary w-100'>{loading ? 'Updateing' : 'Update'}</button>
+                            </div>
+                        {/* </div> */}
                     </div>
                 </div>
-                <input name='cover' hidden accept="image/*" single type="file" />
-                {/* <Checkbox value='1' name="paper" /> */}
-                {/* <Checkbox value='1' name="kindle" /> */}
-                <div className="row mb-3">
-                <div className="col-sm-10 offset-sm-2">
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" id="gridCheck1"/>
-                    <label className="form-check-label" for="gridCheck1">
-                    Example checkbox
-                    </label>
-                </div>
-                </div>
             </div>
-
-                <div className="col-12">
-                <button type="submit" className="btn btn-primary">Sign in</button>
-                </div>
-            </form>
-        </>
+        </div>
     )
 }
+
 export default AddBook
