@@ -45,9 +45,9 @@ const Category = ({category}) => {
                                 alt="Category Image"
                             />
                             <CardContent>
-                                <Typography variant="h3">{category.name}</Typography>
+                                <Typography variant="h3">{category?.name}</Typography>
                                 <Typography variant="h6">
-                                    
+                                {category?.des}
                                 </Typography>
                             </CardContent>
                         </Card>
