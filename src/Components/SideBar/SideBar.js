@@ -1,8 +1,7 @@
 import CategoriesSideBar from "./CategoriesSideBar";
 import FavoriteBooks from "./FavoriteBooks";
 
-const Sidebar = ({books}) => {
-
+const Sidebar = ({books}) => {    
     return (
         <>
             <div class="sidebar-overlay"></div>
@@ -14,7 +13,8 @@ const Sidebar = ({books}) => {
                         {
                             books.map((book, i) => {
                                 // console.log(i)
-                                if(i<2){
+                                
+                                if(i<2 ){
                                     return (<FavoriteBooks book={book} />)
                                 }
                             })
