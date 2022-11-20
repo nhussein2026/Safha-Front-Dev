@@ -1,9 +1,27 @@
+import { useEffect, useState } from "react";
 import SingleBookElement from "../../Books/SingleBookElement/SingleBookElement";
 import HeroSection from "../../HeroSection/HeroSection";
 import Sidebar from "../../SideBar/SideBar";
 
-const CollectionPage = ({books}) => {
-    
+const CollectionPage = () => {
+    const [books, setBooks] = useState([])
+    useEffect(() => {
+        const getBooks = async () => {
+            const booksList = await fetch(`${process.env.REACT_APP_API_URL}/books/all`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            const json = await booksList.json()
+            console.log(json)
+            if (json?.success) {
+                setBooks(json?.data)
+            }
+        }
+        getBooks()
+    }, [])
+    const rand = Math.floor(Math.random() * books.length)
     return(
         <>
             <div className="page-wrapper">
@@ -17,7 +35,9 @@ const CollectionPage = ({books}) => {
                                     <div className="row">
                                         {
                                             books.map((book, i) => {
-                                                return <SingleBookElement book={book} key={i} customize="books" />
+                                                if(i>rand){
+                                                    return <SingleBookElement book={book} key={i} customize="books" />
+                                                }
                                             })
                                         }
                                     </div>
