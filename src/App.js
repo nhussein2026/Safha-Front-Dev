@@ -41,6 +41,7 @@ const App = () => {
             <Route path='/book/:id' element={<SingleBookIndex/>} />
             <Route path='/reviews' element={<Reviews />} />
             <Route path='/categories' element={<CategoriesDesigne />} />
+            <Route path='/category/:id' element={<SingleBookIndex/>} />
             {/* <Route path='/mybooks' element={<MyBooks />} /> */}
             {
               loggedIn?
