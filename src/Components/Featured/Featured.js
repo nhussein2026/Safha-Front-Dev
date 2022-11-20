@@ -20,12 +20,13 @@ const Featured = () => {
         }
         getBooks()
     }, [])
+    // books.reviewsCount
     return (
         <>
             <section className="featured-section bg-white">
                 <div className="container">
                     <div className="row">
-                        <OneFeature />
+                        <OneFeature books={books}/>
                     </div>
                     <div>
                         <h2 className="section-title pb-3 mb-3">Featured Books</h2>
