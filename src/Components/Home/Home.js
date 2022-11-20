@@ -33,7 +33,7 @@ const Home = () => {
     
     return (
         <>
-            {/* <HeroSection /> */}
+            <HeroSection />
             <ScrolledSectioin />
             <HomeCategories />
             <Featured />
