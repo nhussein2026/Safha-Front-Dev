@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
 import Category from "./Category";
 import './Categories.css';
-import Sidebar from "../SideBar/SideBar";
 
 const Categories = () => {
     const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav } = useContext(AuthContext)
@@ -20,7 +19,6 @@ const Categories = () => {
                 }
             })
             const json = await Categories.json()
-            console.log(json)
             if (json?.success) {
                 setCategories(json?.data)
             }
@@ -30,9 +28,8 @@ const Categories = () => {
 
     return (
         <>
-            <div className='container'>
+            <div className='container' id="CategoriesPlace">
                 <div className="row main-content">
-                    <h2 className="section-title pb-3 mb-3">Categories</h2>
                     {
                         categories.map((category, i) => {
                             return <Category category={category} key={i} />

@@ -11,7 +11,6 @@ const CategoriesSideBar = () => {
                 }
             })
             const json = await categoriesList.json()
-            // console.log(json)
             if (json?.success) {
                 setCategories(json?.data)
             }

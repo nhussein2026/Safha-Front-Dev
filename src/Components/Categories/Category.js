@@ -26,6 +26,7 @@ import CategoryImg19 from "../../assets/images/categories/categoriesImages/13185
 import CategoryImg20 from "../../assets/images/categories/categoriesImages/depositphotos_6111711-stock-photo-books-isolated-on-a-white.jpg";
 
 
+
 const Category = ({ category }) => {
     const images =
         [
@@ -68,8 +69,7 @@ const Category = ({ category }) => {
             CategoryImg19,
 
             CategoryImg20
-        ]
-
+            ]
     const randomnumber = Math.floor(Math.random() * images.length)
     const image = images[randomnumber]
     return (

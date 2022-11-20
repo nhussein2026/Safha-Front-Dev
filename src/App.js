@@ -22,6 +22,7 @@ import MyBooks from './Components/MyBooks/MyBooks';
 import AddBook from './Components/MyBooks/AddBook/AddBook';
 import CategoriesF from './Components/Categories/Categories';
 import CollectionPage from './Components/Featured/OneFeature/CollectionPage';
+import CategoriesDesigne from './Components/Categories/CategoriesDesigne';
 // require('dotenv').config()
 
 const App = () => {
@@ -38,7 +39,7 @@ const App = () => {
             <Route path='/books' element={<Books />} />
             <Route path='/book/:id' element={<SingleBookIndex/>} />
             <Route path='/reviews' element={<Reviews />} />
-            <Route path='/categories' element={<Categories />} />
+            <Route path='/categories' element={<CategoriesDesigne />} />
             {/* <Route path='/mybooks' element={<MyBooks />} /> */}
             {
               loggedIn?
