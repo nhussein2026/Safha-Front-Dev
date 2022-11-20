@@ -1,19 +1,155 @@
-import Navbar from "../Navbar/Navbar";
-import { useContext, useEffect } from "react";
-import { AuthContext } from "../../contexts/Authcontext";
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import NovalImage from "../../assets/images/categories/cover/literature-fiction.jpg"
+import './Categories.css'
 
 const Categories = () => {
-    const { setHomeNav, setAboutNav, setCategoriesNav, setBooksNav } = useContext(AuthContext)
-    useEffect(()=>{
-        setCategoriesNav(true);
-        setHomeNav(false);
-        setBooksNav(false);
-        setAboutNav(false);
-    },[])
-    return(
+    return (
         <>
-        {/* <Navbar /> */}
+            <div className='container'>
+            <div className='row' id='categoriesPlace'>
+                <div id='forGap' className='col-12 d-flex'>
+                    {/* the first category */}
+                    <Card sx={{ maxWidth: 345 }}>
+
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={NovalImage}
+                            alt="Category Image"
+                        />
+                        <CardContent>
+                            <Typography paragraph>Novals</Typography>
+                            <Typography paragraph>
+                                Add rice and stir very gently to distribute. Top with artichokes and
+                                peppers, and cook without stirring, until most of the liquid is absorbed,
+                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
+                                mussels, tucking them down into the rice, and cook again without
+                                stirring, until mussels have opened and rice is just tender, 5 to 7
+                                minutes more. (Discard any mussels that don&apos;t open.)
+                            </Typography>
+                        </CardContent>
+                    </Card>
+
+                    {/* the second category */}
+                    <Card sx={{ maxWidth: 345 }}>
+
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={NovalImage}
+                            alt="Category Image"
+                        />
+                        <CardContent>
+                            <Typography paragraph>Novals</Typography>
+                            <Typography paragraph>
+                                Add rice and stir very gently to distribute. Top with artichokes and
+                                peppers, and cook without stirring, until most of the liquid is absorbed,
+                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
+                                mussels, tucking them down into the rice, and cook again without
+                                stirring, until mussels have opened and rice is just tender, 5 to 7
+                                minutes more. (Discard any mussels that don&apos;t open.)
+                            </Typography>
+                        </CardContent>
+                    </Card>
+
+
+                    {/* third category */}
+                    <Card sx={{ maxWidth: 345 }}>
+
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={NovalImage}
+                            alt="Category Image"
+                        />
+                        <CardContent>
+                            <Typography paragraph>Novals</Typography>
+                            <Typography paragraph>
+                                Add rice and stir very gently to distribute. Top with artichokes and
+                                peppers, and cook without stirring, until most of the liquid is absorbed,
+                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
+                                mussels, tucking them down into the rice, and cook again without
+                                stirring, until mussels have opened and rice is just tender, 5 to 7
+                                minutes more. (Discard any mussels that don&apos;t open.)
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </div>
+                <div id='forGap' className='col-12 d-flex'>
+                    {/* 4th Category */}
+                    <Card sx={{ maxWidth: 345 }}>
+
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={NovalImage}
+                            alt="Category Image"
+                        />
+                        <CardContent>
+                            <Typography paragraph>Novals</Typography>
+                            <Typography paragraph>
+                                Add rice and stir very gently to distribute. Top with artichokes and
+                                peppers, and cook without stirring, until most of the liquid is absorbed,
+                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
+                                mussels, tucking them down into the rice, and cook again without
+                                stirring, until mussels have opened and rice is just tender, 5 to 7
+                                minutes more. (Discard any mussels that don&apos;t open.)
+                            </Typography>
+                        </CardContent>
+                    </Card>
+
+                    {/* 5th Category */}
+                    <Card sx={{ maxWidth: 345 }}>
+
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={NovalImage}
+                            alt="Category Image"
+                        />
+                        <CardContent>
+                            <Typography paragraph>Novals</Typography>
+                            <Typography paragraph>
+                                Add rice and stir very gently to distribute. Top with artichokes and
+                                peppers, and cook without stirring, until most of the liquid is absorbed,
+                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
+                                mussels, tucking them down into the rice, and cook again without
+                                stirring, until mussels have opened and rice is just tender, 5 to 7
+                                minutes more. (Discard any mussels that don&apos;t open.)
+                            </Typography>
+                        </CardContent>
+                    </Card>
+
+                    {/* 6th Categry */}
+                    <Card sx={{ maxWidth: 345 }}>
+
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={NovalImage}
+                            alt="Category Image"
+                        />
+                        <CardContent>
+                            <Typography paragraph>Novals</Typography>
+                            <Typography paragraph>
+                                Add rice and stir very gently to distribute. Top with artichokes and
+                                peppers, and cook without stirring, until most of the liquid is absorbed,
+                                15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
+                                mussels, tucking them down into the rice, and cook again without
+                                stirring, until mussels have opened and rice is just tender, 5 to 7
+                                minutes more. (Discard any mussels that don&apos;t open.)
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </div>
+            </div>
+            </div>
         </>
-    )
+
+    );
 }
-export default Categories;
+export default Categories
