@@ -12,21 +12,12 @@ import { AuthContext } from '../../AuthContext/AuthContext'
 
 
 const AddBook = () => {
-    const { token, user, setUser } = useContext(AuthContext)
+    const { token, user, setUser } = useContext(AuthContext);
 
-    const [loading, setLoading] = useState(false)
-    const [currentBook, setCurrentBook] = useState({
-        publish: "", //this is for date
-        land: "",
-        author: "",
-        ISBN: "",
-        categoryId: "",
-        publisherId: "",
-        kindle: "",
-        paper: ""
-    })
-    const navigate = useNavigate()
-    const { logOut, loggedIn } = useContext(AuthContext)
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+    const { logOut, loggedIn } = useContext(AuthContext);
+
     useEffect(() => {
         const addBook = async () => {
             const response = await fetch('https://safha.fjobeir.com/backend/books', {
@@ -45,28 +36,10 @@ const AddBook = () => {
                 })
             }
         }
-        getMe()
+        addBook()
     }, [])
 
 
-    const updateBook = async () => {
-        setLoading(true)
-        const response = await fetch(`https://safha.fjobeir.com/backend/edit/: + ${id}`, {
-            method: 'PUT',
-            body: JSON.stringify(currentBook),
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
-            }
-        })
-        const json = await response.json()
-        setLoading(false)
-        window.alert(json.messages.join(', '))
-        if (json.success) {
-            logOut()
-            if (!loggedIn) navigate('/signin')
-        }
-    }
 
     const onChangeHandler = (e, field) => {
         setCurrentBook((prev) => {
@@ -76,24 +49,6 @@ const AddBook = () => {
             }
         })
     }
-
-    // const deletePost = async (id) => {
-    //     const response = await fetch(`${process.env.REACT_APP_API}/posts/${id}`, {
-    //         method: 'delete',
-    //         headers: {
-    //             'Authorization': `Bearer ${token}`,
-    //         }
-    //     })
-    //     const json = await response.json()
-    //     if (json.success) {
-    //         const currentPosts = [...currentUser.posts]
-    //         const remainedPosts = currentPosts.filter((p) => p.id != id)
-    //         setCurrentUser({
-    //             ...currentUser,
-    //             posts: remainedPosts
-    //         })
-    //     }
-    // }
 
     return (
         <div>
