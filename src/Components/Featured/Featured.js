@@ -57,7 +57,7 @@ const Featured = () => {
                         <div className="row">
                             {
                                 books.map((book, i) => {
-                                    if(i<5){
+                                    if(i<4){
                                         return <SingleBookElement book={book} key={i} customize="Features" />
                                     }
                                 })
