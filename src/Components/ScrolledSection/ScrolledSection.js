@@ -101,7 +101,7 @@ const ScrolledSectioin = () => {
                                             <a href="/">
                                                 <img src={noval} alt="slider" id='category-img' />
                                                 <div className="home-slide-content text-center">
-                                                    <h3 className="ls-n-10 text-white mb-0">Novals</h3>
+                                                    <h3 className="ls-n-10 text-white mb-0">Novels</h3>
                                                 </div>
                                             </a>
                                         </div>
