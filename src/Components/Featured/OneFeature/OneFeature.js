@@ -9,11 +9,11 @@ const OneFeature = () => {
                 <div className="banner banner2" id='banner-place'>
                     <div className="banner-layer">
                         <h3 className="text-uppercase text-white m-b-2">Awarded Books</h3>
-                        <p className="font2 m-b-3">12 Books</p>
+                        <p className="font2 m-b-3">Books</p>
                         <Link to={`/collection`}>
                             <a href="#" className="btn btn-primary" >
-                                    View Collections
-                                    <i className="fas fa-long-arrow-alt-right" />
+                                View Collections
+                                <i className="fas fa-long-arrow-alt-right" />
                             </a>
                         </Link>
                     </div>
@@ -22,8 +22,8 @@ const OneFeature = () => {
             <div className="col-lg-4 m-b-3">
                 <div className="banner" id='banner-palce3'>
                     <div className="banner-layer">
-                        <h3 className="text-uppercase text-white m-b-2">Best Seller Books</h3>
-                        <p className="font2 m-b-3">21 Books</p>
+                        <h3 className="text-uppercase text-white m-b-2">Best Seller</h3>
+                        <p className="font2 m-b-3">Books</p>
                         <Link to={`/collection`}>
                             <a href="#" className="btn btn-secondary">
                                 View Collections
@@ -37,7 +37,7 @@ const OneFeature = () => {
                 <div className="banner" id='banner-place4'>
                     <div className="banner-layer">
                         <h3 className="text-uppercase text-white m-b-2">Most Reviewed</h3>
-                        <p className="font2 m-b-3">38 Books</p>
+                        <p className="font2 m-b-3">Books</p>
                         <Link to={`/collection`}>
                             <a href="#" className="btn btn-teritary">
                                 View Collections
