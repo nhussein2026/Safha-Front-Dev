@@ -28,48 +28,12 @@ import CategoryImg20 from "../../assets/images/categories/categoriesImages/depos
 
 
 const Category = ({ category }) => {
-    const images =
-        [
-            CategoryImg1,
-
-            CategoryImg2,
-
-            CategoryImg3,
-
-            CategoryImg4,
-
-            CategoryImg5,
-            
-            CategoryImg6,
-
-            CategoryImg7,
-
-            CategoryImg8,
-
-            CategoryImg9,
-
-            CategoryImg10,
-
-            CategoryImg11,
-            
-            CategoryImg12,
-
-            CategoryImg13,
-
-            CategoryImg14,
-
-            CategoryImg15,
-
-            CategoryImg16,
-
-            CategoryImg17,
-
-            CategoryImg18,
-
-            CategoryImg19,
-
-            CategoryImg20
-            ]
+    const images = [
+        CategoryImg1, CategoryImg2, CategoryImg3,CategoryImg4, CategoryImg5, CategoryImg6,
+        CategoryImg7, CategoryImg8, CategoryImg9, CategoryImg10, CategoryImg11,
+        CategoryImg12, CategoryImg13, CategoryImg14, CategoryImg15, CategoryImg16,
+        CategoryImg17, CategoryImg18, CategoryImg19, CategoryImg20
+    ]
     const randomnumber = Math.floor(Math.random() * images.length)
     const image = images[randomnumber]
     return (
