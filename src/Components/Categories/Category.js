@@ -24,8 +24,7 @@ import CategoryImg17 from "../../assets/images/categories/categoriesImages/scree
 import CategoryImg18 from "../../assets/images/categories/categoriesImages/kZSZwX-zfaND6Z.png";
 import CategoryImg19 from "../../assets/images/categories/categoriesImages/131858-antique-book-free-hd-image.png";
 import CategoryImg20 from "../../assets/images/categories/categoriesImages/depositphotos_6111711-stock-photo-books-isolated-on-a-white.jpg";
-
-
+import { Link } from 'react-router-dom';
 
 const Category = ({ category }) => {
     const images = [
