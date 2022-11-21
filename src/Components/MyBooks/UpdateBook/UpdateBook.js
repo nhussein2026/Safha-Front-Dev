@@ -69,7 +69,7 @@ const UpdateBook = () => {
                             <div className=' mb-4'>
                                 <img id='logo2' src={logo2} alt='' />
                             </div>
-                            <h1 className='mb-2'>Add Books</h1>
+                            <h1 className='mb-2'>Update Book</h1>
                             <div className='form-field mb-3 d-flex flex-column align-items-start'>
                                 <label htmlFor='name' className='mb-2'>Book Name</label>
                                 <input placeholder='Type Book Name' type='text' id="name" value={currentBook?.name} onChange={(e) => setCurrentBook({ ...currentBook, name: e.target.value })} className='form-control' />
