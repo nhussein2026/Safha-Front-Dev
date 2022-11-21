@@ -1,14 +1,15 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from '../../contexts/Authcontext';
 import Featured from "../Featured/Featured";
-import Footer from "../Footer/Footer";
 import HeroSection from "../HeroSection/HeroSection";
 import HomeCategories from "../HomeCategories/HomeCategories2";
-import Navbar from "../Navbar/Navbar";
-import ScrolledSectioin from "../ScrolledSection/ScrolledSection";
 // import Sidebar from "../SideBar/SideBar";
 import Suggested from "../SuggestedCategories/Suggested";
-// import SingleBook from "../SingleBook/SingleBook";
+import EmblaCarousel from "../ScrolledSection/EmblaCarousel";
+
+
+
+
 const Home = () => {
     // const { token, setUserInfo, userInfo } = useContext(AuthContext)
     // console.log("before getUserInfo token",token);
@@ -34,7 +35,7 @@ const Home = () => {
     return (
         <>
             <HeroSection />
-            {/* <ScrolledSectioin /> */}
+            <EmblaCarousel />
             <HomeCategories />
             <Featured />
             {/* <Sidebar/> */}

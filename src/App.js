@@ -54,16 +54,11 @@ const App = () => {
             <Route path='/footer' element={<Footer />} />
             <Route path='/suggested' element={<Suggested />} />
             <Route path='/profile' element={<Profile />} />
-            <Route path='/scroll' element={<ScrolledSectioin />} />
             <Route path='/pro' element={<Updateprofile />} />
             <Route path='/addbook' element={<AddBook />} />
             <Route path='/collection' element={<CollectionPage />} />
             <Route path='/update-book' element={<UpdateBook />} />
             <Route path='/embla' element={<EmblaCarousel />} />
-
-      
-
-
           </Routes>
         </div>
         <Footer />
