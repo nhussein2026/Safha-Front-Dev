@@ -12,7 +12,6 @@ const Sidebar = ({books}) => {
                         <h3 className="widget-title">Books</h3>
                         {
                             books.map((book, i) => {
-                                // console.log(i)
                                 
                                 if(i<2 ){
                                     return (<FavoriteBooks book={book} />)

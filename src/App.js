@@ -26,6 +26,7 @@ import UpdateBook from './Components/MyBooks/UpdateBook/UpdateBook';
 import CategoryBooks from './Components/Categories/CategoryBooks/CategoryBooks';
 import EmblaCarousel from './Components/ScrolledSection/EmblaCarousel';
 import AddBookTry from './Components/MyBooks/AddBook/AddBooktry';
+import Add from './Components/MyBooks/Add/Add';
 // require('dotenv').config()
 
 const App = () => {
@@ -61,6 +62,7 @@ const App = () => {
             <Route path='/update-book' element={<UpdateBook />} />
             <Route path='/embla' element={<EmblaCarousel />} />
             <Route path='/try' element={<AddBookTry />} />
+            <Route path='/add' element={<Add />} />
 
           </Routes>
         </div>

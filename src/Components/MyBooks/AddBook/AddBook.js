@@ -53,7 +53,6 @@ const AddBook = () => {
     return (
         <>
             <div>
-                {/* <div className='wrapper'> */}
                 <div className='bg-image'>
                     <img id='personal' src={photo2} alt='' />
                 </div>
@@ -114,17 +113,11 @@ const AddBook = () => {
                             <label htmlFor='password_confirmation' className='mb-2'>paper</label>
                             <input placeholder='if book is paper inert 1 or 0 for opist' type='number' id="password_confirmation" value={book?.paper} onChange={(e) => setBook({ ...book, paper: e.target.value })} className='form-control' />
                         </div>
-                        {/* <div className='row'> */}
-                        {/* <div className='col-5'>
-                        <Link className='btn btn-dark w-100' to='/signin'>Go To Login</Link>
-                    </div> */}
                         <div className='col-12 mb-5'>
                             <button onClick={addBook} disabled={loading} className='btn btn-primary w-100'>{loading ? 'Adding Book' : 'Add'}</button>
                         </div>
-                        {/* </div> */}
                     </div>
                 </div>
-                {/* </div> */}
             </div>
         </>
     )
