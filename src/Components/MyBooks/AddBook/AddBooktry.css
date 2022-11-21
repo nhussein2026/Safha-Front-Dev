@@ -1,0 +1,10 @@
+#contaierParent{
+    padding: 0;
+    margin: 0;
+    background-color: #fff !important;
+}
+#container-div{
+    padding: 30px;
+    border-radius: 15px;
+    background-color: hsla(0, 2%, 79%, 0.658);
+}
