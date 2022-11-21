@@ -6,5 +6,8 @@
 #container-div{
     padding: 30px;
     border-radius: 15px;
-    background-color: hsla(0, 2%, 79%, 0.658);
+    background-color: hsla(0, 3%, 83%, 0.658);
+}
+.form-control{
+    border-radius: 6px !important;
 }
