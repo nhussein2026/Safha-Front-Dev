@@ -11,6 +11,8 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.10.2",
+    "embla-carousel-autoplay": "^7.0.5",
+    "embla-carousel-class-names": "^7.0.5",
     "embla-carousel-react": "^7.0.5",
     "install": "^0.13.0",
     "react": "^18.2.0",

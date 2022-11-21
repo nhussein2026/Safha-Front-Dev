@@ -25,7 +25,7 @@ import CollectionPage from './Components/Featured/OneFeature/CollectionPage';
 import CategoriesDesigne from './Components/Categories/CategoriesDesigne';
 import UpdateBook from './Components/MyBooks/UpdateBook/UpdateBook';
 import CategoryBooks from './Components/Categories/CategoryBooks/CategoryBooks';
-import EmplaScroll from './Components/ScrolledSection/EmblaScroll';
+import EmblaCarousel from './Components/ScrolledSection/EmblaCarousel';
 // require('dotenv').config()
 
 const App = () => {
@@ -61,7 +61,7 @@ const App = () => {
             <Route path='/addbook' element={<AddBook />} />
             <Route path='/collection' element={<CollectionPage />} />
             <Route path='/update-book' element={<UpdateBook />} />
-            <Route path='/embla' element={<EmplaScroll />} />
+            <Route path='/embla' element={<EmblaCarousel />} />
 
       
 
