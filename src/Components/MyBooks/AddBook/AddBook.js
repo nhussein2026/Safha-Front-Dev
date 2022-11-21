@@ -33,6 +33,7 @@ const AddBook = () => {
     
         const addBook = async (event) => {
             let BookData = new FormData(event.target)
+            console.log(event.target)
             event.preventDefault()
             const addbook = await fetch(`${process.env.REACT_APP_API_URL}/books`, {
                 method: 'POST',
@@ -85,8 +86,8 @@ const AddBook = () => {
                             <input placeholder='Type Your Name' type='date' id="publish-date" value={book?.publish} onChange={(e) => setBook({ ...book, publish: e.target.value })} className='form-control' />
                         </div>
                         <div className='form-field mb-3  d-flex flex-column align-items-start'>
-                            <label htmlFor='book-lang' className='mb-2'>Book Language</label>
-                            <input placeholder='Email Address' type='text' id="book-lang" value={book?.lang} onChange={(e) => setBook({ ...book, email: e.target.value })} className='form-control' />
+                            <label htmlFor='author-name' className='mb-2'>Book Language</label>
+                            <input placeholder='Write Author Name' type='text' id="author-name" value={book?.lang} onChange={(e) => setBook({ ...book, lang: e.target.value })} className='form-control' />
                         </div>
                         <div className='form-field mb-3  d-flex flex-column align-items-start'>
                             <label htmlFor='author-name' className='mb-2'>Author Name</label>
@@ -117,7 +118,7 @@ const AddBook = () => {
                         <Link className='btn btn-dark w-100' to='/signin'>Go To Login</Link>
                     </div> */}
                         <div className='col-12 mb-5'>
-                            <button onClick={addBook} disabled={loading} className='btn btn-primary w-100'>{loading ? 'Updateing' : 'Update'}</button>
+                            <button onClick={addBook} disabled={loading} className='btn btn-primary w-100'>{loading ? 'Adding Book' : 'Add'}</button>
                         </div>
                         {/* </div> */}
                     </div>
