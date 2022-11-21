@@ -48,21 +48,22 @@ const App = () => {
             {/* <Route path='/mybooks' element={<MyBooks />} /> */}
             {
               loggedIn?
-                <Route path='/mybooks' element={<MyBooks />} />
+                <>
+                  <Route path='/mybooks' element={<MyBooks />} />
+                  <Route path='/add' element={<Add />} />
+                  <Route path='/profile' element={<Profile />} />
+                  <Route path='/addbook' element={<AddBook />} />
+                  <Route path='/pro' element={<Updateprofile />} />
+                  <Route path='/update-book' element={<UpdateBook />} />
+                </>
                 :
                 <Route path='/about' element={<About />} />
             }
             <Route path='/about' element={<About />} />
             <Route path='/footer' element={<Footer />} />
             <Route path='/suggested' element={<Suggested />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/pro' element={<Updateprofile />} />
-            <Route path='/addbook' element={<AddBook />} />
             <Route path='/collection' element={<CollectionPage />} />
-            <Route path='/update-book' element={<UpdateBook />} />
             <Route path='/embla' element={<EmblaCarousel />} />
-            <Route path='/try' element={<AddBookTry />} />
-            <Route path='/add' element={<Add />} />
 
           </Routes>
         </div>
