@@ -9,9 +9,9 @@ const Categories = () => {
     const [categories, setCategories] = useState([])
     useEffect(() => {
         setHomeNav(false)
-        setCategoriesNav(false)
+        setCategoriesNav(true)
         setAboutNav(false)
-        setBooksNav(true)
+        setBooksNav(false)
         const getCatgories = async () => {
             const Categories = await fetch(`${process.env.REACT_APP_API_URL}/categories/all`, {
                 method: 'get',

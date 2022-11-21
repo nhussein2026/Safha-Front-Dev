@@ -1,9 +1,18 @@
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../../contexts/Authcontext";
 import HeroSection from "../HeroSection/HeroSection";
 import CategoriesSideBar from "../SideBar/CategoriesSideBar";
 import Categories from "./Categories";
 import './CategoriesDesigne.css'
 const CategoriesDesigne = () => {
+    const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav } = useContext(AuthContext)
 
+    useEffect(() => {
+        setHomeNav(false)
+        setCategoriesNav(true)
+        setAboutNav(false)
+        setBooksNav(false)
+    },[])
 
     return (
         <>
