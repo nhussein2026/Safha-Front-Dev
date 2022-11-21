@@ -3,7 +3,7 @@ import Entrance from "../Signup&Login/Entrance";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
 import { Route, Routes } from "react-router-dom";
-import Profile from "../Profile/Profile";
+import Profile from "../../screens/Profile/Profile";
 
 const Navbar1 = () => {
 	const { loggedIn, signIn, setHomeNav, homeNav, 

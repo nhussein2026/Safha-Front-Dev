@@ -10,13 +10,13 @@ import Suggested from './Components/SuggestedCategories/Suggested';
 import SingleBook from "./Components/SingleBook/SingleBook";
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
-import Profile from './Components/Profile/Profile';
+import Profile from './screens/Profile/Profile';
 import HomeCategories from './Components/HomeCategories/HomeCategories2';
 import Navbar1 from './Components/Navbar/Navbar1';
 import SingleBookIndex from './Components/SingleBook/SingleBookIndex';
 import Login from './screens/Login/Login';
 
-import Updateprofile from './Components/Profile/Updateprofile';
+import Updateprofile from './screens/Profile/Updateprofile';
 import MyBooks from './Components/MyBooks/MyBooks';
 import AddBook from './Components/MyBooks/AddBook/AddBook';
 import CategoriesF from './Components/Categories/Categories';

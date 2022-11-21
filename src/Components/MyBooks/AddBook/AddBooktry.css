@@ -5,15 +5,17 @@
 }
 #container-div{
     padding: 30px;
+    padding-bottom: 0;
     border-radius: 15px;
-    background-color: hsla(0, 7%, 92%, 0.493);
+    background-color: hsla(0, 12%, 84%, 0.349);
 }
 .form-control{
     border-radius: 6px !important;
 }
 #add-book{
     width: 350px;
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: #a76530;
     border-radius: 7px;
+    color: #fff;
 }
