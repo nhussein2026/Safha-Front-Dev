@@ -50,7 +50,7 @@ const SingleBookElement = ({book,i,customize}) => {
             </figure>
             <div className="product-details">
                 {
-                  !(customize=="MyBooks" || customize=="MyFavorites")&&
+                  !(customize=="MyBooks" || customize=="MyFavorites" || customize=="embla")&&
                   <>
                     <div className="category-wrap">
                         <div className="category-list">
