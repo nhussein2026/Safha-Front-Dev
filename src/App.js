@@ -11,7 +11,6 @@ import SingleBook from "./Components/SingleBook/SingleBook";
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
 import Profile from './Components/Profile/Profile';
-import ScrolledSectioin from './Components/ScrolledSection/ScrolledSection';
 import HomeCategories from './Components/HomeCategories/HomeCategories2';
 import Navbar1 from './Components/Navbar/Navbar1';
 import SingleBookIndex from './Components/SingleBook/SingleBookIndex';
@@ -55,7 +54,6 @@ const App = () => {
             <Route path='/footer' element={<Footer />} />
             <Route path='/suggested' element={<Suggested />} />
             <Route path='/profile' element={<Profile />} />
-            {/* <Route path='/scroll' element={<HomeCategories />} /> */}
             <Route path='/scroll' element={<ScrolledSectioin />} />
             <Route path='/pro' element={<Updateprofile />} />
             <Route path='/addbook' element={<AddBook />} />
