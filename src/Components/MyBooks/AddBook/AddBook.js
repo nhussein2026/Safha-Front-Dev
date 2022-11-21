@@ -98,19 +98,19 @@ const AddBook = () => {
                         </div>
                         <div className='form-field mb-5  d-flex flex-column align-items-start'>
                             <label htmlFor='password_confirmation' className='mb-2'>Category Id</label>
-                            <input placeholder='Password Confirmation' type='password' id="password_confirmation" value={book?.categoryId} onChange={(e) => setBook({ ...book, categoryId: e.target.value })} className='form-control' />
+                            <input placeholder='category id' type='text' id="password_confirmation" value={book?.categoryId} onChange={(e) => setBook({ ...book, categoryId: e.target.value })} className='form-control' />
                         </div>
                         <div className='form-field mb-5  d-flex flex-column align-items-start'>
                             <label htmlFor='password_confirmation' className='mb-2'>Publisher Id</label>
-                            <input placeholder='Password Confirmation' type='password' id="password_confirmation" value={book?.publisherId} onChange={(e) => setBook({ ...book, publisherId: e.target.value })} className='form-control' />
+                            <input placeholder='Write the publisher' type='text' id="password_confirmation" value={book?.publisherId} onChange={(e) => setBook({ ...book, publisherId: e.target.value })} className='form-control' />
                         </div>
                         <div className='form-field mb-5  d-flex flex-column align-items-start'>
-                            <label htmlFor='password_confirmation' className='mb-2'>Book Type</label>
-                            <input placeholder='Password Confirmation' type='password' id="password_confirmation" value={book?.kindle} onChange={(e) => setBook({ ...book, kindle: e.target.value })} className='form-control' />
+                            <label htmlFor='password_confirmation' className='mb-2'>kindle</label>
+                            <input placeholder='if book is kindle type 1 or 0 for opist' type='number' id="password_confirmation" value={book?.kindle} onChange={(e) => setBook({ ...book, kindle: e.target.value })} className='form-control' />
                         </div>
                         <div className='form-field mb-5  d-flex flex-column align-items-start'>
-                            <label htmlFor='password_confirmation' className='mb-2'>Book Type</label>
-                            <input placeholder='Password Confirmation' type='password' id="password_confirmation" value={book?.paper} onChange={(e) => setBook({ ...book, paper: e.target.value })} className='form-control' />
+                            <label htmlFor='password_confirmation' className='mb-2'>paper</label>
+                            <input placeholder='if book is paper inert 1 or 0 for opist' type='number' id="password_confirmation" value={book?.paper} onChange={(e) => setBook({ ...book, paper: e.target.value })} className='form-control' />
                         </div>
                         {/* <div className='row'> */}
                         {/* <div className='col-5'>
