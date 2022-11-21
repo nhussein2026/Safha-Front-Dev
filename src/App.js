@@ -3,7 +3,7 @@ import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Signup from './screens/Signup/Signup';
 import Books from './Components/Books/Books';
-import Reviews from './Components/Reviews/Reviews';
+import Reviews from './Components/Reviews/ViewReviews/Reviwes';
 import Categories from './Components/Categories/Categories';
 import About from './Components/About/About';
 import Suggested from './Components/SuggestedCategories/Suggested';
