@@ -104,7 +104,7 @@ const Navbar1 = () => {
                             <form action=" #" method="get">
                                 <div className="header-search-wrapper">
                                     <input type="search" className="form-control font-italic" name="q" id="q"
-                                        placeholder="Searching for any book" required />
+                                        placeholder="Search" required />
                                     <button className="btn icon-magnifier" title="search" type="submit"></button>
                                 </div>
                             </form>
