@@ -34,7 +34,7 @@ const Home = () => {
     return (
         <>
             <HeroSection />
-            <ScrolledSectioin />
+            {/* <ScrolledSectioin /> */}
             <HomeCategories />
             <Featured />
             {/* <Sidebar/> */}

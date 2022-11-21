@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
-
+// import Autoplay from 'embla-carousel-autoplay'
+import "./EmblaCarousel.css"
 const EmblaCarousel = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()])
+
+
+  const [emblaRef] = useEmblaCarousel({ loop: false })
 
   return (
     <div className="embla" ref={emblaRef}>

@@ -38,7 +38,7 @@ const Category = ({ category }) => {
     return (
         <>
             {/* the first category */}
-            <div id='forGap' className='col-3 d-flex'>
+             <div id='forGap' className='col-3 d-flex'>
                 <Card sx={{ maxWidth: 345 }}>
                     <Link to={`/category/${category?.id}`}>
                         <CardMedia
@@ -48,7 +48,6 @@ const Category = ({ category }) => {
                             alt="Category Image"
                         />
                     </Link>
-                    {/* <img src={`"${image}"`} /> */}
                     <CardContent>
                         <Link to={`/category/${category?.id}`}>
                             <Typography variant="h3">
@@ -60,7 +59,7 @@ const Category = ({ category }) => {
                         </Typography>
                     </CardContent>
                 </Card>
-            </div>
+            </div> 
         </>
     )
 }
