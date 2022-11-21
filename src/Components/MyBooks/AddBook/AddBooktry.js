@@ -25,9 +25,9 @@ const AddBookTry = () => {
                     </div>
                     <div className="col-md-12 mb-3">
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Book Description</label>
-                        <textarea  className="form-control" id="exampleFormControlTextarea1" rows={4} defaultValue={""} />
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows={4} defaultValue={""} />
                     </div>
-                    
+
                     <div className="col-12">
                         <label htmlFor="inputAddress" className="form-label">Add Book Cover</label>
                         <input type="file" className="form-control" id="inputAddress" placeholder="Insert File" />
@@ -56,8 +56,8 @@ const AddBookTry = () => {
                         <label htmlFor="inputCity" className="form-label">Paper</label>
                         <input type="number" className="form-control" id="inputCity" />
                     </div>
-                    <div className="col-6">
-                        <button type="submit" className="btn btn-primary">Sign in</button>
+                    <div className="col-12 d-flex justify-content-center">
+                        <button type="submit" className="btn" id="add-book">Add Book</button>
                     </div>
                 </form>
             </div>

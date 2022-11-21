@@ -6,8 +6,14 @@
 #container-div{
     padding: 30px;
     border-radius: 15px;
-    background-color: hsla(0, 3%, 83%, 0.658);
+    background-color: hsla(0, 7%, 92%, 0.493);
 }
 .form-control{
     border-radius: 6px !important;
+}
+#add-book{
+    width: 350px;
+    margin-top: 50px;
+    background-color: #a76530;
+    border-radius: 7px;
 }
