@@ -1,12 +1,12 @@
-import './Profile.css'
+import './ShowProfile.css'
 // import backgroundImage from "../../assets/images/profile/56eaa2e41500002a000b2512.jpeg"
 import { useEffect } from 'react'
-import { AuthContext } from '../../contexts/Authcontext'
+import { AuthContext } from '../../../contexts/Authcontext'
 import { useState, useContext } from 'react';
 
 
 
-const Profile = () => {
+const ShowProfile = () => {
     const  {token}  = useContext(AuthContext);
     console.log("My token is: ", token)
     const [profile, setProfile] = useState({})
@@ -66,4 +66,4 @@ const Profile = () => {
         </>
     )
 }
-export default Profile
+export default ShowProfile

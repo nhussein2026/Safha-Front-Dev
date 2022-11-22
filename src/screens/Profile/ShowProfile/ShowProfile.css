@@ -90,7 +90,7 @@ path {
   background-size: cover;
 } */
 
-button {
+/* button {
   border: none;
   background: none;
   font-size: 24px;
@@ -101,7 +101,7 @@ button {
     color: #4CAF50  ;
     transform: rotate(22deg)
   }
-}
+} */
 
 .img-avatar img {
     border-radius: 50%;

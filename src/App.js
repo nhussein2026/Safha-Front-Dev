@@ -10,7 +10,7 @@ import Suggested from './Components/SuggestedCategories/Suggested';
 import SingleBook from "./Components/SingleBook/SingleBook";
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
-import Profile from './screens/Profile/Profile';
+import Profile from './screens/Profile/ShowProfile/ShowProfile';
 import HomeCategories from './Components/HomeCategories/HomeCategories2';
 import Navbar1 from './Components/Navbar/Navbar1';
 import SingleBookIndex from './Components/SingleBook/SingleBookIndex';
@@ -29,6 +29,7 @@ import AddBookTry from './Components/MyBooks/AddBook/AddBooktry';
 import Add from './Components/MyBooks/Add/Add';
 import Edit from './Components/MyBooks/Edit/Edit';
 import AddCategory from './Components/Categories/AddCategory/AddCategory';
+import MainProfile from './screens/Profile/MainProfile';
 // require('dotenv').config()
 
 const App = () => {
@@ -53,7 +54,7 @@ const App = () => {
                 <>
                   <Route path='/mybooks' element={<MyBooks />} />
                   <Route path='/add' element={<Add />} />
-                  <Route path='/profile' element={<Profile />} />
+                  <Route path='/profile' element={<MainProfile />} />
                   <Route path='/addbook' element={<AddBook />} />
                   <Route path='/pro' element={<Updateprofile />} />
                   {/* <Route path='/update-book' element={<UpdateBook />} /> */}
