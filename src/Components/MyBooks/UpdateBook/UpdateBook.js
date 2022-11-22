@@ -1,4 +1,4 @@
-import'./UpdateBook.css';
+import'../EditBook.css';
 
 import user from '../../../assets/images/logos/logo with safha.png'
 import logo2 from '../../../assets/images/logos/logo with safha.png'

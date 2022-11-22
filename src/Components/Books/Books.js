@@ -11,6 +11,7 @@ import { AuthContext } from "../../contexts/Authcontext";
 
 const Books = () => {
     const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav } = useContext(AuthContext)
+    console.log(useContext(AuthContext), '111111')
     const [books, setBooks] = useState([])
     useEffect(() => {
         setHomeNav(false)

@@ -27,6 +27,8 @@ import CategoryBooks from './Components/Categories/CategoryBooks/CategoryBooks';
 import EmblaCarousel from './Components/ScrolledSection/EmblaCarousel';
 import AddBookTry from './Components/MyBooks/AddBook/AddBooktry';
 import Add from './Components/MyBooks/Add/Add';
+import Edit from './Components/MyBooks/Edit/Edit';
+import AddCategory from './Components/Categories/AddCategory/AddCategory';
 // require('dotenv').config()
 
 const App = () => {
@@ -54,16 +56,22 @@ const App = () => {
                   <Route path='/profile' element={<Profile />} />
                   <Route path='/addbook' element={<AddBook />} />
                   <Route path='/pro' element={<Updateprofile />} />
-                  <Route path='/update-book' element={<UpdateBook />} />
+                  {/* <Route path='/update-book' element={<UpdateBook />} /> */}
+                  <Route path='/edit' element={<Edit />} />
+
                 </>
                 :
                 <Route path='/about' element={<About />} />
+                
+                
             }
             <Route path='/about' element={<About />} />
             <Route path='/footer' element={<Footer />} />
             <Route path='/suggested' element={<Suggested />} />
             <Route path='/collection' element={<CollectionPage />} />
             <Route path='/embla' element={<EmblaCarousel />} />
+            <Route path='/addCategory' element={<AddCategory />} />
+
 
           </Routes>
         </div>

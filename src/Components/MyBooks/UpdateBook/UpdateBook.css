@@ -1,7 +1,4 @@
 .wrapper {
-    /* background-color: rgb(211, 211, 201); */
-} 
-.wrapper {
     display: flex;
     position: relative;
     justify-content: flex-end;
@@ -59,22 +56,3 @@
     height: 100%;
 }
 
-/* input, select, textarea {
-    color: red;
-} */
-
-/* #name {
-    color: rgb(219, 135, 52);
-}
-
-#email {
-    color: rgb(219, 135, 52);
-}
-
-#password {
-    color: rgb(219, 135, 52);
-}
-
-#password_confirmation {
-    color: rgb(219, 135, 52);
-} */
