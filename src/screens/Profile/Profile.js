@@ -44,26 +44,25 @@ const Profile = () => {
                     </svg> */}
                 </div>
                 <div class="card-text">
-                    <div class="portada" style={{"background-image":`${profile?.bgPic}`}}>
-                        <img src={profile?.bgPic} />
+                    <div class="portada" style={{"background-image":`url(${profile?.bgPic})`}}>
+                        {/* <img src={profile?.bgPic} /> */}
                     </div>
                     <div class="title-total">   
-                    <div class="title">{profile?.nickname}</div>
-                    <h2>{profile?.nickname}</h2>
+                        <div class="title">{profile?.nickname}</div>
+                        <div class="desc">
+                            <h4>{profile?.nickname}</h4>
+                        </div>
+                        
                 
-                <div class="desc">{profile?.des}</div>
-                {/* <div class="actions">
-                    <button><i class="far fa-heart"></i></button>
-                    <button><i class="far fa-envelope"></i></button>
-                    <button><i class="fas fa-user-friends"></i></button>
-                </div> */}
+                        <div class="desc">{profile?.des}</div>
+                        {/* <div class="actions">
+                            <button><i class="far fa-heart"></i></button>
+                            <button><i class="far fa-envelope"></i></button>
+                            <button><i class="fas fa-user-friends"></i></button>
+                        </div> */}
+                    </div>
                 </div>
-                
-                </div>
-                
-                
-                
-                </div>
+            </div>
         </>
     )
 }
