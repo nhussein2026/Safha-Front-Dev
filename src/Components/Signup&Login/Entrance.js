@@ -2,28 +2,34 @@
 import "./Entrance.css"
 import { AuthContext } from "../../contexts/Authcontext";
 import { useContext } from "react";
+import { Link } from "@mui/material";
 
 
 const Entrance = () => {
     const { loggedIn, signOut } = useContext(AuthContext)
     return(
         <>
-            {loggedIn?<a href="/signout">
+            {loggedIn?
+                <Link to="/signout">
+                    <a href="#">
                         <button
                             onClick={signOut}
                             className="btn btn-primary w-49"
                             id='signup-bttn'>SIGN OUT
                         </button>
                         {/* <button  id='signup-bttn' className="button">Signout</button> */}
-                    </a> : 
-                    <a href="/login">
+                    </a>
+                </Link>
+                : 
+                 <Link to="/login">
+                    <a href="#">
                         {/* <button id='signup-bttn' className="button">Login</button> */}
                         <button
                             className="btn btn-primary w-49"
                             id='signup-bttn'>SIGN IN
                         </button>
                     </a>
-                    
+                </Link>      
             }
         </>
     )

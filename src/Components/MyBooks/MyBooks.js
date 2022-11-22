@@ -116,7 +116,6 @@ const MyBooks = () => {
                                                     </div>
                                                 </div>
                                             </div>
-
                                         }
 
                                     </div> 
