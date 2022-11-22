@@ -49,18 +49,26 @@ const Navbar1 = () => {
                             <ul className="menu">
                                 { homeNav? 
                                     <li className="active">
-                                        <a href="/">Home</a>
+                                        <Link to='/'>
+                                            <a href="#">Home</a>
+                                        </Link>
                                     </li> :
                                     <li>
-                                        <a href="/">Home</a>
+                                        <Link to='/'>
+                                            <a href="#">Home</a>
+                                        </Link>
                                     </li> 
                                 }
                                 { categoriesNav? 
                                     <li className="active">
-                                        <a href="/categories">Categories</a>
+                                        <Link to='/categories'>
+                                            <a href="#">Categories</a>
+                                        </Link>
                                     </li> :
                                     <li>
-                                        <a href="/categories">Categories</a>
+                                        <Link to='/categories'>
+                                            <a href="#">Categories</a>
+                                        </Link>
                                     </li> 
                                 }
                                 { booksNav? 
