@@ -36,11 +36,12 @@ const MyBooks = () => {
                 }
             })
             const json = await userInfoFetch.json()
-            // console.log("user info",json)
+            console.log("user info",json)
             if (json?.success) {
                 // console.log("insied if user info",json)
                 setUserInfo(json?.data)
                 setBooks(json?.data?.FavoriteBooks)
+                window.localStorage.setItem('avatar',json?.data?.UserInfo?.avatar)
             }
         }
         getUserInfo()

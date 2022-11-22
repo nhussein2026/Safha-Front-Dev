@@ -11,6 +11,7 @@ const AuthProvider = ({children}) => {
     const [categoriesNav, setCategoriesNav] = useState(false)
     const [booksNav, setBooksNav] = useState(false)
     const [aboutNav, setAboutNav] = useState(false)
+    const [avatar, setAvatar] = useState('')
 
     useEffect(() => {
         const u = window.localStorage.getItem('user')
@@ -21,6 +22,7 @@ const AuthProvider = ({children}) => {
 
     const signIn = (response) => {
         window.localStorage.setItem('token', response.token)
+        setAvatar(window.localStorage.getItem('avatar'))
         setLoggedIn(true)
         setToken(response.token)
         setUser(response.data)
@@ -29,6 +31,7 @@ const AuthProvider = ({children}) => {
     
     const signOut = () => {
         window.localStorage.removeItem('token')
+        window.localStorage.removeItem('avatar')
         setLoggedIn(false)
         setToken('')
         setUser({})
@@ -46,6 +49,7 @@ const AuthProvider = ({children}) => {
             booksNav, setBooksNav,
             aboutNav, setAboutNav,
             userInfo, setUserInfo,
+            avatar, setAvatar,
         }}>
             {children}
         </AuthContext.Provider>

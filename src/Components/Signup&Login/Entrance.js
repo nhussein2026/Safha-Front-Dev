@@ -9,6 +9,13 @@ const Entrance = () => {
     const { loggedIn, signOut } = useContext(AuthContext)
     return(
         <>
+            <div className="img-avatar-entrance">
+                <Link to="/profile">
+                    <a href="#">
+                        <img src={window.localStorage.getItem('avatar')} />
+                    </a>
+                </Link>
+            </div>
             {loggedIn?
                 <Link to="/signout">
                     <a href="#">
