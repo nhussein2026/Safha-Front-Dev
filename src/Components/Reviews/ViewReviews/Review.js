@@ -13,8 +13,8 @@ const Review = ({ review }) => {
                         <div className="row main-content">
                             <div className="product-single-container product-single-default">
                                 <div className="row">
-                                    <div className="col-md-3 product-single-gallery">
-                                        <a href="#">
+                                    <div className="col-md-3  product-single-gallery bg-gray">
+                                        <a href="#" className='mt-3'>
                                             <img src={review?.Book?.cover}
                                                 width="217" height="217" alt="product" />
                                         </a>
