@@ -2,7 +2,7 @@ import logo from "../../assets/images/cuted-logo.png"
 import Entrance from "../Signup&Login/Entrance";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Profile from "../../screens/Profile/ShowProfile/ShowProfile";
 
 const Navbar1 = () => {
@@ -65,31 +65,44 @@ const Navbar1 = () => {
                                 }
                                 { booksNav? 
                                     <li className="active d-none d-xl-block">
-                                        <a href="/books">Books</a>
+                                        <Link to='/books'>
+                                            <a href="#">Books</a>
+                                        </Link> 
                                     </li> :
                                     <li className="d-none d-xl-block">
-                                        <a href="/books">Books</a>
+                                        <Link to='/books'>
+                                            <a href="#">Books</a>
+                                        </Link>
                                     </li> 
                                 }
                                 
                                 {loggedIn? 
                                     ( aboutNav? 
                                         <li className="active">
-                                        <a href="/mybooks">Mybooks</a>
+                                            <Link to='/mybooks'>
+                                                <a href="#">Mybooks</a>
+                                            </Link>
                                         </li>
+                                        
                                         :
                                         <li>
-                                            <a href="/mybooks">Mybooks</a>
+                                            <Link to='/mybooks'>
+                                                <a href="#">Mybooks</a>
+                                            </Link>
                                         </li>  
                                     )
                                     :
                                     ( aboutNav? 
                                         <li className="active">
-                                            <a href="/about">About</a>
+                                            <Link to='/about'>
+                                                <a href="#">About</a>
+                                            </Link>
                                         </li>
                                         :
                                         <li>
-                                            <a href="/about">About</a>
+                                            <Link to='/about'>
+                                                <a href="#">About</a>
+                                            </Link>
                                         </li> 
                                     )
                                 }
