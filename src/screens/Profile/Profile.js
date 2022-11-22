@@ -11,7 +11,9 @@ const Profile = () => {
     console.log("My token is: ", token)
     const [profile, setProfile] = useState({})
     useEffect(() => {
+        console.log("inside useEffect");
         const getProfile = async () => {
+
             const getMyProfile = await fetch(`${process.env.REACT_APP_API_URL}/userInfos`, {
                 method: 'GET',
                 headers: {
@@ -27,11 +29,12 @@ const Profile = () => {
         }
         getProfile()
         }, [])
+    console.log("profile",profile);
     return (
         <>
             <div class="card">
                 <div class="img-avatar">
-                    
+                    <img src={profile?.avatar} />
                     {/* <svg viewBox="0 0 100 100">
                         <path 
                             d="m38.977 59.074c0 2.75-4.125 2.75-4.125 0s4.125-2.75 4.125 0"></path>
@@ -41,19 +44,20 @@ const Profile = () => {
                     </svg> */}
                 </div>
                 <div class="card-text">
-                    <div class="portada">
-                    
+                    <div class="portada" style={{"background-image":`${profile?.bgPic}`}}>
+                        <img src={profile?.bgPic} />
                     </div>
                     <div class="title-total">   
-                    <div class="title">Ant Collector</div>
-                    <h2>Morgan Sweeney</h2>
+                    <div class="title">{profile?.nickname}</div>
+                    <h2>{profile?.nickname}</h2>
                 
-                <div class="desc">Morgan has collected ants since they were six years old and now has many dozen ants but none in their pants.</div>
-                <div class="actions">
+                <div class="desc">{profile?.des}</div>
+                {/* <div class="actions">
                     <button><i class="far fa-heart"></i></button>
                     <button><i class="far fa-envelope"></i></button>
                     <button><i class="fas fa-user-friends"></i></button>
-                </div></div>
+                </div> */}
+                </div>
                 
                 </div>
                 
