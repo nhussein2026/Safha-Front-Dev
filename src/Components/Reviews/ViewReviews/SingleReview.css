@@ -1,0 +1,28 @@
+.review{
+    padding: 15px;
+    border-bottom: 1px solid #f3f4f5;
+    cursor: pointer;
+    font-size: 20px;
+}
+.review:hover {
+    background: rgba(0,0,0,.03);
+}
+.review img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-right: 15px;
+}
+.reviewContent{
+    display: flex;
+   
+}
+.name {
+    font-size: 20px;
+}
+.datetime{
+    font-size: 13px;
+}
+.review p {
+    margin-bottom: 10px;
+}

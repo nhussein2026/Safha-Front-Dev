@@ -31,6 +31,7 @@ import Edit from './Components/MyBooks/Edit/Edit';
 import AddCategory from './Components/Categories/AddCategory/AddCategory';
 import MainProfile from './screens/Profile/MainProfile';
 import MainBook from './Components/MyBooks/MainBook/MainBook';
+import SingleReview from './Components/Reviews/ViewReviews/SingleReview';
 // require('dotenv').config()
 
 const App = () => {
@@ -73,6 +74,8 @@ const App = () => {
             <Route path='/collection' element={<CollectionPage />} />
             <Route path='/embla' element={<EmblaCarousel />} />
             <Route path='/addCategory' element={<AddCategory />} />
+            <Route path='/review/:id' element={<SingleReview />} />
+
 
 
           </Routes>

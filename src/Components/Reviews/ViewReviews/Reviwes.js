@@ -1,13 +1,10 @@
-import Review from "./Review"
+import AllReviews from "./AllReviews"
 import { useState, useEffect } from "react"
-
+import { useParams } from "react-router-dom"
+import SingleReview from "./SingleReview"
 
 
 const Reviews = () => {
-    // const { id } = useParams()
-    // const  token  = useContext(AuthContext)
-
- 
     const [Reviews, setReviews] = useState([])
     useEffect(() => {
         const getReviews = async () => {
@@ -15,30 +12,24 @@ const Reviews = () => {
                 method: 'get',
                 headers: {
                     'Content-Type': 'application/json',
-                    // 'Authorization': `Bearer ${token}`
-
                 }
             })
             const json = await getReviews.json()
-            console.log("json", json)
             if (json?.data?.length) {
                 setReviews(json?.data)
             }
         }
         getReviews()
-
-        const getReview = async() => {
-            // const 
-        }
     }, [])
+   
     return(
         <>
         <div className="mb-4">
                 {
-                    Reviews.map((review, i) => {
-                        return <Review review={review} key={i} />
+                    Reviews.map((reviews, i) => {
+                        return <AllReviews reviews={reviews} key={i} />
                     })
-                }
+                },
             </div>
         </>
     )
