@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext()
 
@@ -14,6 +15,7 @@ const AuthProvider = ({children}) => {
     const [booksNav, setBooksNav] = useState(false)
     const [aboutNav, setAboutNav] = useState(false)
     const [avatar, setAvatar] = useState('')
+    const navigate = useNavigate()
 
     useEffect(() => {
         const u = window.localStorage.getItem('user')
@@ -37,6 +39,7 @@ const AuthProvider = ({children}) => {
         setLoggedIn(false)
         setToken('')
         setUser({})
+        navigate('/')
     }
 
     return (

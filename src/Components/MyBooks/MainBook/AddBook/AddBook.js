@@ -35,45 +35,43 @@ const AddBook = () => {
         <form method="post" onSubmit={AddBook}>
             <div className="cardAdd">
                 <div id='register' className="my-5 p-5">
-                    <div className='form-field mb-2'>
-                        <label htmlFor='name' className='mb-1'>Name:</label>
-                        <input type='text' name="name" className='form-control' />
+                    <div className=" d-flex justify-content-start align-items-between">
+                        <div className='form-field mb-2 mx-2'>
+                            <label htmlFor='name' className='mb-1'>Name:</label>
+                            <input type='text' name="name" className='form-control' />
+                        </div>
+                        <div className='form-field mb-2 mx-2'>
+                            <label htmlFor='pagesCount' className='mb-1'>Pages Count:</label>
+                            <input type='number' name="pagesCount" className='form-control' />
+                        </div>
                     </div>
-                    <div className='form-field mb-2'>
-                        <label htmlFor='pagesCount' className='mb-1'>Pages Count:</label>
-                        <input type='number' name="pagesCount" className='form-control' />
+                    <div className="d-flex justify-content-start align-items-between">
+                        <div className='form-field mb-2 mx-2'>
+                            <label htmlFor='lang' className='mb-1'>Book language:</label>
+                            <input type='text' name="lang" className='form-control' />
+                        </div>
+                        <div className='form-field mb-2 mx-2'>
+                            <label htmlFor='author' className='mb-1'>Author Name:</label>
+                            <input type='text' name="author" className='form-control' />
+                        </div>
                     </div>
-                    <div className='form-field mb-1'>
-                        <label htmlFor='dex' className='mb-1'>Description:</label>
-                        <textarea name="des" id="password" className='form-control'>
-                        </textarea>
+                    <div className="d-flex justify-content-start align-items-between">
+                        <div className='form-field mb-2 mx-2'>
+                            <label htmlFor='publish' className='mb-1'>Publish Date:</label>
+                            <input type='text' name="publish" className='form-control' placeholder="yyyy-mm-dd"/>
+                        </div>
+                        <div className='form-field mb-2 mx-2'>
+                            <label htmlFor='ISBN' className='mb-1'>ISBN:</label>
+                            <input type='text' name="ISBN" className='form-control' />
+                        </div>
                     </div>
-                    <div className='form-field mb-1'>
-                        <label htmlFor='cover' className='mb-1'>Cover Photo:</label>
-                        <input type='file' name="cover" className='form-control' />
-                    </div>
-                    <div className='form-field mb-2'>
-                        <label htmlFor='publish' className='mb-1'>Publish Date:</label>
-                        <input type='text' name="publish" className='form-control' placeholder="yyyy-mm-dd"/>
-                    </div>
-                    <div className='form-field mb-2'>
-                        <label htmlFor='lang' className='mb-1'>Book language:</label>
-                        <input type='text' name="lang" className='form-control' />
-                    </div>
-                    <div className='form-field mb-2'>
-                        <label htmlFor='author' className='mb-1'>Author Name:</label>
-                        <input type='text' name="author" className='form-control' />
-                    </div>
-                    <div className='form-field mb-2'>
-                        <label htmlFor='ISBN' className='mb-1'>ISBN:</label>
-                        <input type='text' name="ISBN" className='form-control' />
-                    </div>
+                    
                     {/* <div className='form-field mb-2'>
                         <label htmlFor='categoryId' className='mb-1'>CategoryId:</label>
                         <input type='text' name="categoryId" className='form-control' />
                     </div> */}
                     <div className='form-field mb-2'>
-                        <label htmlFor='categoryId' className='mb-1'>CategoryId:</label>
+                        <label htmlFor='categoryId' className='mb-1 mx-2'>Category Name:</label>
                         <select name='categoryId' className="form-select" aria-label="Default select example">
                             <option selected>Select Category</option>
                             {
@@ -88,7 +86,7 @@ const AddBook = () => {
                         </select>
                     </div>
                     <div className='form-field mb-2'>
-                        <label htmlFor='publisherId' className='mb-1'>PublisherId:</label>
+                        <label htmlFor='publisherId' className='mb-1 mx-2'>Publisher Name:</label>
                         <select name='publisherId' className="form-select" aria-label="Default select example">
                             <option selected>Select Publisher</option>
                             {
@@ -106,17 +104,26 @@ const AddBook = () => {
                         <label htmlFor='publisherId' className='mb-1'>PublisherId:</label>
                         <input type='text' name="publisherId" className='form-control' />
                     </div> */}
-                    <div className="form-field mb-2 form-check">
+                    <div className="form-field mb-2 form-check mx-2">
                         <input className="form-check-input" type="checkbox" value={1} name="kindle" id="flexCheckDefault"/>
-                        <label className="form-check-label" for="flexCheckDefault">
+                        <label className="form-check-label mx-4" htmlFor="flexCheckDefault">
                         Kindle
                         </label>
                     </div>
-                    <div className="form-field mb-2 form-check">
+                    <div className="form-field mb-2 form-check mx-2">
                         <input className="form-check-input" type="checkbox" name="paper" value={1} id="flexCheckDefault"/>
-                        <label className="form-check-label" for="flexCheckDefault">
+                        <label className="form-check-label mx-4" htmlFor="flexCheckDefault">
                         Paper
                         </label>
+                    </div>
+                    <div className='form-field mb-1 mx-2'>
+                        <label htmlFor='dex' className='mb-1'>Description:</label>
+                        <textarea name="des" id="password" className='form-control'>
+                        </textarea>
+                    </div>
+                    <div className='form-field mb-1 mx-1'>
+                        <label htmlFor='cover' className='mb-1'>Cover Photo:</label>
+                        <input type='file' name="cover" className='form-control' />
                     </div>
 
                     <button className='btn btn-primary w-49' id='signup-bttn'>
