@@ -65,11 +65,6 @@ const AddBook = () => {
                             <input type='text' name="ISBN" className='form-control' />
                         </div>
                     </div>
-                    
-                    {/* <div className='form-field mb-2'>
-                        <label htmlFor='categoryId' className='mb-1'>CategoryId:</label>
-                        <input type='text' name="categoryId" className='form-control' />
-                    </div> */}
                     <div className='form-field mb-2'>
                         <label htmlFor='categoryId' className='mb-1 mx-2'>Category Name:</label>
                         <select name='categoryId' className="form-select" aria-label="Default select example">
@@ -80,9 +75,6 @@ const AddBook = () => {
                                     return <option key={i} value={category?.id}>{category?.name}</option>
                                 })
                             }
-                            {/* <option value={1}>One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option> */}
                         </select>
                     </div>
                     <div className='form-field mb-2'>
@@ -95,15 +87,8 @@ const AddBook = () => {
                                     return <option key={i} value={publisher?.id}>{publisher?.name}</option>
                                 })
                             }
-                            {/* <option value={1}>One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option> */}
                         </select>
                     </div>
-                    {/* <div className='form-field mb-2'>
-                        <label htmlFor='publisherId' className='mb-1'>PublisherId:</label>
-                        <input type='text' name="publisherId" className='form-control' />
-                    </div> */}
                     <div className="form-field mb-2 form-check mx-2">
                         <input className="form-check-input" type="checkbox" value={1} name="kindle" id="flexCheckDefault"/>
                         <label className="form-check-label mx-4" htmlFor="flexCheckDefault">
