@@ -19,7 +19,7 @@ const Entrance = () => {
                             </a>
                         </Link>
                     </div>
-                    <Link to="/signout">
+                    <Link to="/books">
                         <a href="#">
                             <button
                                 onClick={signOut}

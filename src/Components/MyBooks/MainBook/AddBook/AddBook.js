@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../../contexts/Authcontext";
 
 const AddBook = () => {
-    const { token } = useContext(AuthContext)
+    const { token, categories, publishers } = useContext(AuthContext)
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
-    
+    console.log("categories",categories)
     const AddBook = async (event) => {
         let BookData = new FormData(event.target)
         event.preventDefault()
@@ -68,14 +68,44 @@ const AddBook = () => {
                         <label htmlFor='ISBN' className='mb-1'>ISBN:</label>
                         <input type='text' name="ISBN" className='form-control' />
                     </div>
-                    <div className='form-field mb-2'>
+                    {/* <div className='form-field mb-2'>
                         <label htmlFor='categoryId' className='mb-1'>CategoryId:</label>
                         <input type='text' name="categoryId" className='form-control' />
+                    </div> */}
+                    <div className='form-field mb-2'>
+                        <label htmlFor='categoryId' className='mb-1'>CategoryId:</label>
+                        <select name='categoryId' className="form-select" aria-label="Default select example">
+                            <option selected>Select Category</option>
+                            {
+                                categories.map((category, i) => {
+                                    console.log("category?.id",category?.id)
+                                    return <option key={i} value={category?.id}>{category?.name}</option>
+                                })
+                            }
+                            {/* <option value={1}>One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option> */}
+                        </select>
                     </div>
                     <div className='form-field mb-2'>
                         <label htmlFor='publisherId' className='mb-1'>PublisherId:</label>
-                        <input type='text' name="publisherId" className='form-control' />
+                        <select name='publisherId' className="form-select" aria-label="Default select example">
+                            <option selected>Select Publisher</option>
+                            {
+                                publishers.map((publisher, i) => {
+                                    console.log("publisher?.id",publisher?.id)
+                                    return <option key={i} value={publisher?.id}>{publisher?.name}</option>
+                                })
+                            }
+                            {/* <option value={1}>One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option> */}
+                        </select>
                     </div>
+                    {/* <div className='form-field mb-2'>
+                        <label htmlFor='publisherId' className='mb-1'>PublisherId:</label>
+                        <input type='text' name="publisherId" className='form-control' />
+                    </div> */}
                     <div className="form-field mb-2 form-check">
                         <input className="form-check-input" type="checkbox" value={1} name="kindle" id="flexCheckDefault"/>
                         <label className="form-check-label" for="flexCheckDefault">

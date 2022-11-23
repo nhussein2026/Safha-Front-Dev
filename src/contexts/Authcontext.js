@@ -7,6 +7,8 @@ const AuthProvider = ({children}) => {
     const [loggedIn, setLoggedIn] = useState(!!token)
     const [user, setUser] = useState({})
     const [userInfo, setUserInfo] = useState({})
+    const [categories, setCategories] = useState([])
+    const [publishers, setPublishers] = useState([])
     const [homeNav, setHomeNav] = useState(false)
     const [categoriesNav, setCategoriesNav] = useState(false)
     const [booksNav, setBooksNav] = useState(false)
@@ -50,6 +52,8 @@ const AuthProvider = ({children}) => {
             aboutNav, setAboutNav,
             userInfo, setUserInfo,
             avatar, setAvatar,
+            categories, setCategories,
+            publishers, setPublishers,
         }}>
             {children}
         </AuthContext.Provider>

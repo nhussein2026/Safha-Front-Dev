@@ -11,6 +11,37 @@ import EmblaCarousel from "../ScrolledSection/EmblaCarousel";
 
 
 const Home = () => {
+    const { token, setUserInfo, userInfo, setCategories, setPublishers } = useContext(AuthContext)
+    useEffect(() => {
+        const getCatgories = async () => {
+            const Categories = await fetch(`${process.env.REACT_APP_API_URL}/categories/all`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            const json = await Categories.json()
+            if (json?.success) {
+                setCategories(json?.data)
+            }
+        }
+        getCatgories()
+
+        const getPublishers = async () => {
+            const Categories = await fetch(`${process.env.REACT_APP_API_URL}/publishers/all`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            const json = await Categories.json()
+            if (json?.success) {
+                setPublishers(json?.data)
+            }
+        }
+        getPublishers()
+    }, [])
+
     // const { token, setUserInfo, userInfo } = useContext(AuthContext)
     // console.log("before getUserInfo token",token);
     // useEffect(()=>{

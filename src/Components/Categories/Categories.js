@@ -5,8 +5,8 @@ import './Categories.css';
 import CategoriesSideBar from "../SideBar/CategoriesSideBar";
 
 const Categories = () => {
-    const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav } = useContext(AuthContext)
-    const [categories, setCategories] = useState([])
+    const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav, categories, setCategories } = useContext(AuthContext)
+    // const [categories, setCategories] = useState([])
     useEffect(() => {
         setHomeNav(false)
         setCategoriesNav(true)
