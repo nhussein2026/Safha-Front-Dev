@@ -1,5 +1,8 @@
+import dayjs from 'dayjs';
 import './Review.css'
+import relativeTime from 'dayjs/plugin/relativeTime'
 
+dayjs.extend(relativeTime)
 
 const Review = ({ review }) => {
 
@@ -42,6 +45,22 @@ const Review = ({ review }) => {
                                             </p>
                                         </div>
                                         <hr className="short-divider" />
+                                    </div>
+                                    {/* End of Book section */}
+                                    <div id='reviewPlace' className='col-md-8 bg-green'>
+                                        <div className='reviewContent'>
+                                            <img src={review?.User?.UserInfos?.avatar} />
+                                            <div className='mb-0 name'>{review?.User?.username}</div>
+                                            {/* <div className='mb-2' datetime>{dayjs().toDate(dayjs(review?.created_at))}</div> */}
+                                            <p>{review?.content}</p>
+                                            <div className='icons d-flex align-items-center'>
+                                                <div className='me-2'>
+                                                    {
+                                                        
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
