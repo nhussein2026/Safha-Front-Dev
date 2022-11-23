@@ -22,7 +22,7 @@ const OneFeature = () => {
             <div className="col-lg-4 m-b-3">
                 <div className="banner" id='banner-palce3'>
                     <div className="banner-layer">
-                        <h3 className="text-uppercase text-white m-b-2">Best Seller</h3>
+                        <h3 className="text-uppercase text-white m-b-2">Most Reated</h3>
                         <p className="font2 m-b-3">Books</p>
                         <Link to={`/collection`}>
                             <a href="#" className="btn btn-secondary">
