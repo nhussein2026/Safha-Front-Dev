@@ -9,9 +9,7 @@ const EditProfile = () => {
 
     }, [])
     const navigate = useNavigate()
-    const accountRef = useRef();
-    const id = useParams()
-    const passwordRef = useRef();
+    
     const [loading, setLoading] = useState(false)
     
     const EditUserInfo = async (event) => {

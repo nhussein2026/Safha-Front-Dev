@@ -44,42 +44,42 @@ const MainProfile = () => {
                                         {
                                             (hover=='Show')&&
                                             <>
-                                                <li class="nav-item" onClick={()=>setActive(1)}>
-                                                    <a class="nav-link" aria-current="page" href="#">Add Profile</a>
+                                                <li className="nav-item" onClick={()=>setActive(1)}>
+                                                    <a className="nav-link" aria-current="page" href="#">Add Profile</a>
                                                 </li>
-                                                <li class="nav-item" onClick={()=>setActive(2)}>
-                                                    <a class="nav-link" aria-current="page" href="#">Edit Profile</a>
+                                                <li className="nav-item" onClick={()=>setActive(2)}>
+                                                    <a className="nav-link" aria-current="page" href="#">Edit Profile</a>
                                                 </li>
-                                                <li class="nav-item" onClick={()=>setActive(3)}>
-                                                    <a class="nav-link" id="active" aria-current="page" href="#">Show Profile</a>
+                                                <li className="nav-item" onClick={()=>setActive(3)}>
+                                                    <a className="nav-link" id="active" aria-current="page" href="#">Show Profile</a>
                                                 </li>
                                             </>   
                                         }
                                         {
                                             (hover=='Edit')&&
                                             <>
-                                                <li class="nav-item" onClick={()=>setActive(1)}>
-                                                    <a class="nav-link" aria-current="page" href="#">Add Profile</a>
+                                                <li className="nav-item" onClick={()=>setActive(1)}>
+                                                    <a className="nav-link" aria-current="page" href="#">Add Profile</a>
                                                 </li>
-                                                <li class="nav-item" onClick={()=>setActive(2)}>
-                                                    <a class="nav-link" id="active" aria-current="page" href="#">Edit Profile</a>
+                                                <li className="nav-item" onClick={()=>setActive(2)}>
+                                                    <a className="nav-link" id="active" aria-current="page" href="#">Edit Profile</a>
                                                 </li>
-                                                <li class="nav-item" onClick={()=>setActive(3)}>
-                                                    <a class="nav-link" aria-current="page" href="#">Show Profile</a>
+                                                <li className="nav-item" onClick={()=>setActive(3)}>
+                                                    <a className="nav-link" aria-current="page" href="#">Show Profile</a>
                                                 </li>
                                             </>   
                                         }
                                         {
                                             (hover=='Add')&&
                                             <>
-                                                <li class="nav-item" onClick={()=>setActive(1)}>
-                                                    <a class="nav-link" id="active" aria-current="page" href="#">Add Profile</a>
+                                                <li className="nav-item" onClick={()=>setActive(1)}>
+                                                    <a className="nav-link" id="active" aria-current="page" href="#">Add Profile</a>
                                                 </li>
-                                                <li class="nav-item" onClick={()=>setActive(2)}>
-                                                    <a class="nav-link" aria-current="page" href="#">Edit Profile</a>
+                                                <li className="nav-item" onClick={()=>setActive(2)}>
+                                                    <a className="nav-link" aria-current="page" href="#">Edit Profile</a>
                                                 </li>
-                                                <li class="nav-item" onClick={()=>setActive(3)}>
-                                                    <a class="nav-link" aria-current="page" href="#">Show Profile</a>
+                                                <li className="nav-item" onClick={()=>setActive(3)}>
+                                                    <a className="nav-link" aria-current="page" href="#">Show Profile</a>
                                                 </li>
                                             </>   
                                         }

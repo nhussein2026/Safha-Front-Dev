@@ -30,6 +30,7 @@ import Add from './Components/MyBooks/Add/Add';
 import Edit from './Components/MyBooks/Edit/Edit';
 import AddCategory from './Components/Categories/AddCategory/AddCategory';
 import MainProfile from './screens/Profile/MainProfile';
+import MainBook from './Components/MyBooks/MainBook/MainBook';
 // require('dotenv').config()
 
 const App = () => {
@@ -53,7 +54,7 @@ const App = () => {
               loggedIn?
                 <>
                   <Route path='/mybooks' element={<MyBooks />} />
-                  <Route path='/add' element={<Add />} />
+                  <Route path='/addbook' element={<MainBook />} />
                   <Route path='/profile' element={<MainProfile />} />
                   <Route path='/addbook' element={<AddBook />} />
                   <Route path='/pro' element={<Updateprofile />} />

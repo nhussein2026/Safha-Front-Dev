@@ -4,9 +4,7 @@ import { AuthContext } from "../../../contexts/Authcontext";
 import './AddProfile.css'
 const AddProfile = () => {
     const { token } = useContext(AuthContext)
-    useEffect(() => {
-
-    }, [])
+    
     const navigate = useNavigate()
     const accountRef = useRef();
     const passwordRef = useRef();
