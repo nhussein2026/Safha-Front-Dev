@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/Authcontext";
 import SingleBookElement from "../Books/SingleBookElement/SingleBookElement";
-import SingleBookElement1 from "../Books/SingleBookElement/SingleBookELement1";
 import HeroSection from "../HeroSection/HeroSection";
 import Sidebar from "../SideBar/SideBar";
 // import '../../assets/css/demo/demo25/demo25.css'
