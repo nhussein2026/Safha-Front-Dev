@@ -1,3 +1,4 @@
+import Reviews from "./Reviews/Reviews";
 
 const SingleBook = ({book}) => {
     
@@ -56,21 +57,27 @@ const SingleBook = ({book}) => {
                             </ul>
                         </div>
                     </div>
+                    <div className="row">
+                        <div className="col-md-4 product-single-gallery">
+                            <Reviews />
+                        </div>
+                    </div>
                 </div>
-                <div className="product-single-tabs font2">
+                {/* <div className="product-single-tabs font2">
                     <div className="nav nav-tabs d-flex" id="reviews" role="tablist">
                         <div id="addReview">
-                            {/* <AddReview/> */}
+                            <AddReview/>
                         </div>
                     </div>
                     <div className="tab-content">
                         <div className="tab-pane fade show active" id="product-desc-content" role="tabpanel" aria-labelledby="product-tab-desc">
                             <div className="product-desc-content">
-                                {/* <p>{book?.Comment?.content}</p> */}
+                                <p>{book?.Comment?.content}</p>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>  */}
+                
             </div>
                             
         </>
