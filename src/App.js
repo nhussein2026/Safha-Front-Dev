@@ -21,7 +21,6 @@ import AddBook from './Components/MyBooks/AddBook/AddBook';
 import CategoriesF from './Components/Categories/Categories';
 import CollectionPage from './Components/Featured/OneFeature/CollectionPage';
 import CategoriesDesigne from './Components/Categories/CategoriesDesigne';
-import UpdateBook from './Components/MyBooks/UpdateBook/UpdateBook';
 import CategoryBooks from './Components/Categories/CategoryBooks/CategoryBooks';
 import EmblaCarousel from './Components/ScrolledSection/EmblaCarousel';
 import AddBookTry from './Components/MyBooks/AddBook/AddBooktry';
@@ -59,7 +58,6 @@ const App = () => {
                   <Route path='/profile' element={<MainProfile />} />
                   <Route path='/addbook' element={<AddBook />} />
                   <Route path='/pro' element={<Updateprofile />} />
-                  {/* <Route path='/update-book' element={<UpdateBook />} /> */}
                   <Route path='/edit' element={<Edit />} />
 
                 </>
