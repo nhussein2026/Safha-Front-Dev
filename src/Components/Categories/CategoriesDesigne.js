@@ -45,9 +45,9 @@ const CategoriesDesigne = () => {
                                             <li class="nav-item">
                                                 <a class="nav-link active" id="active" aria-current="page" href="#">Categories</a>
                                             </li> 
-                                            <li class="nav-item">
+                                            {/* <li class="nav-item">
                                                 <a class="nav-link active" id="active" aria-current="page" href="addCategory">Add Categories</a>
-                                            </li> 
+                                            </li>  */}
                                         </ul>
                                     </div>
                                     <div className="row">

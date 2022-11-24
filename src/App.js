@@ -18,7 +18,7 @@ import CollectionPage from './Components/Featured/OneFeature/CollectionPage';
 import CategoriesDesigne from './Components/Categories/CategoriesDesigne';
 import CategoryBooks from './Components/Categories/CategoryBooks/CategoryBooks';
 import EmblaCarousel from './Components/ScrolledSection/EmblaCarousel';
-import AddCategory from './Components/Categories/AddCategory/AddCategory';
+// import AddCategory from './Components/Categories/AddCategory/AddCategory';
 import MainProfile from './screens/Profile/MainProfile';
 import MainBook from './Components/MyBooks/MainBook/MainBook';
 import SingleReview from './Components/Reviews/ViewReviews/SingleReview';
@@ -59,7 +59,7 @@ const App = () => {
             <Route path='/suggested' element={<Suggested />} />
             <Route path='/collection' element={<CollectionPage />} />
             <Route path='/embla' element={<EmblaCarousel />} />
-            <Route path='/addCategory' element={<AddCategory />} />
+            {/* <Route path='/addCategory' element={<AddCategory />} /> */}
             <Route path='/review/:id' element={<SingleReview />} />
 
 

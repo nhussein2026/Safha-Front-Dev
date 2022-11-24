@@ -1,4 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
 import { AuthContext } from "../../../../contexts/Authcontext";
 import SingleReview from "./SingleReview/SingleReview";
 
@@ -6,21 +7,26 @@ const Reviews = ({book}) => {
     const { token } = useContext(AuthContext)
     const content= useRef()
     console.log("book?.id",book?.id);
+    const {id} = useParams()
     const [loading, setLoading] = useState(false)
+    const [review, setReview] = useState({
+        content: '',
+        bookId: id,
+    })
     const AddReview = async (event) => {
+        event.preventDefault()
         setLoading(true)
         console.log("inside Add Review");
-        console.log("content",content.current.value )
+        // console.log("content",content.current.value )
         const response = await fetch(`${process.env.REACT_APP_API_URL}/reviews`,
             {
                 method: "POST",
-                body: JSON.stringify({
-                    content: content.current.value,
-                    bookId: book?.id,
-                }),
+                body: JSON.stringify(review),
                 headers: {
+                    "Content-Type": "application/json",
                     'Authorization': `Bearer ${token}`,
                 },
+                
             }
         );
         // console.log("content",content.current.value )
@@ -62,9 +68,9 @@ const Reviews = ({book}) => {
                 <form>
                     <div className='form-field mb-1 mx-2'>
                         <label htmlFor='content' className='mb-1'></label>
-                        <input name="content" id="password" ref={content} className='form-control'/>
+                        <input name="content" id="password" value={review?.content} onChange={(e) => { setReview({ ...review, content: e.target.value }) }} className='form-control'/>
                     </div>
-                    <button className='btn btn-primary w-49' id='signup-bttn' onClick={AddReview}>
+                    <button className='btn btn-primary w-49' type="submit" id='signup-bttn' onClick={AddReview}>
                         {loading ? 'Please Wait' : 'Add'}
                     </button>
                 </form>
