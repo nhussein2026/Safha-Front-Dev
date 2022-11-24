@@ -79,6 +79,7 @@ const SingleBook = ({book}) => {
                 </div>  */}
                 
             </div>
+            
                             
         </>
     );

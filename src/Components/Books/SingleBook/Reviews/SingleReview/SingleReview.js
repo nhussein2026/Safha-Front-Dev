@@ -23,6 +23,8 @@ const SingleReview = ({review}) => {
         getReview()
     }, [])
     console.log("reviewInfo", reviewInfo);
+
+    
     return (
         <>
             {/* <div className="card mb-3 mt-5" style={{maxWidth: '540px'}}>
