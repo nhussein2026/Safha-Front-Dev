@@ -3,17 +3,16 @@ import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Signup from './screens/Signup/Signup';
 import Books from './Components/Books/Books';
-import Reviews from './Components/Reviews/ViewReviews/Reviwes';
+import Reviews from './Components/Reviews/ViewReviews/Reviews';
 import Categories from './Components/Categories/Categories';
 import About from './Components/About/About';
 import Suggested from './Components/SuggestedCategories/Suggested';
-import SingleBook from "./Components/SingleBook/SingleBook";
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
 import Profile from './screens/Profile/ShowProfile/ShowProfile';
 import HomeCategories from './Components/HomeCategories/HomeCategories2';
 import Navbar1 from './Components/Navbar/Navbar1';
-import SingleBookIndex from './Components/SingleBook/SingleBookIndex';
+import SingleBookIndex from './Components/Books/SingleBook/SingleBookIndex';
 import Login from './screens/Login/Login';
 
 import Updateprofile from './screens/Profile/Updateprofile';
@@ -32,6 +31,7 @@ import AddCategory from './Components/Categories/AddCategory/AddCategory';
 import MainProfile from './screens/Profile/MainProfile';
 import MainBook from './Components/MyBooks/MainBook/MainBook';
 import SingleReview from './Components/Reviews/ViewReviews/SingleReview';
+import SingleBook from './Components/Books/SingleBook/SingleBook';
 // require('dotenv').config()
 
 const App = () => {

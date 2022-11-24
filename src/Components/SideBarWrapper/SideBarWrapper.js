@@ -1,11 +1,8 @@
 // import Sidebar from "../SideBar/SideBar";
 import { useEffect, useState } from "react";
-import CategoriesSideBar from "../SideBar/CategoriesSideBar";
 import FavoriteBooks from "../SideBar/FavoriteBooks";
 
-
-
-const SideBarWrapper = () => {
+const SideBarWrapper = ({book}) => {
     const [books, setBooks] = useState([])
     useEffect(() => {
         const getBooks = async () => {
@@ -16,7 +13,7 @@ const SideBarWrapper = () => {
                 }
             })
             const json = await booksList.json()
-            // console.log(json)
+            console.log("json books",json.data)
             if (json?.success) {
                 setBooks(json?.data)
             }
@@ -25,13 +22,12 @@ const SideBarWrapper = () => {
     }, [])
     return (
         <>
-            <div >
                 <aside className="sidebar-product col-lg mobile-sidebar">
                     <div classname="sidebar-wrapper">
                         <div className="widget widget-info">
                             <h3 className="widget-title m-b-3">AUTHOR</h3>
                             <div className="widget-body bg-gray">
-                                <h4 className="font2 text-dark line-height-1 m-b-1">{books?.author}</h4>
+                                <h4 className="font2 text-dark line-height-1 m-b-1">{book?.author}</h4>
                                 <p className="font2 font-weight-normal line-height-1 ls-0 text-uppercase">12
                                     Books</p>
                                 <a href="#" className="d-inline-block text-uppercase">View All
@@ -58,7 +54,6 @@ const SideBarWrapper = () => {
 
                 </aside>
 
-            </div >
         </>
     )
 }

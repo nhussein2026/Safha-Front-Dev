@@ -1,10 +1,10 @@
-import Footer from "../Footer/Footer";
-import Navbar from "../Navbar/Navbar";
-import SideBarWrapper from "../SideBarWrapper/SideBarWrapper";
+import Footer from "../../Footer/Footer";
+import Navbar from "../../Navbar/Navbar";
+import SideBarWrapper from "../../SideBarWrapper/SideBarWrapper";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import AddReview from "../AddReviews/AddReviews";
-const SingleBook = () => {
+import AddReview from "../../AddReviews/AddReviews";
+const SingleBook1 = () => {
     // console.log("I`m in the single book")
     const { id } = useParams()
     // console.log("id", id)
@@ -28,8 +28,7 @@ const SingleBook = () => {
     // console.log("book", book)
     return (
         <>
-
-            <div className="d-flex">
+        <div className="d-flex">
                 <div className="bg-white">
                     <div className="container">
                         <div className="row main-content">
@@ -129,4 +128,4 @@ const SingleBook = () => {
     );
 }
 
-export default SingleBook;
+export default SingleBook1;
