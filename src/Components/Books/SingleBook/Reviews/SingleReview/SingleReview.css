@@ -1,0 +1,104 @@
+.createdAt {
+    color: #aeafb1d5;
+    font-size: 14px;
+}
+
+.buttons-div-p {
+    /* margin: 10px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* margin-bottom: 2em; */
+    /* margin: 2em; */
+}
+
+.postsDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* margin-top: 3em; */
+    border-top: solid 2px #F3F4F5;
+    padding: 1em;
+}
+.commentsDivPost{
+    margin-top: 1em;
+}
+.postsDiv:hover{
+    background-color: #F3F4F5;
+}
+
+.posts-border-posts{
+    border-top: solid 2px #F3F4F5; 
+}
+
+.avatar {
+    margin-right: 1em;
+    margin-top: 0em;
+    padding: 2.5em;
+}
+
+.postContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0.5em;
+}
+
+.comment-posts{
+    margin-left: 0.8em;
+    cursor: pointer;
+}
+
+.like-posts{
+    cursor: pointer;
+}
+
+.likeIcon{
+    color:rgb(209, 57, 57);
+    /* background-color: white; */
+    /* border-color: aquamarine; */
+}
+.postContentText{
+    text-align: justify !important;
+    margin-right: 1em;
+    /* overflow-wrap: anywhere; */
+    /* word-wrap: break-word !important; */
+    /* overflow-wrap: break-word; */
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    /* word-break: break-word; */
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+/* p{
+    text-align: justify !important;
+    margin-right: 1em;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word; 
+} */
+.displayFlexRow{
+    display: flex;
+    flex-direction: row;
+}
+.counter{
+    padding: .3em;
+    color:#aeafb1d5;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.displayFlexRow svg{
+    color: black;
+}

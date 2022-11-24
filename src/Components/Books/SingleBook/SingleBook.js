@@ -58,8 +58,8 @@ const SingleBook = ({book}) => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-4 product-single-gallery">
-                            <Reviews />
+                        <div className="col-md-4 col-lg-10 col-sm-12">
+                            <Reviews book={book} />
                         </div>
                     </div>
                 </div>
