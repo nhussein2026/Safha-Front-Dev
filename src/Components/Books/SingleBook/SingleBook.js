@@ -3,7 +3,7 @@ const SingleBook = ({book}) => {
     
     return (
         <>
-            <div className="col-lg-8 product-sidebar-right">
+            <div className="col-lg-9 product-sidebar-right">
                 <div className="product-single-container product-single-default">
                     <div className="row">
                         <div className="col-md-4 product-single-gallery">

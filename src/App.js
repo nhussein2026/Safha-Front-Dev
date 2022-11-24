@@ -4,33 +4,24 @@ import Footer from './Components/Footer/Footer';
 import Signup from './screens/Signup/Signup';
 import Books from './Components/Books/Books';
 import Reviews from './Components/Reviews/ViewReviews/Reviews';
-import Categories from './Components/Categories/Categories';
 import About from './Components/About/About';
 import Suggested from './Components/SuggestedCategories/Suggested';
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
-import Profile from './screens/Profile/ShowProfile/ShowProfile';
-import HomeCategories from './Components/HomeCategories/HomeCategories2';
 import Navbar1 from './Components/Navbar/Navbar1';
 import SingleBookIndex from './Components/Books/SingleBook/SingleBookIndex';
 import Login from './screens/Login/Login';
 
 import Updateprofile from './screens/Profile/Updateprofile';
 import MyBooks from './Components/MyBooks/MyBooks';
-import AddBook from './Components/MyBooks/AddBook/AddBook';
-import CategoriesF from './Components/Categories/Categories';
 import CollectionPage from './Components/Featured/OneFeature/CollectionPage';
 import CategoriesDesigne from './Components/Categories/CategoriesDesigne';
 import CategoryBooks from './Components/Categories/CategoryBooks/CategoryBooks';
 import EmblaCarousel from './Components/ScrolledSection/EmblaCarousel';
-import AddBookTry from './Components/MyBooks/AddBook/AddBooktry';
-import Add from './Components/MyBooks/Add/Add';
-import Edit from './Components/MyBooks/Edit/Edit';
 import AddCategory from './Components/Categories/AddCategory/AddCategory';
 import MainProfile from './screens/Profile/MainProfile';
 import MainBook from './Components/MyBooks/MainBook/MainBook';
 import SingleReview from './Components/Reviews/ViewReviews/SingleReview';
-import SingleBook from './Components/Books/SingleBook/SingleBook';
 // require('dotenv').config()
 
 const App = () => {
@@ -56,10 +47,7 @@ const App = () => {
                   <Route path='/mybooks' element={<MyBooks />} />
                   <Route path='/addbook' element={<MainBook />} />
                   <Route path='/profile' element={<MainProfile />} />
-                  <Route path='/addbook' element={<AddBook />} />
                   <Route path='/pro' element={<Updateprofile />} />
-                  <Route path='/edit' element={<Edit />} />
-
                 </>
                 :
                 <Route path='/about' element={<About />} />

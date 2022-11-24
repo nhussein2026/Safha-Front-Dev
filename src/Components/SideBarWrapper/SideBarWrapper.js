@@ -28,10 +28,10 @@ const SideBarWrapper = ({book}) => {
                             <h3 className="widget-title m-b-3">AUTHOR</h3>
                             <div className="widget-body bg-gray">
                                 <h4 className="font2 text-dark line-height-1 m-b-1">{book?.author}</h4>
-                                <p className="font2 font-weight-normal line-height-1 ls-0 text-uppercase">12
-                                    Books</p>
-                                <a href="#" className="d-inline-block text-uppercase">View All
-                                    Books</a>
+                                <p className="font2 font-weight-normal line-height-1 ls-0 text-uppercase"></p>
+                                {/* <a href="#" className="d-inline-block text-uppercase">View All
+                                    Books</a> */}
+                                <a href="#" className="d-inline-block text-uppercase"></a>
                             </div>
                         </div>
                     </div>
