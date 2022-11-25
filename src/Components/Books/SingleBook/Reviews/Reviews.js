@@ -26,7 +26,6 @@ const Reviews = ({book}) => {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${token}`,
                 },
-                
             }
         );
         // console.log("content",content.current.value )

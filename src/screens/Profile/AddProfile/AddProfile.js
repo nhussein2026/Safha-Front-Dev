@@ -13,7 +13,7 @@ const AddProfile = () => {
     const AddUserInfo = async (event) => {
         let UserInfoData = new FormData(event.target)
         event.preventDefault()
-        // console.log("UserInfoData", UserInfoData)
+        console.log("UserInfoData", UserInfoData)
         setLoading(true)
         const response = await fetch(`${process.env.REACT_APP_API_URL}/userInfos`,
             {

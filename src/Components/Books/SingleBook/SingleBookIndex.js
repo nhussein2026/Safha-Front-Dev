@@ -25,7 +25,7 @@ const SingleBookIndex = () => {
             }
         }
         getBook()
-    }, [])
+    }, [id])
     console.log("Index book", book, id)
     return(
         <>

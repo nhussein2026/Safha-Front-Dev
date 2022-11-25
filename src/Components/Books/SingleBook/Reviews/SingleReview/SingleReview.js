@@ -44,7 +44,7 @@ const SingleReview = ({review}) => {
 
             <div className="postsDiv">
                 <div >
-                    <Avatar className="avatar" alt="" src="{reviewInfo?.UserInfo?.avatar}" />
+                    <Avatar className="avatar" alt="" src={reviewInfo?.UserInfo?.avatar} />
                 </div>
                 <div className="postContent">
                     <h6>{reviewInfo?.User?.username}</h6>
