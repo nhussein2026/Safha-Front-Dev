@@ -10,11 +10,13 @@ const AuthProvider = ({children}) => {
     const [userInfo, setUserInfo] = useState({})
     const [categories, setCategories] = useState([])
     const [publishers, setPublishers] = useState([])
+    const [favBooks, setFavBooks] = useState([])
     const [homeNav, setHomeNav] = useState(false)
     const [categoriesNav, setCategoriesNav] = useState(false)
     const [booksNav, setBooksNav] = useState(false)
     const [aboutNav, setAboutNav] = useState(false)
     const [avatar, setAvatar] = useState('')
+    const [profile, setProfile] = useState({})
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -57,6 +59,8 @@ const AuthProvider = ({children}) => {
             avatar, setAvatar,
             categories, setCategories,
             publishers, setPublishers,
+            favBooks, setFavBooks,
+            profile, setProfile,
         }}>
             {children}
         </AuthContext.Provider>

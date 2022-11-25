@@ -7,9 +7,9 @@ import { useState, useContext } from 'react';
 
 
 const ShowProfile = () => {
-    const { token } = useContext(AuthContext);
+    const { token, profile, setProfile } = useContext(AuthContext);
     console.log("My token is: ", token)
-    const [profile, setProfile] = useState({})
+    
     useEffect(() => {
         console.log("inside useEffect");
         const getProfile = async () => {

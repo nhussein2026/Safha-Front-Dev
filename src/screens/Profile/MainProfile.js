@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import HeroSection from "../../Components/HeroSection/HeroSection"
 import CategoriesSideBar from "../../Components/SideBar/CategoriesSideBar"
 import ProfileSideBar from "../../Components/SideBar/ProfileSideBar/ProfileSideBar"
@@ -8,6 +8,8 @@ import ShowProfile from "./ShowProfile/ShowProfile"
 import Profile from "./ShowProfile/ShowProfile"
 
 const MainProfile = () => {
+    // const { profile } = useContext(AuthContext)
+
     const [show, setShow] = useState("Show")
     const [hover, setHover] = useState("Show")
     const setActive = (type) =>{
@@ -89,6 +91,7 @@ const MainProfile = () => {
                                 <div className="row">
                                     <div className="col-6 col-sm-6 col-lg-6">
                                         {
+
                                             (show=='Add')&&
                                             <AddProfile />
                                         }

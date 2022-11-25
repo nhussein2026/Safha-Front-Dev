@@ -39,6 +39,11 @@
     padding: 2.5em;
     background-color: #fe3f7271;
     border: 3px dashed #fe3f73;
+    /* border-radius: 50%; */
+    float: left;
+    width:  110px;
+    height: 110px;
+    object-fit: cover;
 }
 
 .postContent{

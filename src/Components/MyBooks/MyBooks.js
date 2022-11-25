@@ -12,8 +12,7 @@ const MyBooks = () => {
     // console.log("InsideMyBooks")
     const { setHomeNav, setAboutNav, 
             setCategoriesNav, setBooksNav,
-            userInfo, token, setUserInfo} = useContext(AuthContext)
-    const [books, setBooks] = useState([])
+            userInfo, token, setUserInfo, setFavBooks, favBooks} = useContext(AuthContext)
     const [addedBooks, setAddedBooks] = useState([])
     // setBooks(userInfo?.FavoriteBooks)
     // console.log("user",userInfo?.FavoriteBooks)
@@ -37,9 +36,7 @@ const MyBooks = () => {
             const json = await userInfoFetch.json()
             console.log("user info",json)
             if (json?.success) {
-                // console.log("insied if user info",json)
-                setUserInfo(json?.data)
-                setBooks(json?.data?.FavoriteBooks)
+                setFavBooks(json?.data?.FavoriteBooks)
                 window.localStorage.setItem('avatar',json?.data?.UserInfo?.avatar)
             }
         }
@@ -47,7 +44,7 @@ const MyBooks = () => {
     },[])
 
     const setFavBooksFun= () => {
-        setBooks(userInfo?.FavoriteBooks)
+        setFavBooks(userInfo?.FavoriteBooks)
         setAdded(false)
     }
     const setAddedBooksFun= () => {
@@ -56,7 +53,7 @@ const MyBooks = () => {
         setAdded(true)
     }
 
-    // console.log("books",books);
+    // console.log("favBooks",favBooks);
     return(
         <>
             <div className="page-wrapper">
@@ -65,7 +62,7 @@ const MyBooks = () => {
                     <div className="bg-white">
                         <div className="container">
                             <div className="row main-content">
-                                <Sidebar books={books} />
+                                <Sidebar books={favBooks} />
                                 <div class="sidebar-overlay"></div>
                                     <div className="col-lg-9">
                                         <div className="col-6 col-sm-4 col-lg-6">
@@ -94,7 +91,7 @@ const MyBooks = () => {
                                         {!added?
                                             <div className="row">
                                                 {
-                                                    books.map((book, i) => {
+                                                    favBooks.map((book, i) => {
                                                         return <SingleBookElement book={book} key={i} customize="MyBooks"/>
                                                     })
                                                 }
