@@ -106,4 +106,8 @@ path {
 
 .img-avatar img {
     border-radius: 50%;
+    float: left;
+    width:  110px;
+    height: 110px;
+    object-fit: cover;
   }

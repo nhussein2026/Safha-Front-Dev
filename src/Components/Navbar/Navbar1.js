@@ -1,11 +1,27 @@
 import logo from "../../assets/images/cuted-logo.png"
 import Entrance from "../Signup&Login/Entrance";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
 import { Link, Route, Routes } from "react-router-dom";
 import Profile from "../../screens/Profile/ShowProfile/ShowProfile";
 
 const Navbar1 = () => {
+    const searchRef = useRef()
+    const [search, setSearch] = useState([])
+    const searchFun = async(event) => {
+        event.preventDefault()
+        const booksList = await fetch(`${process.env.REACT_APP_API_URL}/search/?name=${searchRef.current.value}`, {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        const json = await booksList.json()
+        console.log("json search",json)
+        if (json?.success) {
+            setSearch(json?.data)
+        }
+    }
 	const { loggedIn, signIn, setHomeNav, homeNav, 
         setCategoriesNav, categoriesNav,
         setBooksNav, booksNav,
@@ -124,9 +140,9 @@ const Navbar1 = () => {
                             <a href="#" className="search-toggle" role="button"><i className="icon-magnifier"></i></a>
                             <form action=" #" method="get">
                                 <div className="header-search-wrapper">
-                                    <input type="search" className="form-control font-italic" name="q" id="q"
+                                    <input type="search" ref={searchRef} className="form-control font-italic" name="q" id="q"
                                         placeholder="Search" required />
-                                    <button className="btn icon-magnifier" title="search" type="submit"></button>
+                                    <button className="btn icon-magnifier" title="search" onClick={searchFun} type="submit"></button>
                                 </div>
                             </form>
                         </div>

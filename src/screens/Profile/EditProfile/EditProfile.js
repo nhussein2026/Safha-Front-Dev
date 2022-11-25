@@ -17,7 +17,7 @@ const EditProfile = () => {
         event.preventDefault()
         // console.log("UserInfoData", UserInfoData)
         setLoading(true)
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/userInfos/edit/1`,
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/userInfos/edit`,
             {
                 method: "PUT",
                 body: UserInfoData,
