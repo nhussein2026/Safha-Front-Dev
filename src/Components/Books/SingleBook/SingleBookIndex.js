@@ -7,7 +7,7 @@ import './SingleBook.css'
 
 const SingleBookIndex = () => {
     const { id } = useParams()
-    const [book, setBook] = useState({})
+    const [Singlebook, setSingleBook] = useState({})
 
     useEffect(() => {
         console.log("inside useeffect index");
@@ -21,12 +21,12 @@ const SingleBookIndex = () => {
             const json = await getOneBook.json()
             console.log("json", json)
             if (json?.success) {
-                setBook(json?.data)
+                setSingleBook(json?.data)
             }
         }
         getBook()
     }, [id])
-    console.log("Index book", book, id)
+    console.log("Index book", Singlebook, id)
     return(
         <>
         <div class="page-wrapper">
@@ -34,8 +34,8 @@ const SingleBookIndex = () => {
                 <div className="bg-white">
                     <div className="container">
                         <div className="row main-content">
-                            <SingleBook book={book}/>
-                            <SideBarWrapper book={book}/>
+                            <SingleBook book={Singlebook}/>
+                            <SideBarWrapper book={Singlebook}/>
                         </div>
                     </div>
                 </div>

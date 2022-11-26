@@ -6,10 +6,7 @@ const AddProfile = () => {
     const { token } = useContext(AuthContext)
     
     const navigate = useNavigate()
-    const accountRef = useRef();
-    const passwordRef = useRef();
     const [loading, setLoading] = useState(false)
-    
     const AddUserInfo = async (event) => {
         let UserInfoData = new FormData(event.target)
         event.preventDefault()
