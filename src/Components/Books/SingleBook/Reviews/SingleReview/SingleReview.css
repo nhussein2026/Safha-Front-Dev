@@ -41,6 +41,7 @@
     border-radius: 50%;
     border: 6px solid rgba(242, 202, 236, 0.055);
     background-image: linear-gradient(-60deg, #16a08411 0%, #f43fe823 100%);
+    margin-bottom: 1em;
 }
 .avatarClass img {
     /* margin-right: 1em; */
@@ -63,10 +64,21 @@
     margin-top: 0.5em;
     margin-left: 3em;
 }
+.postContentTopPart{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    margin-top: 0.5em;
+    margin-left: 3em;
+}
 .topPart{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    margin-left: 3em;
 }
 .comment-posts{
     margin-left: 1em;

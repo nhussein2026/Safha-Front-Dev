@@ -41,7 +41,7 @@ const SingleReview = ({review}) => {
                     <div className="avatarClass">
                         <img alt="" src={`${reviewInfo?.UserInfo?.avatar}`} />
                     </div>
-                    <div className="postContent">
+                    <div className="postContentTopPart">
                         <h6>{reviewInfo?.User?.username}</h6>
                         <p className="createdAt">created before {createdAtFun(reviewInfo?.createdAt)}</p>   
                     </div>
