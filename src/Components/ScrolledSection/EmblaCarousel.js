@@ -34,7 +34,7 @@ const EmblaCarousel = () => {
                 books.map((book, i) => {
                   if(i>7 && i <12){
                     return <SingleBookElement book={book} key={i} customize="embla" />
-                  }  
+                  } 
                 })
               }
               {/* <div className='col-6 col-md-4 col-xl-2'> */}
@@ -54,7 +54,6 @@ const EmblaCarousel = () => {
               }
             </div>
           </div>
-          
         </div>
       </div>
     </div>
