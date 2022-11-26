@@ -49,7 +49,8 @@ const MyBooks = () => {
     }
     const setAddedBooksFun= () => {
         setAddedBooks(userInfo?.AddedBooks)
-        console.log("inside set added",userInfo.AddedBooks );
+        console.log("inside set added userInf",userInfo );
+        console.log("inside set added",userInfo?.AddedBooks );
         setAdded(true)
     }
 
@@ -98,10 +99,10 @@ const MyBooks = () => {
                                             </div>
                                             :
                                             <div className="row">
-                                                {
-                                                    addedBooks.map((book, i) => {
+                                                { (addedBooks.length>0) &&
+                                                    (addedBooks?.map((book, i) => {
                                                         return <SingleBookElement book={book} key={i} customize="MyFavorites"/>
-                                                    })
+                                                    }))
                                                 }
                                                 <div className="col-6 col-sm-4 col-lg-3">
                                                     <div className="product-default inner-quickview inner-icon">
