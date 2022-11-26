@@ -1,3 +1,4 @@
+import { Rating } from "@mui/material";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../../contexts/Authcontext";
@@ -80,14 +81,16 @@ const SingleBook = ({book}) => {
                         <div className="col-md-6 product-single-details font2" id="font2">
                             <h1 className="product-title">{book?.name}</h1>
                             <div className="ratings-container">
-                                <div className="product-ratings">
-                                    <span className="ratings" style={{ width: '80%' }} />
-                                    <span className="tooltiptext tooltip-top" />
-                                </div>
-                                <div>
-                                    <span className="ratings" style={{ width: `${Number(book?.avgRating)}%` }}></span>
-                                    <span className="tooltiptext tooltip-top"></span>
-                                </div>
+                                <Rating sx={{
+                                    display: 'flex',
+                                    height: 25,
+                                    width: "100%",
+                                    fontSize:"19px",
+                                    backgroundColor: 'white',
+                                    borderRadius: '1rem',
+                                    color: '#fe1656'
+                                    }} name="size-large" size="large"  defaultValue={0} style={{ width: `${Number(book?.avgRating)}%` }}/>
+                                    {/* <span className="ratings" style={{ width: `${Number(book?.avgRating)}%` }} /> */}
                             </div>
                             <hr className="short-divider" />
                             <div className="category-list">
@@ -113,8 +116,28 @@ const SingleBook = ({book}) => {
                     </div>
                     <div className="row">
                         <div className="col-md-4 col-lg-10 col-sm-12">
-                            <Reviews book={singleBook} />
                             <div className="product-single-tabs font2">
+                                <ul className="nav nav-tabs" role="tablist">
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="product-tab-reviews" 
+                                            data-toggle="tab" href="#" 
+                                            role="tab" aria-controls="product-reviews-content" 
+                                            aria-selected="false">
+                                            Reviews</a>
+                                    </li>
+                                </ul>
+                                <Reviews book={singleBook} />
+                            </div>
+                            <div className="product-single-tabs font2">
+                                <ul className="nav nav-tabs" role="tablist">
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="product-tab-reviews" 
+                                            data-toggle="tab" href="#" 
+                                            role="tab" aria-controls="product-reviews-content" 
+                                            aria-selected="false">
+                                            Add A Review</a>
+                                    </li>
+                                </ul>
                                 <form>
                                     <div className='form-field mb-1 mx-2'>
                                         <label htmlFor='content' className='mb-1'></label>
