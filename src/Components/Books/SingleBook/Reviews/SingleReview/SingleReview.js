@@ -42,9 +42,7 @@ const SingleReview = ({review}) => {
                 </div>
                 <div className="postContent">
                     <h6>{reviewInfo?.User?.username}</h6>
-                    {/* <p className="createdAt">created befor {dayjs(post.user.created_at).hour()} hours</p> */}
-                    {/* <p className="createdAt">created before {createdAtFun(post.user.created_at)}</p> */}
-                    {/* <p className="createdAt">created before {createdAtFun(post?.created_at)}</p> */}
+                    <p className="createdAt">created before {createdAtFun(reviewInfo?.createdAt)}</p>
                     <div className="desArea">
                         <p className="postContentText">{reviewInfo?.content}</p>
                     </div>
