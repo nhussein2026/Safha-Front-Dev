@@ -1,7 +1,55 @@
+import { useContext, useState } from "react";
+import { useParams } from "react-router-dom";
+import { AuthContext } from "../../../contexts/Authcontext";
 import Reviews from "./Reviews/Reviews";
 
 const SingleBook = ({book}) => {
-    
+
+    const { token } = useContext(AuthContext)
+    const {id} = useParams()
+    const [loading, setLoading] = useState(false)
+    const [singleBook, setSingleBook] = useState(false)
+    const [review, setReview] = useState({
+        content: '',
+        bookId: id,
+    })
+    const getBook = async () => {
+        const getOneBook = await fetch(`${process.env.REACT_APP_API_URL}/books/${id}`, {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        const json = await getOneBook.json()
+        console.log("json", json)
+        if (json?.success) {
+            setSingleBook(json?.data)
+        }
+    }
+    const AddReview = async (event) => {
+        event.preventDefault()
+        setLoading(true)
+        console.log("inside Add Review");
+        // console.log("content",content.current.value )
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/reviews`,
+            {
+                method: "POST",
+                body: JSON.stringify(review),
+                headers: {
+                    "Content-Type": "application/json",
+                    'Authorization': `Bearer ${token}`,
+                },
+            }
+        );
+        // console.log("content",content.current.value )
+        const json = await response.json();
+        console.log(json)
+        window.alert(json.messages)
+        if (json.success) {
+            getBook()
+            // alert(json.messages.join(' '))
+        }
+    }
     return (
         <>
             <div className="col-lg-9 product-sidebar-right">
@@ -60,6 +108,17 @@ const SingleBook = ({book}) => {
                     <div className="row">
                         <div className="col-md-4 col-lg-10 col-sm-12">
                             <Reviews book={book} />
+                            <div className="product-single-tabs font2">
+                                <form>
+                                    <div className='form-field mb-1 mx-2'>
+                                        <label htmlFor='content' className='mb-1'></label>
+                                        <input name="content" id="password" value={review?.content} onChange={(e) => { setReview({ ...review, content: e.target.value }) }} className='form-control'/>
+                                    </div>
+                                    <button className='btn btn-primary w-49' type="submit" id='signup-bttn' onClick={AddReview}>
+                                        {loading ? 'Please Wait' : 'Add'}
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
