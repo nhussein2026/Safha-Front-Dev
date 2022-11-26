@@ -1,10 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../../contexts/Authcontext";
 import Reviews from "./Reviews/Reviews";
 
 const SingleBook = ({book}) => {
-
+    useEffect(()=>{
+        getBook()
+    },[])
     const { token } = useContext(AuthContext)
     const {id} = useParams()
     const [loading, setLoading] = useState(false)
@@ -27,6 +29,7 @@ const SingleBook = ({book}) => {
         }
     }
     const AddReview = async (event) => {
+        getBook()
         event.preventDefault()
         setLoading(true)
         console.log("inside Add Review");
@@ -107,7 +110,7 @@ const SingleBook = ({book}) => {
                     </div>
                     <div className="row">
                         <div className="col-md-4 col-lg-10 col-sm-12">
-                            <Reviews book={book} />
+                            <Reviews book={singleBook} />
                             <div className="product-single-tabs font2">
                                 <form>
                                     <div className='form-field mb-1 mx-2'>
