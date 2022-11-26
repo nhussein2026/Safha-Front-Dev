@@ -69,8 +69,8 @@
     flex-direction: column;
     /* align-items: flex-start; */
     /* justify-content: flex-start; */
-    margin-top: 0.5em;
-    margin-left: 3em;
+    margin-top: 0.6em;
+    margin-left: 2em;
 }
 .topPart{
     display: flex;

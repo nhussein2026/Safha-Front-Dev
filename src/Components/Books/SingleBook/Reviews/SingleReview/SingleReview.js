@@ -14,21 +14,36 @@ const SingleReview = ({review}) => {
         return dayjs(date).fromNow()
     })
     const [reviewInfo, setReviewInfo] = useState({})
+    const [usersInfo, setUsersInfo] = useState([])
     useEffect(() => {
         const getReview = async () => {
-            const booksList = await fetch(`${process.env.REACT_APP_API_URL}/reviews/${review.id}`, {
+            const reviewList = await fetch(`${process.env.REACT_APP_API_URL}/reviews/${review.id}`, {
                 method: 'get',
                 headers: {
                     'Content-Type': 'application/json',
                 }
             })
-            const json = await booksList.json()
+            const json = await reviewList.json()
             console.log(json)
             if (json?.success) {
                 setReviewInfo(json?.data)
             }
         }
+        const getUsersInfo= async () => {
+            const userInfoList = await fetch(`${process.env.REACT_APP_API_URL}/userInfos/all`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            const json = await userInfoList.json()
+            console.log(json)
+            if (json?.success) {
+                setUsersInfo(json?.data)
+            }
+        }
         getReview()
+        getUsersInfo()
     }, [])
     console.log("reviewInfo", reviewInfo);
     console.log("reviewInfo?.UserInfo?.avatar", reviewInfo?.UserInfo?.avatar);
@@ -39,7 +54,17 @@ const SingleReview = ({review}) => {
             <div className="postsDiv">
                 <div className="topPart">
                     <div className="avatarClass">
-                        <img alt="" src={`${reviewInfo?.UserInfo?.avatar}`} />
+                        {
+                            usersInfo.map((userInfo)=>{
+                                if(userInfo.userId == reviewInfo?.userId){
+                                return(
+                                    <img alt="" src={`${userInfo?.avatar}`} />
+                                )}
+                            })
+                            
+                                
+                        }
+                        
                     </div>
                     <div className="postContentTopPart">
                         <h6>{reviewInfo?.User?.username}</h6>
