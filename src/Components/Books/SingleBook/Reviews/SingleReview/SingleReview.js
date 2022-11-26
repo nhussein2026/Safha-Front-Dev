@@ -37,12 +37,17 @@ const SingleReview = ({review}) => {
     return (
         <>
             <div className="postsDiv">
-                <div className="avatarClass">
-                    <img alt="" src={`${reviewInfo?.UserInfo?.avatar}`} />
+                <div className="topPart">
+                    <div className="avatarClass">
+                        <img alt="" src={`${reviewInfo?.UserInfo?.avatar}`} />
+                    </div>
+                    <div className="postContent">
+                        <h6>{reviewInfo?.User?.username}</h6>
+                        <p className="createdAt">created before {createdAtFun(reviewInfo?.createdAt)}</p>   
+                    </div>
                 </div>
+                
                 <div className="postContent">
-                    <h6>{reviewInfo?.User?.username}</h6>
-                    <p className="createdAt">created before {createdAtFun(reviewInfo?.createdAt)}</p>
                     <div className="desArea">
                         <p className="postContentText">{reviewInfo?.content}</p>
                     </div>
@@ -66,7 +71,7 @@ const SingleReview = ({review}) => {
                             reviewInfo?.Comments.map((comment, i) =>{
                                 return(<SingleComment comment={comment} key={i}/>)})
                         } */}
-                    </div>          
+                    </div>   
                 </div>
             </div>
         </>

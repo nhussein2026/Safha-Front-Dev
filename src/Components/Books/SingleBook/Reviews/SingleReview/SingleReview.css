@@ -17,7 +17,7 @@
 
 .postsDiv {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     /* margin-top: 3em; */
@@ -36,11 +36,11 @@
 }
 
 .avatarClass{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     border: 6px solid rgba(242, 202, 236, 0.055);
-    /* background-image: linear-gradient(-60deg, #16a08411 0%, #f43fe823 100%); */
+    background-image: linear-gradient(-60deg, #16a08411 0%, #f43fe823 100%);
 }
 .avatarClass img {
     /* margin-right: 1em; */
@@ -50,8 +50,8 @@
     /* border: 3px dashed #fe3f73; */
     border-radius: 50%;
     float: left;
-    width:  110px;
-    height: 110px;
+    width:  80px;
+    height: 80px;
     object-fit: cover;;
 }
 
@@ -63,7 +63,11 @@
     margin-top: 0.5em;
     margin-left: 3em;
 }
-
+.topPart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .comment-posts{
     margin-left: 1em;
     cursor: pointer;
