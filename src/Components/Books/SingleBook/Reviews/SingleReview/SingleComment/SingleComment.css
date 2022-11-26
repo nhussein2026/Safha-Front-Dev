@@ -1,0 +1,97 @@
+.createdAtCom {
+    color: #aeafb1d5;
+    font-size: 15px;
+}
+.commentContentText{
+    text-align: justify !important;
+    margin-right: 1em;
+    /* overflow-wrap: anywhere; */
+    /* word-wrap: break-word !important; */
+    /* overflow-wrap: break-word; */
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    /* word-break: break-word; */
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.buttons-div-pCom {
+    /* margin: 10px; */
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    /* margin-bottom: 2em; */
+    /* margin: 2em; */
+    border-top: solid 2px #e0e3e6; 
+}
+
+.commentsDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* margin-top: 3em; */
+    border-top: solid 2px #F3F4F5;
+    padding: 1em;
+}
+
+.commentsDiv:hover{
+    background-color: #F3F4F5;
+}
+
+.comments-border-comments{
+    border-top: solid 2px #F3F4F5; 
+}
+
+.avatarCom {
+    margin-right: .5em;
+    margin-top: 0em;
+}
+
+.ComContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0.5em;
+}
+
+#bttn {
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #9e561f;
+    /* border-bottom: 1px solid rgb(255, 255, 255); */
+    border-color: #F3F4F5;
+}
+
+.commentCom{
+    margin-left: 0.8em;
+    margin-bottom: 2em;
+}
+.avatarClassComment{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 6px solid rgba(242, 202, 236, 0.055);
+    background-image: linear-gradient(-60deg, #16a08411 0%, #f43fe823 100%);
+    margin-bottom: 1em;
+}
+.avatarClassComment img{
+    border-radius: 50%;
+    float: left;
+    width:  65px;
+    height: 65px;
+    object-fit: cover;
+}

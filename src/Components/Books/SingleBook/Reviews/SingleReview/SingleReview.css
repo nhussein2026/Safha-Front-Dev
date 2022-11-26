@@ -53,9 +53,13 @@
     float: left;
     width:  80px;
     height: 80px;
-    object-fit: cover;;
+    object-fit: cover;
 }
 
+#addComment{
+    display: flex;
+    align-items: center;
+}
 .postContent{
     display: flex;
     flex-direction: column;
@@ -81,8 +85,12 @@
     margin-left: 3em;
 }
 .comment-posts{
-    margin-left: 1em;
+    margin-left: 1.5em;
     cursor: pointer;
+
+}
+.comment-posts:hover{
+    color:darkred;
 }
 
 .like-posts{
@@ -127,6 +135,7 @@
     /* padding: 1em;   */
     /* margin-left: 20px; */
     margin-top: 10px;
+    /* margin: 1em; */
 }
 .counter{
     padding: .3em;

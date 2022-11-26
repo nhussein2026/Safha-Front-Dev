@@ -6,29 +6,41 @@ import * as dayjs from 'dayjs'
 
 import { FaHeart, FaRegCommentAlt, FaRegHeart } from "react-icons/fa"
 import SingleComment from "./SingleComment/SingleComment";
+import { AuthContext } from "../../../../../contexts/Authcontext";
 
 
 const SingleReview = ({review}) => {
+    const { token } = useContext(AuthContext)
+    const [reviewInfo, setReviewInfo] = useState({})
+    const [usersInfo, setUsersInfo] = useState([])
+    const [comment, setComment] = useState(false)
+    const [loading, setLoading] = useState(false)
+
     const createdAtFun = ( (date) => {
         dayjs.extend(relativeTime)
         return dayjs(date).fromNow()
     })
-    const [reviewInfo, setReviewInfo] = useState({})
-    const [usersInfo, setUsersInfo] = useState([])
-    useEffect(() => {
-        const getReview = async () => {
-            const reviewList = await fetch(`${process.env.REACT_APP_API_URL}/reviews/${review.id}`, {
-                method: 'get',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            })
-            const json = await reviewList.json()
-            console.log(json)
-            if (json?.success) {
-                setReviewInfo(json?.data)
+    const commentFun = (()=> {
+        setComment(true)
+        setNewComment({ ...newComment, reviewId: reviewInfo?.id })
+    })
+
+    const getReview = async () => {
+        const reviewList = await fetch(`${process.env.REACT_APP_API_URL}/reviews/${review.id}`, {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json',
             }
+        })
+        const json = await reviewList.json()
+        console.log(json)
+        if (json?.success) {
+            setReviewInfo(json?.data)
         }
+    }
+
+    useEffect(() => {
+        
         const getUsersInfo= async () => {
             const userInfoList = await fetch(`${process.env.REACT_APP_API_URL}/userInfos/all`, {
                 method: 'get',
@@ -45,9 +57,41 @@ const SingleReview = ({review}) => {
         getReview()
         getUsersInfo()
     }, [])
-    console.log("reviewInfo", reviewInfo);
-    console.log("reviewInfo?.UserInfo?.avatar", reviewInfo?.UserInfo?.avatar);
 
+    const [newComment, setNewComment] = useState({
+        content: '',
+        reviewId: '',
+    })
+    const addCommentFun = async (event) => {
+        event.preventDefault()
+        setLoading(true)
+        console.log("inside Add Review");
+        // console.log("content",content.current.value )
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/comments`,
+            {
+                method: "POST",
+                body: JSON.stringify(newComment),
+                headers: {
+                    "Content-Type": "application/json",
+                    'Authorization': `Bearer ${token}`,
+                },
+            }
+        );
+        // console.log("content",content.current.value )
+        const json = await response.json();
+        console.log("json newComment",json)
+        window.alert(json.messages)
+        if (json.success) {
+            getReview()
+            // alert(json.messages.join(' '))
+        }
+    }
+
+    console.log("reviewInfo?.id",reviewInfo?.id);
+    console.log("newComment",newComment);
+    // console.log("reviewInfo", reviewInfo);
+    // console.log("reviewInfo?.UserInfo?.avatar", reviewInfo?.UserInfo?.avatar);
+    // setNewComment.reviewId(reviewInfo?.id)
     
     return (
         <>
@@ -60,11 +104,8 @@ const SingleReview = ({review}) => {
                                 return(
                                     <img alt="" src={`${userInfo?.avatar}`} />
                                 )}
-                            })
-                            
-                                
+                            })      
                         }
-                        
                     </div>
                     <div className="postContentTopPart">
                         <h6>{reviewInfo?.User?.username}</h6>
@@ -83,7 +124,7 @@ const SingleReview = ({review}) => {
                             </svg>
                             {/* <p className="counter">{reviewInfo?.Likes.length}</p> */}
                         </div>
-                        <div className="comment-posts displayFlexRow" >
+                        <div className="comment-posts displayFlexRow" onClick={commentFun}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-chat-right-text" viewBox="0 0 16 16">
                                 <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
                                 <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
@@ -91,12 +132,29 @@ const SingleReview = ({review}) => {
                             {/* <p className="counter">{reviewInfo?.Comments.length}</p> */}
                         </div>
                     </div>                                
-                    <div className="commentsDivPost displayFlexRow">
-                        {/* {
-                            reviewInfo?.Comments.map((comment, i) =>{
-                                return(<SingleComment comment={comment} key={i}/>)})
-                        } */}
-                    </div>   
+                    { comment&&
+                        <>
+                            <div className="commentsDivPost">
+                                {
+                                (reviewInfo?.Comments.length>0)&&
+                                    (reviewInfo?.Comments.map((comment, i) =>{
+                                        return(<SingleComment comment={comment} key={i} usersInfo={usersInfo}/>)}))
+                                }
+                            </div>
+                            {/* <div className="commentsDivPost"> */}
+                                <div className="buttons-div-pCom" id="addComment">
+                                    <div className="mb-3">
+                                        <input placeholder="Comment" value={newComment?.content} onChange={(e) => { setNewComment({ ...newComment, content: e.target.value }) }} type="text" />
+                                    </div>
+                                    <div className="commentCom">
+                                        <button type="button" id='bttn' className="btn btn-primary button" onClick={addCommentFun}>
+                                        {loading ? 'Wait' : 'Add'}
+                                        </button>
+                                    </div>
+                                </div>
+                            {/* </div> */}
+                        </>
+                    }   
                 </div>
             </div>
         </>
