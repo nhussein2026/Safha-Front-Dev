@@ -84,6 +84,7 @@ const SingleReview = ({review}) => {
         if (json.success) {
             getReview()
             // alert(json.messages.join(' '))
+
         }
         if (!json.success) {
             window.alert(json.messages)
@@ -112,7 +113,7 @@ const SingleReview = ({review}) => {
                     </div>
                     <div className="postContentTopPart">
                         <h6>{reviewInfo?.User?.username}</h6>
-                        <p className="createdAt">created before {createdAtFun(reviewInfo?.createdAt)}</p>   
+                        <p className="createdAt">{createdAtFun(reviewInfo?.createdAt)}</p>   
                     </div>
                 </div>
                 
@@ -147,10 +148,10 @@ const SingleReview = ({review}) => {
                             {/* <div className="commentsDivPost"> */}
                                 <div className="buttons-div-pCom" id="addComment">
                                     <div className="mb-3">
-                                        <input placeholder="Comment" value={newComment?.content} onChange={(e) => { setNewComment({ ...newComment, content: e.target.value }) }} type="text" />
+                                        <input placeholder="Write your comment" value={newComment?.content} onChange={(e) => { setNewComment({ ...newComment, content: e.target.value }) }} type="text" />
                                     </div>
                                     <div className="commentCom">
-                                        <button type="button" id='bttn' className="btn btn-primary button" onClick={addCommentFun}>
+                                        <button itemID="input-placeholder" type="button" id='bttn' className="btn btn-primary button" onClick={addCommentFun}>
                                         {loading ? 'Wait' : 'Add'}
                                         </button>
                                     </div>

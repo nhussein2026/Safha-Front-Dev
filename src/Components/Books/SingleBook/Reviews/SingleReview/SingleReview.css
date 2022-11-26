@@ -155,3 +155,6 @@
     word-break: break-all;
     
   }
+::placeholder{
+    font-size: 15px;
+}
