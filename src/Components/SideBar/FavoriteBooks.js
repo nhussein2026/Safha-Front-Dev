@@ -55,7 +55,7 @@ const FavoriteBooks = ({ book }) => {
                             <h3 className="product-title">
                                 <a href="#">{book?.name}</a>
                             </h3>
-                            <div className="ratings-container">
+                            
                                 <div className="product-ratings">
                                     {/* <span className="ratings" style={{ width: `${Number(book?.avgRating)}%` }} /> */}
                                     {/* <Rating name="half-rating" defaultValue={2.5} precision={0.5} /> */}
@@ -63,7 +63,7 @@ const FavoriteBooks = ({ book }) => {
                                     {/* End .ratings */}
                                     <span className="tooltiptext tooltip-top" />
                                 </div>{/* End .product-ratings */}
-                            </div>{/* End .product-container */}
+                           
                             <div className="price-box">
                                 <span className="product-price">{book?.reviewsCount}</span>
                             </div> {/* End .price-box */}
