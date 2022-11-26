@@ -23,7 +23,7 @@ const AddReview = () => {
 
         console.log(AddReview)
         const json = await response.json();
-        window.alert(json.messages)
+        // window.alert(json.messages)
     }
     // const getReview = async () => {
     //     const response = await fetch('https://safha.fjobeir.com/backend/reviews/all', {

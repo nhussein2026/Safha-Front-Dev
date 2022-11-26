@@ -26,7 +26,7 @@ const AddProfile = () => {
         // window.alert(json.messages)
         alert(json.messages.join(' '))
         if (json.success) {
-            navigate('/profile')
+            navigate('/')
         }
     }
     

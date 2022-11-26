@@ -32,9 +32,8 @@ const Reviews = ({book}) => {
         const json = await response.json();
         console.log(json)
         window.alert(json.messages)
-        
         if (json.success) {
-            alert(json.messages.join(' '))
+            // alert(json.messages.join(' '))
         }
     }
     // console.log("content",content.current.value );

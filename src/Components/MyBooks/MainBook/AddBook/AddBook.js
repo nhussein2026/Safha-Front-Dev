@@ -24,9 +24,9 @@ const AddBook = () => {
         const json = await response.json();
         console.log(json)
         window.alert(json.messages)
-        alert(json.messages.join(' '))
+        // alert(json.messages.join(' '))
         if (json.success) {
-            navigate('/books')
+            navigate('/books')  
         }
     }
     
