@@ -21,7 +21,7 @@ const SingleReview = ({review}) => {
         return dayjs(date).fromNow()
     })
     const commentFun = (()=> {
-        setComment(true)
+        setComment(!comment)
         setNewComment({ ...newComment, reviewId: reviewInfo?.id })
     })
 
