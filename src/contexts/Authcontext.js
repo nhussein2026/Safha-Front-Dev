@@ -19,19 +19,19 @@ const AuthProvider = ({children}) => {
     const [profile, setProfile] = useState({})
     const navigate = useNavigate()
 
-    useEffect(() => {
-        const u = window.localStorage.getItem('user')
-        if (u) {
-            setUser(JSON.parse(u))
-        }
-    }, [])
+    // useEffect(() => {
+    //     const u = window.localStorage.getItem('user')
+    //     if (u) {
+    //         setUser(JSON.parse(u))
+    //     }
+    // }, [])
 
     const signIn = (response) => {
         window.localStorage.setItem('token', response.token)
         setAvatar(window.localStorage.getItem('avatar'))
         setLoggedIn(true)
         setToken(response.token)
-        setUser(response.data)
+        // setUser(response.data)
         window.localStorage.setItem('user', JSON.stringify(response.data))
     }
     
@@ -50,7 +50,7 @@ const AuthProvider = ({children}) => {
             token,
             signIn,
             signOut,
-            user,
+            user, setUser,
             homeNav, setHomeNav,
             categoriesNav, setCategoriesNav,
             booksNav, setBooksNav,
