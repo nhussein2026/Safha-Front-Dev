@@ -24,10 +24,13 @@ const SingleBookElement = ({ book, i, customize }) => {
     console.log("customize", customize)
     const json = await postFavorite.json()
     // console.log(json)
-    window.alert(json.messages)
+    // window.alert(json.messages)
     if (json?.success) {
       //   console.log(json.messages)
     }
+    if (!json.success) {
+      window.alert(json.messages)
+  }
   }
   return (
     <>

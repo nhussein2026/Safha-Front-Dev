@@ -80,10 +80,13 @@ const SingleReview = ({review}) => {
         // console.log("content",content.current.value )
         const json = await response.json();
         console.log("json newComment",json)
-        window.alert(json.messages)
+        // window.alert(json.messages)
         if (json.success) {
             getReview()
             // alert(json.messages.join(' '))
+        }
+        if (!json.success) {
+            window.alert(json.messages)
         }
     }
 

@@ -47,10 +47,13 @@ const SingleBook = ({book}) => {
         // console.log("content",content.current.value )
         const json = await response.json();
         console.log(json)
-        window.alert(json.messages)
+        
         if (json.success) {
             getBook()
             // alert(json.messages.join(' '))
+        }
+        if (!json.success) {
+            window.alert(json.messages)
         }
     }
     return (

@@ -32,7 +32,6 @@ const Signup = () => {
         if (json.success) {
             navigate('/login')
         }
-
     }
     // const login = () => {
     //     navigate('/login')
