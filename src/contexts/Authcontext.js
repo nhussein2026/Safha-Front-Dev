@@ -50,7 +50,7 @@ const AuthProvider = ({children}) => {
             token,
             signIn,
             signOut,
-            user, setUser,
+            // user, setUser,
             homeNav, setHomeNav,
             categoriesNav, setCategoriesNav,
             booksNav, setBooksNav,

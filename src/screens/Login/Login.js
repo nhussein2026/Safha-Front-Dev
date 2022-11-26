@@ -5,7 +5,7 @@ import logo from "../../assets/images/logo.png";
 import './Login.css';
 
 const Login = () => {
-    const { signIn, setHomeNav, setAboutNav, setCategoriesNav, setBooksNav, setUser } = useContext(AuthContext)
+    const { signIn, setHomeNav, setAboutNav, setCategoriesNav, setBooksNav } = useContext(AuthContext)
     useEffect(() => {
 
     }, [])
@@ -35,7 +35,7 @@ const Login = () => {
             // console.log(json)
             // Login(json)
             signIn(json)
-            setUser(json.data)
+            // setUser(json.data)
             // console.log("json.token", json.token)
             // go to homeBage
             setHomeNav(true)
