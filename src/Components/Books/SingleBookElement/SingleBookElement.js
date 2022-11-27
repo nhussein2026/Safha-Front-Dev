@@ -102,7 +102,7 @@ const SingleBookElement = ({ book, i, customize }) => {
                       backgroundColor: 'white',
                       borderRadius: '1rem',
                       color: '#f44336'
-                    }} name="size-large" size="large"  defaultValue={0} />
+                    }} name="size-large" size="large" precision={0.5} value={parseFloat(book?.avgRating)}  om/>
                   </div>
                
                 {
