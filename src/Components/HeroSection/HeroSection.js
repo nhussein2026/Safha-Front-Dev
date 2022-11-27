@@ -1,4 +1,5 @@
 import './HeroSection.css'
+import { Link } from 'react-router-dom';
 const HeroSection = () => {
 
     return (
@@ -15,7 +16,8 @@ const HeroSection = () => {
                             <div className="col-md-3 col-lg-4" id="for-logo">
                             </div>
                             <div className="col-md-4 col-lg-3 text-md-center">
-                                <a href="/reviews" className="btn btn-quaternary ml-0">Explore Books Reviews <i className="fas fa-long-arrow-alt-right" /></a>
+                                <Link href="/" className="btn btn-quaternary ml-0">Explore Books Reviews <i className="fas fa-long-arrow-alt-right" />
+                                </Link>
                             </div>
                         </div>
                     </div>

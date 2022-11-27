@@ -1,7 +1,12 @@
 import dayjs from 'dayjs';
 import './AllReviews.css'
 import relativeTime from 'dayjs/plugin/relativeTime'
-
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 dayjs.extend(relativeTime)
 
 const Review = ({ reviews }) => {
@@ -9,7 +14,7 @@ const Review = ({ reviews }) => {
 
     return (
         <>
-            <div className="d-flex">
+            {/* <div className="d-flex">
                 <div className="bg-white">
                     <div className="container">
                         <div className="row main-content">
@@ -45,12 +50,10 @@ const Review = ({ reviews }) => {
                                         </div>
                                         <hr className="short-divider" />
                                     </div>
-                                    {/* End of Book section */}
                                     <div id='reviewPlace' className='col-md-8 bg-green'>
                                         <div className='reviewContent'>
                                             <img src={reviews?.User?.UserInfos?.avatar} />
                                             <div className='mb-0 name'>{reviews?.User?.username}</div>
-                                            {/* <div className='mb-2' datetime>{dayjs().toDate(dayjs(review?.created_at))}</div> */}
                                             <p>{reviews?.content}</p>
                                             <div className='icons d-flex align-items-center'>
                                                 <div className='me-2'>
@@ -66,7 +69,29 @@ const Review = ({ reviews }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <div id='forGap' className='col-3 d-flex'>
+                <Card sx={{ maxWidth: 345 }}>
+                    <Link to={`/category/${reviews?.id}`}>
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={reviews?.Book?.cover}
+                            alt="Category Image"
+                        />
+                    </Link>
+                    <CardContent>
+                        <Link to={`/category/${reviews?.id}`}>
+                            <Typography variant="h3">
+                                {reviews?.Book?.name}
+                            </Typography>
+                        </Link>
+                        <Typography variant="h6">
+                            {reviews?.content}
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </div> 
         </>
     )
 }
