@@ -10,7 +10,7 @@ import { AuthContext } from "../../../../../contexts/Authcontext";
 
 
 const SingleReview = ({review}) => {
-    const { token } = useContext(AuthContext)
+    const { token, profile } = useContext(AuthContext)
     const [reviewInfo, setReviewInfo] = useState({})
     const [usersInfo, setUsersInfo] = useState([])
     const [comment, setComment] = useState(false)
@@ -34,9 +34,12 @@ const SingleReview = ({review}) => {
             }
         })
         const json = await reviewList.json()
-        console.log(json)
+        // console.log(json)
         if (json?.success) {
             setReviewInfo(json?.data)
+            console.log("json?.data?.Likes", json?.data?.Likes);
+            console.log("json?.data?.Likes", json?.data?.Likes);
+            setLike(json?.data?.Likes?.find(like => like.userId == profile?.userId) ? true : false)
         }
     }
 
@@ -49,7 +52,7 @@ const SingleReview = ({review}) => {
                 }
             })
             const json = await userInfoList.json()
-            console.log(json)
+            // console.log(json)
             if (json?.success) {
                 setUsersInfo(json?.data)
             }
@@ -79,7 +82,7 @@ const SingleReview = ({review}) => {
         );
         // console.log("content",content.current.value )
         const json = await response.json();
-        console.log("json newComment",json)
+        // console.log("json newComment",json)
         // window.alert(json.messages)
         if (json.success) {
             getReview()
@@ -92,7 +95,7 @@ const SingleReview = ({review}) => {
     const AddlikeFun = async (event) => {
         event.preventDefault()
         setLoading(!loading)
-        console.log("inside Add like");
+        // console.log("inside Add like");
         const response = await fetch(`${process.env.REACT_APP_API_URL}/likes/reviews/${reviewInfo?.id}`,
             {
                 method: "POST",
@@ -107,9 +110,9 @@ const SingleReview = ({review}) => {
             }
         );
         const json = await response.json();
-        console.log("json newLike",json)
+        // console.log("json newLike",json)
         if (json.success) {
-            setLike(!like)
+            setLike(Array.isArray(json?.data) ? false : true)
             getReview()
             // window.alert(json.messages)
         }
@@ -120,7 +123,7 @@ const SingleReview = ({review}) => {
     
     // console.log("reviewInfo?.id",reviewInfo?.id);
     // console.log("newComment",newComment);
-    console.log("reviewInfo", reviewInfo);
+    // console.log("reviewInfo", reviewInfo);
     // console.log("reviewInfo?.UserInfo?.avatar", reviewInfo?.UserInfo?.avatar);
     // setNewComment.reviewId(reviewInfo?.id)
     

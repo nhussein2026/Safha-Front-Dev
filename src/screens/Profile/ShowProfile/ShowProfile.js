@@ -8,10 +8,10 @@ import { useState, useContext } from 'react';
 
 const ShowProfile = () => {
     const { token, profile, setProfile, user } = useContext(AuthContext);
-    console.log("My token is: ", token)
+    // console.log("My token is: ", token)
     
     useEffect(() => {
-        console.log("inside useEffect");
+        // console.log("inside useEffect");
         const getProfile = async () => {
 
             const getMyProfile = await fetch(`${process.env.REACT_APP_API_URL}/userInfos`, {
@@ -22,14 +22,14 @@ const ShowProfile = () => {
                 }
             })
             const json = await getMyProfile.json()
-            console.log("json", json)
+            // console.log("json", json)
             if (json?.success) {
                 setProfile(json?.data)
             }
         }
         getProfile()
     }, [])
-    console.log("profile", profile);
+    // console.log("profile", profile);
     return (
         <>
             <div className='Profilecontainer'>

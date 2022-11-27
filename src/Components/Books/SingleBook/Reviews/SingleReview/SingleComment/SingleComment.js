@@ -24,7 +24,7 @@ const SingleComment = ({comment, i, usersInfo}) => {
             }
         })
         const json = await commentShow.json()
-        console.log(json)
+        // console.log(json)
         if (json?.success) {
             setCommentInfo(json?.data)
         }
@@ -36,7 +36,7 @@ const SingleComment = ({comment, i, usersInfo}) => {
     const AddlikeFun = async (event) => {
         event.preventDefault()
         setLoading(!loading)
-        console.log("inside Add like");
+        // console.log("inside Add like");
         const response = await fetch(`${process.env.REACT_APP_API_URL}/likes/comments/${commentInfo?.id}`,
             {
                 method: "POST",
@@ -51,7 +51,7 @@ const SingleComment = ({comment, i, usersInfo}) => {
             }
         );
         const json = await response.json();
-        console.log("json newLike",json)
+        // console.log("json newLike",json)
         if (json.success) {
             setLike(!like)
             getComment()
