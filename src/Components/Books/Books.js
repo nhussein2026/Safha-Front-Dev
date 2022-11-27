@@ -1,17 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import SingleBookElement from "./SingleBookElement/SingleBookElement";
-import Footer from "../Footer/Footer";
 import HeroSection from "../HeroSection/HeroSection";
-import Navbar from "../Navbar/Navbar";
 import Sidebar from "../SideBar/SideBar";
-import Navbar1 from "../Navbar/Navbar1";
 import { AuthContext } from "../../contexts/Authcontext";
 // import '../../assets/css/demo/demo25/demo25.css'
 // import '../../assets/css/demo25.min.css'
 
 const Books = () => {
     const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav, favBooks } = useContext(AuthContext)
-    console.log(useContext(AuthContext), '111111')
+    // console.log(useContext(AuthContext), '111111')
     const [books, setBooks] = useState([])
     useEffect(() => {
         setHomeNav(false)
@@ -26,7 +23,7 @@ const Books = () => {
                 }
             })
             const json = await booksList.json()
-            console.log(json)
+            // console.log(json)
             if (json?.success) {
                 setBooks(json?.data)
             }

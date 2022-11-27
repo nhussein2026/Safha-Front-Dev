@@ -4,7 +4,9 @@ import { AuthContext } from "../../../../contexts/Authcontext";
 import SingleReview from "./SingleReview/SingleReview";
 
 const Reviews = ({book}) => {
-        
+    const {profile} = useContext(AuthContext)
+    console.log("book.Reviews", book.Reviews);
+    console.log("profile", profile);
     return (
         <>
             {
