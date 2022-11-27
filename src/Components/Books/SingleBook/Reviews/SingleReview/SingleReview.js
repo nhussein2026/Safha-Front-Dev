@@ -96,7 +96,7 @@ const SingleReview = ({review}) => {
         event.preventDefault()
         setLoading(!loading)
         // console.log("inside Add like");
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/likes/reviews/${reviewInfo?.id}`,
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/likes/reviews`,
             {
                 method: "POST",
                 body: JSON.stringify({
