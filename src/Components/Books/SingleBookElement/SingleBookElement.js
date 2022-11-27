@@ -8,6 +8,8 @@ const SingleBookElement = ({ book, i, customize, favorite: isFav }) => {
   // const userId = useRef()
   // const bookId = useRef()
   const [favorite, setFavorite] = useState(isFav)
+  const [rate, setRate] = useState(book?.avgRating);
+  const rateRef = useRef()
   const addFavorite = async (id) => {
     setFavorite(!favorite)
     // console.log("bookId.current.value",bookId.current.value)
@@ -28,6 +30,29 @@ const SingleBookElement = ({ book, i, customize, favorite: isFav }) => {
     // window.alert(json.messages)
     if (json?.success) {
       //   console.log(json.messages)
+    }
+    if (!json.success) {
+      window.alert(json.messages)
+    }
+  }
+  const addRate = async (value, id) => {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/rates`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        bookId: id,
+        rate: value
+      }),
+    })
+    const json = await response.json()
+      setRate(json?.data)
+    window.alert(json.messages)
+    if (json?.success) {
+        console.log(json.messages)
+        setRate(value)
     }
     if (!json.success) {
       window.alert(json.messages)
@@ -102,7 +127,7 @@ const SingleBookElement = ({ book, i, customize, favorite: isFav }) => {
                       backgroundColor: 'white',
                       borderRadius: '1rem',
                       color: '#f44336'
-                    }} name="size-large" size="large" precision={0.5} value={parseFloat(book?.avgRating)}  om/>
+                    }} name="size-large" size="large" precision={0.5} value={rate}  onChange={(event, value)=> addRate(value, book?.id)}/>
                   </div>
                
                 {
