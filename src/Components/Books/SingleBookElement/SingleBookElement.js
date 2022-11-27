@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/Authcontext";
 import { Rating } from "@mui/material";
 import './SingleBookElement.css'
-const SingleBookElement = ({ book, i, customize }) => {
+const SingleBookElement = ({ book, i, customize, favorite: isFav }) => {
   const { token } = useContext(AuthContext)
   // const userId = useRef()
   // const bookId = useRef()
-  const [favorite, setFavorite] = useState(false)
+  const [favorite, setFavorite] = useState(isFav)
   const addFavorite = async (id) => {
     setFavorite(!favorite)
     // console.log("bookId.current.value",bookId.current.value)

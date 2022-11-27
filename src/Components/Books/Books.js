@@ -10,7 +10,7 @@ import { AuthContext } from "../../contexts/Authcontext";
 // import '../../assets/css/demo25.min.css'
 
 const Books = () => {
-    const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav } = useContext(AuthContext)
+    const { setBooksNav, setHomeNav, setCategoriesNav, setAboutNav, favBooks } = useContext(AuthContext)
     console.log(useContext(AuthContext), '111111')
     const [books, setBooks] = useState([])
     useEffect(() => {
@@ -49,7 +49,9 @@ const Books = () => {
                                         <div className="row">
                                             {
                                                 books.map((book, i) => {
-                                                    return <SingleBookElement book={book} key={i} customize="books" />
+                                                    return <SingleBookElement book={book} key={i} customize="books" 
+                                                    favorite={favBooks?.find((favbook) =>
+                                                        favbook?.id==book?.id ) ? true : false} />
                                                 })
                                             }
                                         </div>
