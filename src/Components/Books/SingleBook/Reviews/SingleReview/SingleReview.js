@@ -196,7 +196,7 @@ const SingleReview = ({review}) => {
                                     </div>
                                     <div className="commentCom">
                                         <button itemID="input-placeholder" type="button" id='bttn' className="btn btn-primary button" onClick={addCommentFun}>
-                                        {loading ? 'Wait' : 'Add'}
+                                        {loading ? 'Add' : 'Wait'}
                                         </button>
                                     </div>
                                 </div>
