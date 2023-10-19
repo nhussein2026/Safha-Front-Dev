@@ -2,7 +2,9 @@ import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/Authcontext";
 import { Rating } from "@mui/material";
-import './SingleBookElement.css'
+import './SingleBookElement.css';
+
+
 const SingleBookElement = ({ book, i, customize, favorite: isFav }) => {
   const { token } = useContext(AuthContext)
   // const userId = useRef()
@@ -56,6 +58,7 @@ const SingleBookElement = ({ book, i, customize, favorite: isFav }) => {
     }
     if (!json.success) {
       window.alert(json.messages)
+    //  here must put the widow of login for not registered
     }
   }
   return (
