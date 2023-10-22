@@ -8,10 +8,9 @@ import About from './Components/About/About';
 import Suggested from './Components/SuggestedCategories/Suggested';
 import { useContext } from 'react';
 import { AuthContext } from './contexts/Authcontext';
-import Navbar1 from './Components/Navbar/Navbar1';
+import Navbar from './Components/Navbar/Navbar';
 import SingleBookIndex from './Components/Books/SingleBook/SingleBookIndex';
 import Login from './screens/Login/Login';
-
 import Updateprofile from './screens/Profile/Updateprofile';
 import MyBooks from './Components/MyBooks/MyBooks';
 import CollectionPage from './Components/Featured/OneFeature/CollectionPage';
@@ -29,7 +28,8 @@ const App = () => {
   return (
     <>
       <div className="page-wrapper">
-        <Navbar1/>
+        <Navbar/>
+
         <Routes>
             <Route path='/signup' element={<Signup />} />
             <Route path='/login' element={<Login />} />

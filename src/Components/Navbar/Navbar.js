@@ -1,234 +1,158 @@
 import logo from "../../assets/images/cuted-logo.png"
-import Entrance from "../Signup&Login/Entrance";
-import { useContext } from "react";
+import Entrance from "./ProfileDrop/Entrance";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Profile from "../../screens/Profile/ShowProfile/ShowProfile";
 
-const Navbar = () => {
-	const { loggedIn } = useContext(AuthContext)
-    return(
+const Navbar1 = () => {
+    const searchRef = useRef()
+    const [search, setSearch] = useState([])
+    const searchFun = async (event) => {
+        event.preventDefault()
+        const booksList = await fetch(`${process.env.REACT_APP_API_URL}/search/?name=${searchRef.current.value}`, {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        const json = await booksList.json()
+        console.log("json search", json)
+        if (json?.success) {
+            setSearch(json?.data)
+        }
+    }
+    const { loggedIn, signIn, setHomeNav, homeNav,
+        setCategoriesNav, categoriesNav,
+        setBooksNav, booksNav,
+        setAboutNav, aboutNav } = useContext(AuthContext)
+    useEffect(() => {
+        if (homeNav) {
+            setCategoriesNav(false);
+            setBooksNav(false);
+            setAboutNav(false);
+        } else if (categoriesNav) {
+            setHomeNav(false);
+            setBooksNav(false);
+            setAboutNav(false);
+        } else if (booksNav) {
+            setCategoriesNav(false);
+            setHomeNav(false);
+            setAboutNav(false);
+        } else if (aboutNav) {
+            setCategoriesNav(false);
+            setHomeNav(false);
+            setBooksNav(false);
+        } else {
+            // return
+            setHomeNav(true)
+        }
+        // console.log("homeNav",homeNav)
+    }, [homeNav, categoriesNav, booksNav, aboutNav])
+    return (
         <>
-        <header className="header">
-            <div className="header-middle sticky-header">
-                <div className="container-fluid">
-                    <div className="header-left">
-                        <button className="mobile-menu-toggler pl-0" type="button">
-                            <i className="fas fa-bars"></i>
-                        </button>
-                        <a href="/" className="logo">
-                            <img src={logo} alt="Safha Logo" width="150" height="50" />
-                        </a>
-                        <nav className="main-nav">
-                            <ul className="menu">
-                                <li className="active">
-                                    <a href="/">Home</a>
-                                </li>
-                                <li>
-                                    <a href="/categories">Categories</a>
-                                    <div className="megamenu megamenu-fixed-width megamenu-cols">
-                                        <div className="row">
-                                            <div className="col-lg-4">
-                                                <a href="#" className="nolink">VARIATION 1</a>
-                                                <ul className="submenu">
-                                                    <li><a href="category.html">Fullwidth Banner</a></li>
-                                                    <li><a href="category-banner-boxed-slider.html">Boxed Slider
-                                                            Banner</a>
-                                                    </li>
-                                                    <li><a href="category-banner-boxed-image.html">Boxed Image
-                                                            Banner</a>
-                                                    </li>
-                                                    <li><a href="category.html">Left Sidebar</a></li>
-                                                    <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
-                                                    <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                                    <li><a href="category-horizontal-filter1.html">Horizontal
-                                                            Filter1</a>
-                                                    </li>
-                                                    <li><a href="category-horizontal-filter2.html">Horizontal
-                                                            Filter2</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div className="col-lg-4">
-                                                <a href="#" className="nolink">VARIATION 2</a>
-                                                <ul className="submenu">
-                                                    <li><a href="category-list.html">List Types</a></li>
-                                                    <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
-                                                    </li>
-                                                    <li><a href="category.html">3 Columns Products</a></li>
-                                                    <li><a href="category-4col.html">4 Columns Products</a></li>
-                                                    <li><a href="category-5col.html">5 Columns Products</a></li>
-                                                    <li><a href="category-6col.html">6 Columns Products</a></li>
-                                                    <li><a href="category-7col.html">7 Columns Products</a></li>
-                                                    <li><a href="category-8col.html">8 Columns Products</a></li>
-                                                </ul>
-                                            </div>
-                                            <div className="col-lg-4 p-0">
-                                                <div className="menu-banner">
-                                                    <figure>
-                                                        <img src="assets/images/menu-banner.jpg" alt="Menu banner"
-                                                            width="300" height="300" />
-                                                    </figure>
-                                                    <div className="banner-content">
-                                                        <h4>
-                                                            <span className="">UP TO</span><br />
-                                                            <b className="">50%</b>
-                                                            <i>OFF</i>
-                                                        </h4>
-                                                        <a href="category.html" className="btn btn-sm btn-dark">SHOP NOW</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li className="d-none d-xl-block">
-                                    <a href="/books">Books</a>
-                                    <div className="megamenu megamenu-fixed-width">
-                                        <div className="row">
-                                            <div className="col-lg-4">
-                                                <a href="#" className="nolink">PRODUCT PAGES</a>
-                                                <ul className="submenu">
-                                                    <li><a href="demo25-product.html">SIMPLE PRODUCT</a></li>
-                                                    <li><a href="product-variable.html">VARIABLE PRODUCT</a></li>
-                                                    <li><a href="demo25-product.html">SALE PRODUCT</a></li>
-                                                    <li><a href="demo25-product.html">FEATURED & ON SALE</a></li>
-                                                    <li><a href="product-custom-tab.html">WITH CUSTOM TAB</a></li>
-                                                    <li><a href="product-sidebar-left.html">WITH LEFT SIDEBAR</a></li>
-                                                    <li><a href="product-sidebar-right.html">WITH RIGHT SIDEBAR</a></li>
-                                                    <li><a href="product-addcart-sticky.html">ADD CART STICKY</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="col-lg-4">
-                                                <a href="#" className="nolink">PRODUCT LAYOUTS</a>
-                                                <ul className="submenu">
-                                                    <li><a href="product-extended-layout.html">EXTENDED LAYOUT</a></li>
-                                                    <li><a href="product-grid-layout.html">GRID IMAGE</a></li>
-                                                    <li><a href="product-full-width.html">FULL WIDTH LAYOUT</a></li>
-                                                    <li><a href="product-sticky-info.html">STICKY INFO</a></li>
-                                                    <li><a href="product-sticky-both.html">LEFT & RIGHT STICKY</a></li>
-                                                    <li><a href="product-transparent-image.html">TRANSPARENT IMAGE</a>
-                                                    </li>
-                                                    <li><a href="product-center-vertical.html">CENTER VERTICAL</a></li>
-                                                    <li><a href="#">BUILD YOUR OWN</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="col-lg-4 p-0">
-                                                <div className="menu-banner menu-banner-2">
-                                                    <figure>
-                                                        <img src="assets/images/menu-banner-1.jpg" alt="Menu banner"
-                                                            className="product-promo" width="380" height="790" />
-                                                    </figure>
-                                                    <i>OFF</i>
-                                                    <div className="banner-content">
-                                                        <h4>
-                                                            <span className="">UP TO</span><br />
-                                                            <b className="">50%</b>
-                                                        </h4>
-                                                    </div>
-                                                    <a href="category.html" className="btn btn-sm btn-dark">SHOP NOW</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                {/* <li className="d-none d-xl-block">
-                                    <a href="/books">REviews</a>
-                                    <div className="megamenu megamenu-fixed-width">
-                                        <div className="row">
-                                            <div className="col-lg-4">
-                                                <a href="#" className="nolink">PRODUCT PAGES</a>
-                                                <ul className="submenu">
-                                                    <li><a href="demo25-product.html">SIMPLE PRODUCT</a></li>
-                                                    <li><a href="product-variable.html">VARIABLE PRODUCT</a></li>
-                                                    <li><a href="demo25-product.html">SALE PRODUCT</a></li>
-                                                    <li><a href="demo25-product.html">FEATURED & ON SALE</a></li>
-                                                    <li><a href="product-custom-tab.html">WITH CUSTOM TAB</a></li>
-                                                    <li><a href="product-sidebar-left.html">WITH LEFT SIDEBAR</a></li>
-                                                    <li><a href="product-sidebar-right.html">WITH RIGHT SIDEBAR</a></li>
-                                                    <li><a href="product-addcart-sticky.html">ADD CART STICKY</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="col-lg-4">
-                                                <a href="#" className="nolink">PRODUCT LAYOUTS</a>
-                                                <ul className="submenu">
-                                                    <li><a href="product-extended-layout.html">EXTENDED LAYOUT</a></li>
-                                                    <li><a href="product-grid-layout.html">GRID IMAGE</a></li>
-                                                    <li><a href="product-full-width.html">FULL WIDTH LAYOUT</a></li>
-                                                    <li><a href="product-sticky-info.html">STICKY INFO</a></li>
-                                                    <li><a href="product-sticky-both.html">LEFT & RIGHT STICKY</a></li>
-                                                    <li><a href="product-transparent-image.html">TRANSPARENT IMAGE</a>
-                                                    </li>
-                                                    <li><a href="product-center-vertical.html">CENTER VERTICAL</a></li>
-                                                    <li><a href="#">BUILD YOUR OWN</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="col-lg-4 p-0">
-                                                <div className="menu-banner menu-banner-2">
-                                                    <figure>
-                                                        <img src="assets/images/menu-banner-1.jpg" alt="Menu banner"
-                                                            className="product-promo" width="380" height="790" />
-                                                    </figure>
-                                                    <i>OFF</i>
-                                                    <div className="banner-content">
-                                                        <h4>
-                                                            <span className="">UP TO</span><br />
-                                                            <b className="">50%</b>
-                                                        </h4>
-                                                    </div>
-                                                    <a href="category.html" className="btn btn-sm btn-dark">SHOP NOW</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li> */}
-                                <li>
-                                    <a href="/about">About</a>
-                                    <ul>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                        <li><a href="cart.html">Shopping Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="dashboard.html">Dashboard</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="#">Blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="single.html">Blog Post</a></li>
-                                            </ul>
+            <header className="header">
+                <div className="header-middle sticky-header">
+                    <div className="container-fluid">
+                        <div className="header-left">
+                            <button className="mobile-menu-toggler pl-0" type="button">
+                                <i className="fas fa-bars"></i>
+                            </button>
+                            <a href="/" className="logo">
+                                <img src={logo} alt="Safha Logo" width="150" height="50" />
+                            </a>
+                            <nav className="main-nav">
+                                <ul className="menu">
+                                    {homeNav ?
+                                        <li className="active">
+                                            <Link to='/'>
+                                                <a href="#">Home</a>
+                                            </Link>
+                                        </li> :
+                                        <li>
+                                            <Link to='/'>
+                                                <a href="#">Home</a>
+                                            </Link>
                                         </li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="forgot-password.html">Forgot Password</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                                    }
+                                    {categoriesNav ?
+                                        <li className="active">
+                                            <Link to='/categories'>
+                                                <a href="#">Categories</a>
+                                            </Link>
+                                        </li> :
+                                        <li>
+                                            <Link to='/categories'>
+                                                <a href="#">Categories</a>
+                                            </Link>
+                                        </li>
+                                    }
+                                    {booksNav ?
+                                        <li className="active d-none d-xl-block">
+                                            <Link to='/books'>
+                                                <a href="#">Books</a>
+                                            </Link>
+                                        </li> :
+                                        <li className="d-none d-xl-block">
+                                            <Link to='/books'>
+                                                <a href="#">Books</a>
+                                            </Link>
+                                        </li>
+                                    }
 
-                    <div className="header-right pl-0 pl-lg-4">
-                        <div
-                            className="header-search header-search-inline header-search-category w-lg-max text-right d-none d-sm-flex">
-                            <a href="#" className="search-toggle" role="button"><i className="icon-magnifier"></i></a>
-                            <form action=" #" method="get">
-                                <div className="header-search-wrapper">
-                                    <input type="search" className="form-control font-italic" name="q" id="q"
-                                        placeholder="Search" required />
-                                    <button className="btn icon-magnifier" title="search" type="submit"></button>
-                                </div>
-                            </form>
+                                    {loggedIn ?
+                                        (aboutNav ?
+                                            <li className="active">
+                                                <Link to='/mybooks'>
+                                                    <a href="#">Mybooks</a>
+                                                </Link>
+                                            </li>
+
+                                            :
+                                            <li>
+                                                <Link to='/mybooks'>
+                                                    <a href="#">Mybooks</a>
+                                                </Link>
+                                            </li>
+                                        )
+                                        :
+                                        (aboutNav ?
+                                            <li className="active">
+                                                <Link to='/about'>
+                                                    <a href="#">About</a>
+                                                </Link>
+                                            </li>
+                                            :
+                                            <li>
+                                                <Link to='/about'>
+                                                    <a href="#">About</a>
+                                                </Link>
+                                            </li>
+                                        )
+                                    }
+                                </ul>
+                            </nav>
                         </div>
 
-                        <span className="separator d-none d-lg-inline"></span>
-				          <Entrance />   
+                        <div className="header-right pl-0 pl-lg-4">
+                            <div
+                                className="header-search header-search-inline header-search-category w-lg-max text-right d-none d-sm-flex">
+                                <a href="#" className="search-toggle" role="button"><i className="icon-magnifier"></i></a>
+                                <form action=" #" method="get">
+                                    <div className="header-search-wrapper">
+                                        <input type="search" ref={searchRef} className="form-control font-italic" name="q" id="q"
+                                            placeholder="Search" required />
+                                        <button className="btn icon-magnifier" title="search" onClick={searchFun} type="submit"></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <span className="separator d-none d-lg-inline"></span>
+                            <Entrance />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
         </>
     )
 }
-export default Navbar;
+export default Navbar1;
