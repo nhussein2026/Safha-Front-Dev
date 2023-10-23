@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export const AuthContext = createContext()
 
 const AuthProvider = ({children}) => {
-    const [token, setToken] = useState(window.localStorage.getItem('token'))
+    const [token, setToken] = useState(null)
     const [loggedIn, setLoggedIn] = useState(!!token)
     const [user, setUser] = useState({})
     const [userInfo, setUserInfo] = useState({})
@@ -15,7 +15,7 @@ const AuthProvider = ({children}) => {
     const [categoriesNav, setCategoriesNav] = useState(false)
     const [booksNav, setBooksNav] = useState(false)
     const [aboutNav, setAboutNav] = useState(false)
-    const [avatar, setAvatar] = useState('')
+    const [avatar, setAvatar] = useState(null)
     const [profile, setProfile] = useState({})
     const navigate = useNavigate()
 
@@ -27,19 +27,17 @@ const AuthProvider = ({children}) => {
     // }, [])
 
     const signIn = (response) => {
-        window.localStorage.setItem('token', response.token)
-        setAvatar(window.localStorage.getItem('avatar'))
-        setLoggedIn(true)
         setToken(response.token)
+        setAvatar(response.avatar)
+        setLoggedIn(true)
         // setUser(response.data)
         window.localStorage.setItem('user', JSON.stringify(response.data))
     }
     
     const signOut = () => {
-        window.localStorage.removeItem('token')
-        window.localStorage.removeItem('avatar')
         setLoggedIn(false)
-        setToken('')
+        setToken(null)
+        setAvatar(null)
         setUser({})
         navigate('/')
     }

@@ -4,6 +4,7 @@ import { AuthContext } from "../../../contexts/Authcontext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styles from './ProfileDropdown.module.css'
+import { BsPerson } from 'react-icons/bs'
 
 const ProfileDropdown = () => {
     const { loggedIn, signOut } = useContext(AuthContext)
@@ -21,16 +22,16 @@ const ProfileDropdown = () => {
                     </div>
                     {/* the new code of profile drop */}
                     {/* drop try */}
-                    <div className={styles.dropdown}>
-                        <button className={styles.dropbtn}>me</button>
+                    <div className={styles.dropdown} style={{backgroundImage: `url(${BsPerson})`}}>
+                        <div className={styles.dropbtn}>
+                            <img src={'userImage'} alt="" />
+                        </div>
                         <div className={styles.dropdownContent}>
                             <Link to="/profile">Profile</Link>
                             <Link to="/settings">Settings</Link>
                             <Link to="/logout" onClick={signOut}>Logout</Link>
                         </div>
                     </div>
-
-
                 </>
                 :
                 <Link to="/login">

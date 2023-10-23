@@ -1,5 +1,5 @@
 import logo from "../../assets/images/cuted-logo.png"
-import Entrance from "./ProfileDrop/Entrance";
+import ProfileDropdown from "./ProfileDrop/ProfileDropdown";
 import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../../contexts/Authcontext";
 import { Link, Route, Routes } from "react-router-dom";
@@ -147,7 +147,7 @@ const Navbar1 = () => {
                                 </form>
                             </div>
                             <span className="separator d-none d-lg-inline"></span>
-                            <Entrance />
+                            <ProfileDropdown />
                         </div>
                     </div>
                 </div>
