@@ -1,10 +1,11 @@
 .dropdown {
   height: 64px;
   width: 64px;
+  border: 1px solid #E0C9A6;
   border-radius: 50%;
   position: relative;
   display: inline-block;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .dropdownContent {
@@ -12,6 +13,22 @@
   position: absolute;
   min-width: 160px;
   z-index: 1;
+}
+
+.dropbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop img {
+  height: 75px;
+  width: 75px;
+  background-size: 100%;
+}
+
+.dropIcon {
+  color: #f59a11;
 }
 
 .dropdownContent a {
@@ -24,4 +41,3 @@
 .dropdown:hover .dropdownContent {
   display: block;
 }
-
